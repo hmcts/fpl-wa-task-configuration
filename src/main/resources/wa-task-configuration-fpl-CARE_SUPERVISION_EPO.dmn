@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-configuration-fpl-CARE_SUPERVISION_EPO" name="Task configuration DMN">
+    <decisionTable id="DecisionTable_04h0po8">
+      <input id="Input_1" label="CCD Case Data">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0v6nbht" label="Task type" biodi:width="352">
+        <inputExpression id="LiteralExpression_0ea4yee" typeRef="string">
+          <text>if(taskAttributes != null and taskAttributes.taskType != null) then
+            taskAttributes. taskType
+else if(taskType != null) then
+           taskType
+else
+null</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="Name" typeRef="string" />
+      <output id="OutputClause_0n53zsu" label="Value" typeRef="string" />
+      <rule id="DecisionRule_0maqehe">
+        <inputEntry id="UnaryTests_1m9yr5w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17ubext">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1077f89">
+          <text>"caseName"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kxli13">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lmc0xa">
+        <inputEntry id="UnaryTests_1j3ik23">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08xcs3l">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qf3i3p">
+          <text>"caseManagementCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s3nxeg">
+          <text>"PUBLICLAW"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xmukll">
+        <inputEntry id="UnaryTests_19wcjxa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gwkci0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r0rqc3">
+          <text>"location"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16at2lk">
+          <text>if (caseData.caseManagementLocation!= null) then caseData.caseManagementLocation.baseLocation else "1"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wt7gcl">
+        <inputEntry id="UnaryTests_03r7kdi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xgeybf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05issji">
+          <text>"locationName"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z5dl4t">
+          <text>if (caseData.locationName!= null) then caseData.locationName else ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_143eanc">
+        <inputEntry id="UnaryTests_0q8sz4a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08wb4e8">
+          <text>"review_allocation_decision","create/upload_gatekeepingorder","create_allocatedjudge","view _additionalapplications","approve_orders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uxu3q4">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jq9tdm">
+          <text>"decision_making_work"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03zv29s">
+        <inputEntry id="UnaryTests_03m6s9h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v6se2q">
+          <text>"create_urgentorders","manage_hearings"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08sdeu3">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hk36sf">
+          <text>"routine_work"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kv0hqi">
+        <inputEntry id="UnaryTests_0b47gxz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1by75dv">
+          <text>"review_specificAccessRequestLegalOps","review_specificAccessRequestAdmin","review_specificAcesssRequestJudiciary"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hyib3u">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c4mici">
+          <text>"access_requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y90d10">
+        <inputEntry id="UnaryTests_0ye9p42">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s6gmgs">
+          <text>"review_allocation_decision","create/upload_gatekeepingorder","create_allocatedjudge","view_additionalapplications","approve_orders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dgz5dj">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08usdcs">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_150emyr">
+        <inputEntry id="UnaryTests_104bvwv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uyodif">
+          <text>"review_specificAccessRequestLegalOps","review_specificAccessRequestAdmin","review_specificAcesssRequestJudiciary","review_specificAccessRequestAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xp71lz">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ts5bp7">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f4qtla">
+        <inputEntry id="UnaryTests_1eojfin">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0csj5a0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1esrbnt">
+          <text>"region"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yji5r7">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0j6ycu5">
+        <inputEntry id="UnaryTests_0rcrd4j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14wzwq1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08ai7jd">
+          <text>"appealtype"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oxls1d">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="wa-task-configuration-fpl-CARE_SUPERVISION_EPO">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

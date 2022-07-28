@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1l97b4e" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-cancellation-fpl-CARE_SUPERVISION_EPO" name="Task cancellation DMN">
+    <decisionTable id="DecisionTable_0gksf8r" hitPolicy="COLLECT">
+      <input id="Input_1" label="From State">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_13b1x1h">
+        <inputExpression id="LiteralExpression_16kt9wd" typeRef="string">
+          <text>Event</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0f6u4qu" label="State">
+        <inputExpression id="LiteralExpression_0d7il84" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Action" typeRef="string" />
+      <output id="OutputClause_0ty3602" label="Warning Code" typeRef="string" />
+      <output id="OutputClause_064noaa" label="Warning Text" typeRef="string" />
+      <output id="OutputClause_03gx6sx" label="Process Categories Identifiers" typeRef="string" />
+      <rule id="DecisionRule_1dw2sok">
+        <description>To cancel routine work and hearing work on general applications</description>
+        <inputEntry id="UnaryTests_0ba2x61">
+          <text>Submitted</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eehogs">
+          <text>"manage local authorities"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pa73kp">
+          <text>case management</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1c3eag2">
+          <text>Warn</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qyx26v">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0somnjb">
+          <text>
+This is an application task that will cancel all active tasks*</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05purvr">
+          <text>case progression, case creation</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16s7cw9">
+        <description>to cancel decision making work on general applications</description>
+        <inputEntry id="UnaryTests_02dvj2i">
+          <text>Submitted</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s2c2ae">
+          <text>"manage representatives"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ejiti0">
+          <text>case management</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xm2oyz">
+          <text>Warn</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01obp2j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_145u4t5">
+          <text>This is an application task that will cancel all active tasks*</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17tas9t">
+          <text>manage outcomes, listing</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="wa-task-cancellation-fpl-CARE_SUPERVISION_EPO">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
