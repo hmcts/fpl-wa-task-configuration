@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-initiation-fpl-CARE_SUPERVISION_EPO" name="Task initiation DMN">
     <decisionTable id="DecisionTable_1fj3kaa">
       <input id="Input_1">
@@ -12,23 +12,23 @@
           <text>Post event state</text>
         </inputExpression>
       </input>
-      <output id="Output_1" name="Task Id" typeRef="string" />
+      <output id="Output_1" name="Task Id" typeRef="string" biodi:width="217" />
       <output id="OutputClause_002axxi" name="Name" typeRef="string" />
       <output id="OutputClause_0nhxkm7" name="Delay Duration" typeRef="integer" />
       <output id="OutputClause_04k5sns" name="Working Days Allowed" typeRef="integer" />
       <output id="OutputClause_17qu5hg" name="Process Categories Identifiers" typeRef="string" />
       <rule id="DecisionRule_0v5mokq">
         <inputEntry id="UnaryTests_14nnlep">
-          <text>messageJudgeOrLegalAdviser</text>
+          <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_14tm4p1">
-          <text>gatekeeping,case management, final hearing</text>
+          <text>"Gatekeeping","PREPARE_FOR_HEARING","FINAL_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0f6mrch">
-          <text>reply_to_message</text>
+          <text>"reply_to_message"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dz1njw">
-          <text>Reply to Message</text>
+          <text>"Reply to Message"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00oh2yp">
           <text>0</text>
@@ -37,21 +37,21 @@
           <text>5</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11ox5ka">
-          <text>case progression</text>
+          <text>"case progression"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0gc9elh">
         <inputEntry id="UnaryTests_1rsx4xx">
-          <text>otherAllocationDecision</text>
+          <text>"otherAllocationDecision"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1i7ghvf">
-          <text>case management</text>
+          <text>"PREPARE_FOR_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rnf7pe">
-          <text>review_allocation_decision</text>
+          <text>"review_allocation_decision"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fa1can">
-          <text>Make Allocation decision</text>
+          <text>"Make Allocation decision"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_136buuv">
           <text>0</text>
@@ -60,21 +60,21 @@
           <text>10</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15wssaj">
-          <text>case creation</text>
+          <text>"case creation"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0f2jw0s">
         <inputEntry id="UnaryTests_1406ywd">
-          <text>addGatekeepingOrder</text>
+          <text>"addGatekeepingOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_18vtssi">
-          <text>case management</text>
+          <text>"PREPARE_FOR_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0y9j7tq">
-          <text>create/upload_gatekeepingorder</text>
+          <text>"create/upload_gatekeepingorder"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gaiuky">
-          <text>Create/upload gatekeeping order</text>
+          <text>"Create/upload gatekeeping order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ybzrc2">
           <text>0</text>
@@ -83,21 +83,21 @@
           <text>5</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_10znmw1">
-          <text>manage outcome</text>
+          <text>"manage outcome"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0hyn2f0">
         <inputEntry id="UnaryTests_1fqtgeu">
-          <text>allocatedJudge</text>
+          <text>"allocatedJudge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1daikdx">
-          <text>gatekeeping,case management</text>
+          <text>"Gatekeeping","PREPARE_FOR_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1o0wwzq">
-          <text>create_allocatedjudge</text>
+          <text>"create_allocatedjudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0d99m4s">
-          <text>Update allocated judge</text>
+          <text>"Update allocated judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sdpp7b">
           <text>0</text>
@@ -106,21 +106,21 @@
           <text>2</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1pnfarg">
-          <text>case creation</text>
+          <text>"case creation"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1gcchf9">
         <inputEntry id="UnaryTests_1dk0utf">
-          <text>uploadAdditionalApplications</text>
+          <text>"uploadAdditionalApplications"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_18rqk2z">
-          <text>case management</text>
+          <text>"PREPARE_FOR_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hbw4hz">
-          <text>view_additionalapplications</text>
+          <text>"view_additionalapplications"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0x6ix0l">
-          <text>Provide Directions via Judicial Messages</text>
+          <text>"Provide Directions via Judicial Messages"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1entdnf">
           <text>0</text>
@@ -129,21 +129,21 @@
           <text>10</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0as9sbd">
-          <text>manage outcome</text>
+          <text>"manage outcome"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1k2qqeh">
         <inputEntry id="UnaryTests_1rf6koq">
-          <text>manageOrders</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1g293g9">
-          <text>case management</text>
+          <text>"PREPARE_FOR_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0a8v6g9">
-          <text>approve_orders</text>
+          <text>"approve_orders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i013dl">
-          <text>Approve draft orders</text>
+          <text>"Approve draft orders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04dq3l3">
           <text>0</text>
@@ -152,21 +152,21 @@
           <text>10</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11siaj1">
-          <text>manage outcome</text>
+          <text>"manage outcome"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_02tmjdn">
         <inputEntry id="UnaryTests_0nty3d2">
-          <text>manageHearings</text>
+          <text>"manageHearings"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jk4lzg">
-          <text>submitted,gatekeeping,case management,final hearing</text>
+          <text>"Submitted","Gatekeeping","PREPARE_FOR_HEARING","FINAL_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1a8ppip">
-          <text>manage_hearings</text>
+          <text>"manage_hearings"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0lxrmrw">
-          <text>manage hearings- view /update</text>
+          <text>"manage hearings- view /update"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1oqputy">
           <text>0</text>
@@ -175,7 +175,7 @@
           <text>5</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_004doq0">
-          <text>listing</text>
+          <text>"listing"</text>
         </outputEntry>
       </rule>
     </decisionTable>

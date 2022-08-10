@@ -10,99 +10,99 @@
       <output id="Output_1" name="Task Type" typeRef="string" />
       <output id="OutputClause_11cuihz" name="Completion Mode" typeRef="string" />
       <rule id="DecisionRule_0z1v6wd">
-        <description>Event that is completed by the user in ExUI. Values can be listed as comma separated</description>
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_17xumcq">
-          <text>manageOrders</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1cmr000">
-          <text>approve_orders</text>
+          <text>"approve_orders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1b6vqv3">
-          <text>Auto</text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_17x2i92">
-        <description>Event that is completed by the user in ExUI. Values can be listed as comma separated</description>
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_0jla5ef">
-          <text>messageJudgeOrLegalAdviser</text>
+          <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0s0kg71">
-          <text>reply_to_message</text>
+          <text>"reply_to_message"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0f3jzhf">
-          <text>Auto</text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0lzirfx">
-        <description>Event that is completed by the user in ExUI. Values can be listed as comma separated</description>
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_1vm2iw8">
-          <text>otherAllocationDecision</text>
+          <text>"otherAllocationDecision"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0adx2i0">
-          <text>review_allocation_decision</text>
+          <text>"review_allocation_decision"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16kllvi">
-          <text>Auto</text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0buaxhy">
-        <description>Event that is completed by the user in ExUI. Values can be listed as comma separated</description>
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_0rrb6n1">
-          <text>allocatedJudge</text>
+          <text>"allocatedJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07gfkc8">
-          <text>create_allocatedjudge</text>
+          <text>"create_allocatedjudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18ixsh1">
-          <text>Auto</text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0r3d03z">
-        <description>Event that is completed by the user in ExUI. Values can be listed as comma separated</description>
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_0llbtvp">
-          <text>uploadAdditionalApplications</text>
+          <text>"uploadAdditionalApplications"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1wc84rr">
-          <text>view _additionalapplications</text>
+          <text>"view_additionalapplications"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06bleac">
-          <text>Auto</text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1x6pjj8">
-        <description>Event that is completed by the user in ExUI. Values can be listed as comma separated</description>
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_0boj8cf">
-          <text>addGatekeepingOrder</text>
+          <text>"addGatekeepingOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1fn7egp">
-          <text>create/upload_gatekeepingorder</text>
+          <text>"create/upload_gatekeepingorder"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03ivcmv">
-          <text>Auto</text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1rqrwzr">
-        <description>Event that is completed by the user in ExUI. Values can be listed as comma separated</description>
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_0ki2g54">
-          <text>manageOrders</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0mos6sj">
-          <text>create_urgentorders</text>
+          <text>"create_urgentorders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1qi1qfo">
-          <text>Auto</text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0xnd5x6">
-        <description>Event that is completed by the user in ExUI. Values can be listed as comma separated</description>
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_0hto096">
-          <text>manageHearings</text>
+          <text>"manageHearings"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hwfdtw">
-          <text>manage_hearings</text>
+          <text>"manage_hearings"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_035maad">
-          <text>Auto</text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
     </decisionTable>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-permissions-fpl-CARE_SUPERVISION_EPO" name="Permissions DMN">
     <decisionTable id="DecisionTable_0vv02p8" hitPolicy="RULE ORDER">
       <input id="Input_1">
@@ -14,7 +14,7 @@
       </input>
       <output id="Output_1" label="Case Access Category" typeRef="string" />
       <output id="OutputClause_0tfvigx" label="Name" typeRef="string" />
-      <output id="OutputClause_175fp1a" label="Value" typeRef="string" />
+      <output id="OutputClause_175fp1a" label="Value" typeRef="string" biodi:width="236" />
       <output id="OutputClause_0o2n8ga" label="RoleCategory" typeRef="string" />
       <output id="OutputClause_111j2yb" label="Authorisations" typeRef="string" />
       <output id="OutputClause_1124n9m" label="Assignment Priority" typeRef="integer" />
@@ -34,7 +34,7 @@
           <text>"task-supervisor"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_031urzk">
-          <text>"Read, Manage, Cancel"</text>
+          <text>"Read","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c0juuw">
           <text></text>
@@ -52,7 +52,7 @@
       <rule id="DecisionRule_0scvhhe">
         <description>Judge to review messages</description>
         <inputEntry id="UnaryTests_0gcmra0">
-          <text>reply_to_message</text>
+          <text>"reply_to_message"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jv7hvr">
           <text></text>
@@ -65,7 +65,7 @@
 "Legal Caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1llhigo">
-          <text>"Read, Own, Manage, Cancel"</text>
+          <text>"Read","Own","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1n8rbfp">
           <text>"JUDICIAL"
@@ -99,7 +99,7 @@
 "Legal Caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1v94o7r">
-          <text>"Read, Manage, Cancel"</text>
+          <text>"Read","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i9m59w">
           <text>"JUDICIAL"
@@ -133,7 +133,7 @@
 "Legal Caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1thzwkv">
-          <text>"Read, Manage, Cancel"</text>
+          <text>"Read","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rk7y7e">
           <text>"JUDICIAL"
@@ -167,7 +167,7 @@
 "Legal Caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0750tpi">
-          <text>"Read, Manage, Cancel"</text>
+          <text>"Read","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1x5vuij">
           <text>"JUDICIAL"
@@ -201,7 +201,7 @@
 "Legal Caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1igxnro">
-          <text>"Read, Manage, Cancel"</text>
+          <text>"Read","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0trtk55">
           <text>"JUDICIAL"
@@ -235,7 +235,7 @@
 "Legal Caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1spozmx">
-          <text>"Read, Manage, Cancel"</text>
+          <text>"Read","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1liaba7">
           <text>"JUDICIAL"
@@ -268,7 +268,7 @@
           <text>"Local Court Admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vn60v6">
-          <text>"Read, Own, Manage, Cancel"</text>
+          <text>"Read","Own","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0s9w2y1">
           <text>"Local court admin"</text>
@@ -300,7 +300,7 @@
           <text>"Local Court Admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0opovhp">
-          <text>"Read, Own, Manage, Cancel"</text>
+          <text>"Read","Own","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0l9h11b">
           <text>"Local court admin"</text>
@@ -332,7 +332,7 @@
           <text>"Local Court Admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xk7tpm">
-          <text>"Read, Manage, Cancel"</text>
+          <text>"Read","Manage","Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1p3tmeq">
           <text>"Local court admin"</text>
