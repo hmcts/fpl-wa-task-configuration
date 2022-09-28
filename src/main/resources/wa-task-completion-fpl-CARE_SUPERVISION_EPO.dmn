@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1iaots2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
-  <decision id="wa-task-completion-fpl-CARE_SUPERVISION_EPO" name="Task completion DMN">
+  <decision id="wa-task-completion-PUBLICLAW-CARE_SUPERVISION_EPO" name="Task completion DMN">
     <decisionTable id="DecisionTable_14vgqqu" hitPolicy="COLLECT">
       <input id="Input_1">
         <inputExpression id="InputExpression_1" typeRef="string">
@@ -9,78 +9,6 @@
       </input>
       <output id="Output_1" name="Task Type" typeRef="string" />
       <output id="OutputClause_11cuihz" name="Completion Mode" typeRef="string" />
-      <rule id="DecisionRule_0z1v6wd">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
-        <inputEntry id="UnaryTests_17xumcq">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1cmr000">
-          <text>"approve_orders"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1b6vqv3">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_17x2i92">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
-        <inputEntry id="UnaryTests_0jla5ef">
-          <text>"messageJudgeOrLegalAdviser"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0s0kg71">
-          <text>"reply_to_message"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0f3jzhf">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0lzirfx">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
-        <inputEntry id="UnaryTests_1vm2iw8">
-          <text>"otherAllocationDecision"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0adx2i0">
-          <text>"review_allocation_decision"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_16kllvi">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0buaxhy">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
-        <inputEntry id="UnaryTests_0rrb6n1">
-          <text>"allocatedJudge"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_07gfkc8">
-          <text>"create_allocatedjudge"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_18ixsh1">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0r3d03z">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
-        <inputEntry id="UnaryTests_0llbtvp">
-          <text>"uploadAdditionalApplications"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1wc84rr">
-          <text>"view_additionalapplications"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_06bleac">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1x6pjj8">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
-        <inputEntry id="UnaryTests_0boj8cf">
-          <text>"addGatekeepingOrder"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1fn7egp">
-          <text>"create/upload_gatekeepingorder"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_03ivcmv">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1rqrwzr">
         <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_0ki2g54">
@@ -105,11 +33,47 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1fd34p5">
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
+        <inputEntry id="UnaryTests_1hz19s2">
+          <text>"reviewCMO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lp0f06">
+          <text>"approve_orders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12llq4e">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kldlbd">
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
+        <inputEntry id="UnaryTests_0ph0udh">
+          <text>"messageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04wqzjc">
+          <text>"reply_to_message"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h4awho">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sdavr9">
+        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
+        <inputEntry id="UnaryTests_1kpfn45">
+          <text>"messageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gbvhtf">
+          <text>"view _additionalapplications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jegsfv">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape dmnElementRef="wa-task-completion-fpl-CARE_SUPERVISION_EPO">
+      <dmndi:DMNShape dmnElementRef="wa-task-completion-PUBLICLAW-CARE_SUPERVISION_EPO">
         <dc:Bounds height="80" width="180" x="160" y="100" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
