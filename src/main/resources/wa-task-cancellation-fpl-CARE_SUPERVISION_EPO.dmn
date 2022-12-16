@@ -27,13 +27,13 @@
           <text>"Submitted"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1eehogs">
-          <text>"manage local authorities"</text>
+          <text>"manageLocalAuthorities"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0pa73kp">
           <text>"PREPARE_FOR_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1c3eag2">
-          <text>"Warn"</text>
+          <text>"Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qyx26v">
           <text></text>
@@ -51,13 +51,13 @@
           <text>"Submitted"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s2c2ae">
-          <text>"manage representatives"</text>
+          <text>"manageRepresentatives"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ejiti0">
           <text>"PREPARE_FOR_HEARING"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xm2oyz">
-          <text>"Warn"</text>
+          <text>"Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_01obp2j">
           <text></text>
