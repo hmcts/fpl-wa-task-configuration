@@ -39,7 +39,7 @@
           <text>"reviewCMO"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1lp0f06">
-          <text>"approve_orders"</text>
+          <text>"approveOrders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12llq4e">
           <text>"Auto"</text>
@@ -48,25 +48,201 @@
       <rule id="DecisionRule_1kldlbd">
         <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_0ph0udh">
-          <text>"messageJudgeOrLegalAdviser"</text>
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_04wqzjc">
-          <text>"reply_to_message"</text>
+          <text>"reviewMessageJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h4awho">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_101urwk">
+        <inputEntry id="UnaryTests_091yqxh">
+          <text>"messageJudgeOrLegalAdviserSubmitResponse"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10ozv4x">
+          <text>"reviewResponseJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19rblsq">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hj4yof">
+        <inputEntry id="UnaryTests_0y8lgvw">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04ufctt">
+          <text>"reviewMessageHearingCentreAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c092b9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13vvvom">
+        <inputEntry id="UnaryTests_00znl1c">
+          <text>"messageJudgeOrLegalAdviserSubmitResponse"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06k2gtw">
+          <text>"reviewResponseHearingCentreAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15zvy2d">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1f9jv1n">
+        <inputEntry id="UnaryTests_1qfyxd7">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a8y5o4">
+          <text>"reviewMessageCTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mhm5gp">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13v8epr">
+        <inputEntry id="UnaryTests_0fzhj0f">
+          <text>"messageJudgeOrLegalAdviserSubmitResponse"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1koab59">
+          <text>"reviewResponseCTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17z9379">
           <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0sdavr9">
         <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_1kpfn45">
-          <text>"messageJudgeOrLegalAdviser"</text>
+          <text>"confirmApplicationReviewed"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1gbvhtf">
-          <text>"view _additionalapplications"</text>
+          <text>"viewAdditionalApplications"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1jegsfv">
           <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01w5qqs">
+        <inputEntry id="UnaryTests_1qiicqc">
+          <text>"reviewCMO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0soubey">
+          <text>"approveOrders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ysotxy">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0n7hkfv">
+        <inputEntry id="UnaryTests_1qq7je4">
+          <text>"sendToGatekeeper"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_046v7hu">
+          <text>"reviewUrgentApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_101sll0">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08e41cr">
+        <inputEntry id="UnaryTests_1gb5xgj">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gbdwh8">
+          <text>"reviewUrgentApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vg09qm">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11b93z6">
+        <inputEntry id="UnaryTests_09i3abf">
+          <text>"sendToGatekeeper"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m0s31c">
+          <text>"reviewStandardApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ppaint">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gyripa">
+        <inputEntry id="UnaryTests_0q6onvj">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jg6sd7">
+          <text>"reviewStandardApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0al22s5">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rpnsbw">
+        <inputEntry id="UnaryTests_0g54rqk">
+          <text>"manageOrdersOrderSelection"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ho760d">
+          <text>"reviewStandardDirectionOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12doxgu">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fr50ri">
+        <inputEntry id="UnaryTests_1vqk9uy">
+          <text>"manageOrdersOrderSelection"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lm5ygy">
+          <text>"reviewOrderCMO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0frxfd1">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0e6910s">
+        <inputEntry id="UnaryTests_1j9epiy">
+          <text>"failedPaymentCompletingTask"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dwd16m">
+          <text>"reviewFailedPayment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ahqou8">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pl20rz">
+        <inputEntry id="UnaryTests_1ny19xk">
+          <text>"respondToCorrespondence"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0606zbn">
+          <text>"reviewCorrespondence"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s8o5cw">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03ykkgb">
+        <inputEntry id="UnaryTests_1vk4zs3">
+          <text>"confirmPlacementApplicationReviewed"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03d56lv">
+          <text>"checkPlacementApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tc31r7">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r2pxh4">
+        <inputEntry id="UnaryTests_0qc8h8j">
+          <text>"sendOrderReminder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zv2bno">
+          <text>"chaseOutstandingOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xiravz">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>

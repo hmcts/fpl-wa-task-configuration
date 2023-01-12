@@ -12,101 +12,482 @@
           <text>Post event state</text>
         </inputExpression>
       </input>
+      <input id="InputClause_0k85u8n" label="Case Data">
+        <inputExpression id="LiteralExpression_03ky169" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
       <output id="Output_1" name="Task Id" typeRef="string" biodi:width="217" />
       <output id="OutputClause_002axxi" name="Name" typeRef="string" />
       <output id="OutputClause_0nhxkm7" name="Delay Duration" typeRef="integer" />
       <output id="OutputClause_04k5sns" name="Working Days Allowed" typeRef="integer" />
       <output id="OutputClause_17qu5hg" name="Process Categories Identifiers" typeRef="string" />
-      <rule id="DecisionRule_0v5mokq">
-        <inputEntry id="UnaryTests_14nnlep">
+      <rule id="DecisionRule_11n6aew">
+        <inputEntry id="UnaryTests_14tvcbz">
           <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_14tm4p1">
+        <inputEntry id="UnaryTests_0t9fngz">
           <text>"PREPARE_FOR_HEARING","FINAL_HEARING"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0f6mrch">
-          <text>"reply_to_message"</text>
+        <inputEntry id="UnaryTests_0oxaf0x">
+          <text>if caseData.latestRoleSent == 'Judiciary'</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gtn6d2">
+          <text>"reviewMessageJudge"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0dz1njw">
-          <text>"Reply to Message"</text>
+        <outputEntry id="LiteralExpression_1t763fh">
+          <text>"Review Message"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_00oh2yp">
+        <outputEntry id="LiteralExpression_0rdug08">
           <text>0</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0xaplpy">
+        <outputEntry id="LiteralExpression_0ybegxw">
           <text>5</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_11ox5ka">
+        <outputEntry id="LiteralExpression_154c778">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1gcchf9">
-        <inputEntry id="UnaryTests_1dk0utf">
-          <text>"uploadAdditionalApplications"</text>
+      <rule id="DecisionRule_0l1dahb">
+        <inputEntry id="UnaryTests_129lz80">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_18rqk2z">
-          <text>"PREPARE_FOR_HEARING"</text>
+        <inputEntry id="UnaryTests_1nt65cy">
+          <text>"PREPARE_FOR_HEARING","FINAL_HEARING"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0hbw4hz">
-          <text>"view_additionalapplications"</text>
+        <inputEntry id="UnaryTests_0dwv4c7">
+          <text>if caseData.latestRoleSent == 'Judiciary'</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kt6o9k">
+          <text>"reviewResponseJudge"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0x6ix0l">
-          <text>"Provide Directions via Judicial Messages"</text>
+        <outputEntry id="LiteralExpression_1vn5g5s">
+          <text>"Review Response"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1entdnf">
+        <outputEntry id="LiteralExpression_0v622xr">
           <text>0</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1w54wlm">
-          <text>10</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0as9sbd">
-          <text>"manage outcome"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1k2qqeh">
-        <inputEntry id="UnaryTests_1rf6koq">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1g293g9">
-          <text>"PREPARE_FOR_HEARING"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0a8v6g9">
-          <text>"approve_orders"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1i013dl">
-          <text>"Approve draft orders"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_04dq3l3">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1kfi51n">
-          <text>10</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_11siaj1">
-          <text>"manage outcome"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_02tmjdn">
-        <inputEntry id="UnaryTests_0nty3d2">
-          <text>"manageHearings"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jk4lzg">
-          <text>"Submitted","PREPARE_FOR_HEARING","FINAL_HEARING"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1a8ppip">
-          <text>"manage_hearings"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0lxrmrw">
-          <text>"manage hearings- view /update"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1oqputy">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0o7yck0">
+        <outputEntry id="LiteralExpression_128mzkj">
           <text>5</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_004doq0">
-          <text>"listing"</text>
+        <outputEntry id="LiteralExpression_0qsu1y1">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ly7w1o">
+        <inputEntry id="UnaryTests_18zezak">
+          <text>"messageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tignk5">
+          <text>"PREPARE_FOR_HEARING","FINAL_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wjp3sq">
+          <text>if caseData.latestRoleSent == 'Local Court Admin'</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q69w4p">
+          <text>"reviewMessageHearingCentreAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12pi3z1">
+          <text>"Review Message"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_019oc5j">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qmndc0">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1980vgl">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_083o0e2">
+        <inputEntry id="UnaryTests_12dgqqk">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01fpepe">
+          <text>"PREPARE_FOR_HEARING","FINAL_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01ebcp1">
+          <text>if caseData.latestRoleSent == 'Local Court Admin'</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0melnll">
+          <text>"reviewResponseHearingCentreAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rzrvvz">
+          <text>"Review Response"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ggoglf">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1px20gr">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wsr1fx">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f40sed">
+        <inputEntry id="UnaryTests_15skt61">
+          <text>"messageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14yndyh">
+          <text>"PREPARE_FOR_HEARING","FINAL_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jlz9lh">
+          <text>if caseData.latestRoleSent == 'CTSC'</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01sz739">
+          <text>"reviewMessageCTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nclh6l">
+          <text>"Review Message"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oc4n8j">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hzarmi">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l4qma3">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14o3ryf">
+        <inputEntry id="UnaryTests_04k89am">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c1l4db">
+          <text>"PREPARE_FOR_HEARING","FINAL_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l7h8bp">
+          <text>if caseData.latestRoleSent == 'CTSC'</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11xjxvf">
+          <text>"reviewResponseCTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ino8jm">
+          <text>"Review Response"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01qdcl9">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xomefc">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qew45g">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1h9ox6h">
+        <inputEntry id="UnaryTests_0yduhmx">
+          <text>"uploadAdditionalApplications"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rsx36n">
+          <text>"PREPARE_FOR_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pzup6n">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15vnak5">
+          <text>"viewAdditionalApplications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_160oaxk">
+          <text>"View Additional Applications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09us3vj">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j7i9wv">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d8sks8">
+          <text>"manage outcome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wndqzo">
+        <inputEntry id="UnaryTests_0f8guqf">
+          <text>"uploadCMO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iba57d">
+          <text>"Gatekeeping","PREPARE_FOR_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pe80kt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0csn711">
+          <text>"approveOrders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02szmi6">
+          <text>"Approve Orders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sx0acl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dubjtl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mi8gx4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l6xn2h">
+        <inputEntry id="UnaryTests_0vdrvff">
+          <text>"submitApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02yysqy">
+          <text>"Submitted"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05purj9">
+          <text>caseData.hearing.timeFrame == "Within 2 days" OR caseData.hearing.timeFrame == "Same day"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wnlj75">
+          <text>"reviewUrgentApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zmfj7r">
+          <text>"Review Urgent Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1waj3n0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d6o5mz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ucao7d">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0k37xd4">
+        <inputEntry id="UnaryTests_1h10zlk">
+          <text>"submitApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hevap8">
+          <text>"Submitted"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sn6119">
+          <text>caseData.hearing.timeFrame == "Within 2 days" OR caseData.hearing.timeFrame == "Same day"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ey1wov">
+          <text>"reviewUrgentApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kuymys">
+          <text>"Review Urgent Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06iwilb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1amykrj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f88rvp">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tmxddd">
+        <inputEntry id="UnaryTests_05wh5oh">
+          <text>"submitApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eqdc4m">
+          <text>"Submitted"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v78wyy">
+          <text>caseData.hearing.timeFrame != "Within 2 days" AND caseData.hearing.timeFrame != "Same day"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_030je0l">
+          <text>"reviewStandardApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dzbsoz">
+          <text>"Review Standard Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lqezhg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_174oly5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ix9eyr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1euqmat">
+        <inputEntry id="UnaryTests_1ydwb0e">
+          <text>"submitApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s6o21b">
+          <text>"Submitted"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mlxsrh">
+          <text>caseData.hearing.timeFrame != "Within 2 days" AND caseData.hearing.timeFrame != "Same day"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09ej1uq">
+          <text>"reviewStandardApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c76joe">
+          <text>"Review Standard Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yjefa7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18ai694">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ovocr4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lktk48">
+        <inputEntry id="UnaryTests_01q9d9j">
+          <text>"addGatekeepingOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bl0b2a">
+          <text>"Gatekeeping"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03eg9m4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1prnege">
+          <text>"reviewStandardDirectionOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_104sfhe">
+          <text>"Review Standard Direction Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_007ydw4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06jca5i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o4d0fk">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ur3w39">
+        <inputEntry id="UnaryTests_157j1zd">
+          <text>"reviewCMO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jt6a9j">
+          <text>"Submitted","Gatekeeping","PREPARE_FOR_HEARING","FINAL_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mbz63r">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iigomq">
+          <text>"reviewOrderCMO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q171p2">
+          <text>"Review Order CMO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1srvt9x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f2p23p">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yhdh1s">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0idtv4n">
+        <inputEntry id="UnaryTests_1i39tz1">
+          <text>"failedPayment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04377d8">
+          <text>"Submitted"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pbwojy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vy2kdp">
+          <text>"reviewFailedPayment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pv70yn">
+          <text>"Review Failed Payment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03hk29h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r6bdhv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hjxgpr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wvst0a">
+        <inputEntry id="UnaryTests_0pe88lt">
+          <text>"manageCorrespondence"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1af33t6">
+          <text>"Submitted"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fbb5qw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fneeoh">
+          <text>"reviewCorrespondence"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fuo958">
+          <text>"Review Correspondence"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s1eu95">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hi8zxp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nz9qa7">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0z5c01v">
+        <inputEntry id="UnaryTests_14qu4kl">
+          <text>"uploadPlacementApplications"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0omn8mq">
+          <text>"PREPARE_FOR_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08t6xwx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11hgygm">
+          <text>"checkPlacementApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06kyu4x">
+          <text>"Check Placement Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l4kvur">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00qyhcn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16kn5j9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cx3hcu">
+        <inputEntry id="UnaryTests_1urq6be">
+          <text>"dummyEventOrderNotUploadedAfter5Days"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_014trtd">
+          <text>"PREPARE_FOR_HEARING","FINAL_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16s78ms">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jbhsid">
+          <text>"chaseOutstandingOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k6fgk8">
+          <text>"Chase Outstanding Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xbgmnm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02uaq27">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15yqcjr">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>

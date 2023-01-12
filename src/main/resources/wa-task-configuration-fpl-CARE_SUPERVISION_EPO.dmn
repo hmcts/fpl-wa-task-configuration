@@ -19,6 +19,7 @@ null</text>
       </input>
       <output id="Output_1" name="Name" typeRef="string" />
       <output id="OutputClause_0n53zsu" label="Value" typeRef="string" biodi:width="344" />
+      <output id="OutputClause_0vog2vc" name="Can Reconfigure" typeRef="string" />
       <rule id="DecisionRule_0maqehe">
         <inputEntry id="UnaryTests_1m9yr5w">
           <text></text>
@@ -31,6 +32,9 @@ null</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kxli13">
           <text>if caseData.applicantCaseName !=null then caseData.applicantCaseName else "Public Law Applications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uecj96">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0lmc0xa">
@@ -46,6 +50,9 @@ null</text>
         <outputEntry id="LiteralExpression_1s3nxeg">
           <text>"PUBLICLAW"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_0gltgk0">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_0wxbdoh">
         <inputEntry id="UnaryTests_0lbyizi">
@@ -60,6 +67,9 @@ null</text>
         <outputEntry id="LiteralExpression_1nq2bh1">
           <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.region != null)
 then caseData.caseManagementLocation.region else "1"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d7zv96">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1xmukll">
@@ -77,6 +87,9 @@ then caseData.caseManagementLocation.region else "1"</text>
 null) then
 caseData.caseManagementLocation.baseLocation else "231596"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_02e3u51">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_0wt7gcl">
         <inputEntry id="UnaryTests_03r7kdi">
@@ -93,13 +106,16 @@ caseData.caseManagementLocation.baseLocation else "231596"</text>
 null) then
 caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_0m1o1nq">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_143eanc">
         <inputEntry id="UnaryTests_0q8sz4a">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08wb4e8">
-          <text>"view _additionalapplications","approve_orders","review_orderCMO"</text>
+          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0uxu3q4">
           <text>"workType"</text>
@@ -107,13 +123,16 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         <outputEntry id="LiteralExpression_1jq9tdm">
           <text>"decision_making_work"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_1k4lq5m">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_03zv29s">
         <inputEntry id="UnaryTests_03m6s9h">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"review_message","review_response","review_standard_directions_order","review_correspondence","check_placement_application","chase_outstanding_order"</text>
+          <text>"reviewMessageJudge","reviewResponseJudge","reviewMessageLocalCourt","reviewResponseLocalCourt","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08sdeu3">
           <text>"workType"</text>
@@ -121,19 +140,25 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         <outputEntry id="LiteralExpression_1hk36sf">
           <text>"routine_work"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_184v81y">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_0i365sk">
         <inputEntry id="UnaryTests_1aibdsg">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_178m83z">
-          <text>"review_urgent_application","review_standard_application","review_failed_payment"</text>
+          <text>"reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tzsh4h">
           <text>"workType"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xsdn01">
           <text>"applications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yekdr4">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0vxpxj5">
@@ -149,6 +174,9 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         <outputEntry id="LiteralExpression_0nosgvx">
           <text>"access_requests"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_0dqfk6h">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_0y90d10">
         <inputEntry id="UnaryTests_0ye9p42">
@@ -163,18 +191,24 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         <outputEntry id="LiteralExpression_08usdcs">
           <text></text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_0zuv2m8">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_150emyr">
         <inputEntry id="UnaryTests_104bvwv">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1uyodif">
-          <text>"review_specificAccessRequestLegalOps","review_specificAccessRequestAdmin","review_specificAcesssRequestJudiciary","review_specificAccessRequestAdmin"</text>
+          <text>"reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestAdmin","reviewSpecificAcesssRequestJudiciary","reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xp71lz">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ts5bp7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0huuh8c">
           <text></text>
         </outputEntry>
       </rule>
@@ -191,13 +225,16 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         <outputEntry id="LiteralExpression_1bhk0ws">
           <text>if (taskAttributes !=null and taskAttributes.roleAssignmentId != null) then taskAttributes.roleAssignmentId else "1234"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_0tdvep3">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_06vnygn">
         <inputEntry id="UnaryTests_12fiatp">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ox5s2">
-          <text>"reviewSpecificAccessRequestAdmin","review_urgent_application","review_standard_application","review_failed_payment",</text>
+          <text>"reviewSpecificAccessRequestAdmin","reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment",</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_020dk9k">
           <text>"roleCategory"</text>
@@ -205,13 +242,16 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         <outputEntry id="LiteralExpression_1ynjgb5">
           <text>"ADMIN"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_0sxe289">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_15c68rw">
         <inputEntry id="UnaryTests_0bbkw7t">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewSpecificAccessRequestJudiciary","view_additionalapplications","approve_orders"</text>
+          <text>"reviewSpecificAccessRequestJudiciary","viewAdditionalApplications","approveOrders","reviewMessageJudge","reviewResponseJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -219,13 +259,16 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         <outputEntry id="LiteralExpression_0fvsumy">
           <text>"JUDICIAL"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_19h8eda">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_1uba887">
         <inputEntry id="UnaryTests_1ezuf5j">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uuvjqh">
-          <text>"review_urgent_application","review_standard_application","review_failed_payment","review_message","review_response","review_standard_directions_order","review_correspondence","check_placement_application","chase_outstanding_order","review_orderCMO","review_correspondence","check_placement_application","chase_outstanding_order","reviewSpecificAccessRequestCtsc"</text>
+          <text>"reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionsOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewOrderCMO","reviewSpecificAccessRequestCtsc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_011ayls">
           <text>"roleCategory"</text>
@@ -233,19 +276,25 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         <outputEntry id="LiteralExpression_06i07op">
           <text>"CTSC"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_15jm3sy">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_090qhef">
         <inputEntry id="UnaryTests_1th7avs">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mciq3d">
-          <text>"review_specificAccessRequestLegalOps"</text>
+          <text>"review_specificAccessRequestLegalOps","reviewMessageLocalCourt","reviewResponseLocalCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0n4tene">
           <text>"roleCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1if5rk3">
           <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mpxusj">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1hx73kr">
@@ -260,6 +309,9 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15h4g38">
           <text>"taskAttributes.name"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fnf8hq">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
