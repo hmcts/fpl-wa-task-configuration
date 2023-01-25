@@ -170,7 +170,7 @@
       </rule>
       <rule id="DecisionRule_1yjkgdf">
         <inputEntry id="UnaryTests_00pv629">
-          <text>"review_message","review_response"DO WE NEED THIS ROW ANYMORE?</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lxncmx">
           <text></text>

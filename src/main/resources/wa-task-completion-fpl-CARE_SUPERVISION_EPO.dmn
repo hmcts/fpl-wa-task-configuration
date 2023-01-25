@@ -115,7 +115,7 @@
       <rule id="DecisionRule_0sdavr9">
         <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
         <inputEntry id="UnaryTests_1kpfn45">
-          <text>"confirmApplicationReviewed"</text>
+          <text>"reviewAdditionalApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1gbvhtf">
           <text>"viewAdditionalApplications"</text>
@@ -181,7 +181,7 @@
       </rule>
       <rule id="DecisionRule_0rpnsbw">
         <inputEntry id="UnaryTests_0g54rqk">
-          <text>"manageOrdersOrderSelection"</text>
+          <text>"reviewGatekeeperOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ho760d">
           <text>"reviewStandardDirectionOrder"</text>
@@ -192,7 +192,7 @@
       </rule>
       <rule id="DecisionRule_1fr50ri">
         <inputEntry id="UnaryTests_1vqk9uy">
-          <text>"manageOrdersOrderSelection"</text>
+          <text>"actionCMO"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1lm5ygy">
           <text>"reviewOrderCMO"</text>
@@ -214,7 +214,7 @@
       </rule>
       <rule id="DecisionRule_0pl20rz">
         <inputEntry id="UnaryTests_1ny19xk">
-          <text>"respondToCorrespondence"</text>
+          <text>"reviewCorrespondence"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0606zbn">
           <text>"reviewCorrespondence"</text>
@@ -225,7 +225,7 @@
       </rule>
       <rule id="DecisionRule_03ykkgb">
         <inputEntry id="UnaryTests_1vk4zs3">
-          <text>"confirmPlacementApplicationReviewed"</text>
+          <text>"reviewPlacementApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_03d56lv">
           <text>"checkPlacementApplication"</text>
