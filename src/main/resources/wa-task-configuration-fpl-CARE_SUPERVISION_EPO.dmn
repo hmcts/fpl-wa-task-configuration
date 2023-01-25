@@ -31,10 +31,10 @@ null</text>
           <text>"caseName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kxli13">
-          <text>if caseData.applicantCaseName !=null then caseData.applicantCaseName else "Public Law Applications"</text>
+          <text>if caseData.caseName !=null then caseData.caseName else "Public Law Applications"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1uecj96">
-          <text></text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0lmc0xa">
@@ -65,11 +65,11 @@ null</text>
           <text>"region"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nq2bh1">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.region != null)
-then caseData.caseManagementLocation.region else "1"</text>
+          <text>if (caseData.court != null and caseData.court.region != null)
+then caseData.court.region else "1"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1d7zv96">
-          <text></text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1xmukll">
@@ -88,7 +88,7 @@ null) then
 caseData.caseManagementLocation.baseLocation else "231596"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02e3u51">
-          <text></text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0wt7gcl">
@@ -102,12 +102,12 @@ caseData.caseManagementLocation.baseLocation else "231596"</text>
           <text>"locationName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0z5dl4t">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocation !=
+          <text>if (caseData.court != null and caseData.court.name !=
 null) then
-caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
+caseData.court.name else "Taylor House"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m1o1nq">
-          <text></text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_143eanc">
@@ -285,7 +285,7 @@ caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mciq3d">
-          <text>"review_specificAccessRequestLegalOps","reviewMessageLocalCourt","reviewResponseLocalCourt"</text>
+          <text>"review_specificAccessRequestLegalOps","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0n4tene">
           <text>"roleCategory"</text>
