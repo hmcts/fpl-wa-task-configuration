@@ -1,40 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1iaots2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1iaots2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-completion-PUBLICLAW-CARE_SUPERVISION_EPO" name="Task completion DMN">
-    <decisionTable id="DecisionTable_14vgqqu" hitPolicy="COLLECT">
-      <input id="Input_1">
+    <decisionTable id="DecisionTable_14vgqqu" hitPolicy="COLLECT" biodi:annotationsWidth="708">
+      <input id="Input_1" biodi:width="341">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text>Event ID</text>
         </inputExpression>
       </input>
-      <output id="Output_1" name="Task Type" typeRef="string" />
+      <output id="Output_1" name="Task Type" typeRef="string" biodi:width="573" />
       <output id="OutputClause_11cuihz" name="Completion Mode" typeRef="string" />
-      <rule id="DecisionRule_1rqrwzr">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
-        <inputEntry id="UnaryTests_0ki2g54">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0mos6sj">
-          <text>"create_urgentorders"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1qi1qfo">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0xnd5x6">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
-        <inputEntry id="UnaryTests_0hto096">
-          <text>"manageHearings"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0hwfdtw">
-          <text>"manage_hearings"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_035maad">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1fd34p5">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
+        <description></description>
         <inputEntry id="UnaryTests_1hz19s2">
           <text>"reviewCMO"</text>
         </inputEntry>
@@ -46,26 +22,15 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1kldlbd">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
+        <description></description>
         <inputEntry id="UnaryTests_0ph0udh">
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_04wqzjc">
-          <text>"reviewMessageJudge"</text>
+          <text>"reviewMessageJudge","reviewResponseJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h4awho">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_101urwk">
-        <inputEntry id="UnaryTests_091yqxh">
-          <text>"messageJudgeOrLegalAdviserSubmitResponse"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_10ozv4x">
-          <text>"reviewResponseJudge"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_19rblsq">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1hj4yof">
@@ -73,21 +38,10 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_04ufctt">
-          <text>"reviewMessageHearingCentreAdmin"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c092b9">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_13vvvom">
-        <inputEntry id="UnaryTests_00znl1c">
-          <text>"messageJudgeOrLegalAdviserSubmitResponse"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_06k2gtw">
-          <text>"reviewResponseHearingCentreAdmin"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_15zvy2d">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1f9jv1n">
@@ -95,25 +49,26 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0a8y5o4">
-          <text>"reviewMessageCTSC"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1mhm5gp">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_13v8epr">
-        <inputEntry id="UnaryTests_0fzhj0f">
-          <text>"messageJudgeOrLegalAdviserSubmitResponse"</text>
+      <rule id="DecisionRule_1jjsbej">
+        <description></description>
+        <inputEntry id="UnaryTests_0x64pfq">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1koab59">
-          <text>"reviewResponseCTSC"</text>
+        <outputEntry id="LiteralExpression_0fno3rm">
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_17z9379">
-          <text></text>
+        <outputEntry id="LiteralExpression_1k2i5kj">
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0sdavr9">
-        <description>"Event that is completed by the user in ExUI. Values can be listed as comma separated"</description>
+        <description></description>
         <inputEntry id="UnaryTests_1kpfn45">
           <text>"reviewAdditionalApplication"</text>
         </inputEntry>
@@ -124,17 +79,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_01w5qqs">
-        <inputEntry id="UnaryTests_1qiicqc">
-          <text>"reviewCMO"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0soubey">
-          <text>"approveOrders"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ysotxy">
-          <text></text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0n7hkfv">
         <inputEntry id="UnaryTests_1qq7je4">
           <text>"sendToGatekeeper"</text>
@@ -143,7 +87,7 @@
           <text>"reviewUrgentApplication"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_101sll0">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_08e41cr">
@@ -154,7 +98,7 @@
           <text>"reviewUrgentApplication"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vg09qm">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_11b93z6">
@@ -165,7 +109,7 @@
           <text>"reviewStandardApplication"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ppaint">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0gyripa">
@@ -176,7 +120,7 @@
           <text>"reviewStandardApplication"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0al22s5">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0rpnsbw">
@@ -187,51 +131,7 @@
           <text>"reviewStandardDirectionOrder"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12doxgu">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1fr50ri">
-        <inputEntry id="UnaryTests_1vqk9uy">
-          <text>"actionCMO"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1lm5ygy">
-          <text>"reviewOrderCMO"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0frxfd1">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0e6910s">
-        <inputEntry id="UnaryTests_1j9epiy">
-          <text>"failedPaymentCompletingTask"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0dwd16m">
-          <text>"reviewFailedPayment"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ahqou8">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0pl20rz">
-        <inputEntry id="UnaryTests_1ny19xk">
-          <text>"reviewCorrespondence"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0606zbn">
-          <text>"reviewCorrespondence"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0s8o5cw">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_03ykkgb">
-        <inputEntry id="UnaryTests_1vk4zs3">
-          <text>"reviewPlacementApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_03d56lv">
-          <text>"checkPlacementApplication"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1tc31r7">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0r2pxh4">
@@ -242,7 +142,7 @@
           <text>"chaseOutstandingOrder"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xiravz">
-          <text></text>
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
     </decisionTable>

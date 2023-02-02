@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1l97b4e" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1l97b4e" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-cancellation-PUBLICLAW-CARE_SUPERVISION_EPO" name="Task cancellation DMN">
     <decisionTable id="DecisionTable_0gksf8r" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -21,54 +21,6 @@
       <output id="OutputClause_0ty3602" label="Warning Code" typeRef="string" />
       <output id="OutputClause_064noaa" label="Warning Text" typeRef="string" />
       <output id="OutputClause_03gx6sx" label="Process Categories Identifiers" typeRef="string" />
-      <rule id="DecisionRule_1dw2sok">
-        <description>"To cancel routine work and hearing work on general applications"</description>
-        <inputEntry id="UnaryTests_0ba2x61">
-          <text>"Submitted"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1eehogs">
-          <text>"manageLocalAuthorities"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0pa73kp">
-          <text>"PREPARE_FOR_HEARING"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1c3eag2">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0qyx26v">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0somnjb">
-          <text>"This is an application task that will cancel all active tasks*"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_05purvr">
-          <text>"case progression","case creation"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_16s7cw9">
-        <description>"To cancel decision making work on general applications"</description>
-        <inputEntry id="UnaryTests_02dvj2i">
-          <text>"Submitted"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0s2c2ae">
-          <text>"manageRepresentatives"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ejiti0">
-          <text>"PREPARE_FOR_HEARING"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1xm2oyz">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01obp2j">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_145u4t5">
-          <text>"This is an application task that will cancel all active tasks*"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_17tas9t">
-          <text>"manage outcomes","listing"</text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
