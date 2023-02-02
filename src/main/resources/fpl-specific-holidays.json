@@ -1,0 +1,44 @@
+{
+    "events": [
+        {
+            "title": "New Year's Day",
+            "date": "2023-01-02"
+        },
+        {
+            "title": "Good Friday",
+            "date": "2023-04-07"
+        },
+        {
+            "title": "Easter Monday",
+            "date": "2023-04-10"
+        },
+        {
+            "title": "May Day",
+            "date": "2023-05-01"
+        },
+        {
+            "title": "Coronation Bank Holiday",
+            "date": "2023-05-08"
+        },
+        {
+            "title": "Spring Bank Holiday",
+            "date": "2023-05-29"
+        },
+        {
+            "title": "Summer Bank Holiday",
+            "date": "2023-08-28"
+        },
+        {
+            "title": "Christmas Day (substitute)",
+            "date": "2023-12-25"
+        },
+        {
+            "title": "Boxing Day (substitute)",
+            "date": "2023-12-26"
+        },
+        {
+            "title": "Fixed Christmas Privilege Day",
+            "date": "2023-12-27"
+        }
+    ]
+}
