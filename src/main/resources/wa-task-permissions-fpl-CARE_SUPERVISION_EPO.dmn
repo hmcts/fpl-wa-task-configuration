@@ -26,13 +26,13 @@
           <text>"task-supervisor"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_031urzk">
-          <text>"Complete","Own","Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c0juuw">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1sqfc4g">
-          <text>316</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0po6z0w">
           <text></text>
@@ -53,7 +53,7 @@
           <text>"judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fxbixa">
-          <text>"Complete","Own","Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0h6utj4">
           <text>"JUDICIAL"</text>
@@ -80,7 +80,7 @@
           <text>"judge","tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ug8odu">
-          <text>"Complete","Own","CompleteOwn",""Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own",""Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0bo9pox">
           <text>"JUDICIAL"</text>
@@ -107,7 +107,7 @@
           <text>"allocated-judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ql9lpl">
-          <text>"Complete","Own","CompleteOwn",""Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own",""Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0lszq4g">
           <text>"JUDICIAL"</text>
@@ -134,7 +134,7 @@
           <text>"judge","tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ka10px">
-          <text>"Complete","Own","CompleteOwn","Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0azqxtu">
           <text>"JUDICIAL"</text>
@@ -158,10 +158,10 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m9f0um">
-          <text>"hearing-judge","tribunal-caseworker"</text>
+          <text>"hearing-judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mto07b">
-          <text>"Complete","Own","CompleteOwn","Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06c4om0">
           <text>"JUDICIAL"</text>
@@ -187,13 +187,13 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hiioi6">
-          <text>"Complete","CompleteOwn","Own","Claim","Unclaim","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Claim","Unclaim","UnassignClaim","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1br4qdl">
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1sr52di">
-          <text>316</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hs5o0c">
           <text></text>
@@ -219,7 +219,7 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1abirdb">
-          <text>316</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zp0ot3">
           <text></text>
@@ -240,13 +240,13 @@
           <text>"tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1f52hvl">
-          <text>"Complete","Own","CompleteOwn","Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08bnm2x">
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c6wk8d">
-          <text>316</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1y6p8zd">
           <text></text>
@@ -266,13 +266,13 @@
           <text>"tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0u4o2tl">
-          <text>"Complete","Own","CompleteOwn","Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ljua16">
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1lgm8d6">
-          <text>316</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0yjwewe">
           <text></text>
@@ -292,13 +292,13 @@
           <text>"specific-access-approver-legal-ops"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02lckci">
-          <text>"Complete","Own","CompleteOwn","Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0w042qi">
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_10p63oe">
-          <text>316</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1g0ltaq">
           <text></text>
@@ -324,7 +324,7 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0pg4ul9">
-          <text>316</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1173dzp">
           <text></text>
@@ -344,7 +344,7 @@
           <text>"specific-access-approver-judiciary"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ix5ns7">
-          <text>"Complete","Own","CompleteOwn","Assign","Claim","Unassign","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Assign","Claim","Unassign","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wyb2bm">
           <text>"JUDICIAL"</text>
@@ -371,13 +371,13 @@
           <text>"specific-access-approver-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wlrxh2">
-          <text>"Complete","CompleteOwn","Own","Claim","Unclaim","UnassignClaim","Read"</text>
+          <text>"Complete","Own","Claim","Unclaim","UnassignClaim","Read"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0lgsob5">
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1m8hunx">
-          <text>316</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1jxh3zl">
           <text></text>

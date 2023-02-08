@@ -28,7 +28,7 @@
           <text>"Within 5 days","Within 2 days","Same day"</text>
         </inputValues>
       </input>
-      <input id="InputClause_15h2ykf" label="Last Created WA Task" camunda:inputVariable="additionalData">
+      <input id="InputClause_15h2ykf" label="Last Created WA Task" biodi:width="192" camunda:inputVariable="additionalData">
         <inputExpression id="LiteralExpression_0c2avuw" typeRef="string">
           <text>additionalData.data.lastCreatedWATask</text>
         </inputExpression>
@@ -323,7 +323,7 @@
           <text>0</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1j7i9wv">
-          <text>10</text>
+          <text>5</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1d8sks8">
           <text>"case progression"</text>
@@ -362,7 +362,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0l6xn2h">
-        <description>-- todo check 2 hours?</description>
+        <description>-- todo check 2 hours? might not be possible in this "old way"</description>
         <inputEntry id="UnaryTests_0vdrvff">
           <text>"submitApplication"</text>
         </inputEntry>
@@ -388,7 +388,7 @@
           <text>0</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0d6o5mz">
-          <text>2 hours</text>
+          <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ucao7d">
           <text>"case creation"</text>
