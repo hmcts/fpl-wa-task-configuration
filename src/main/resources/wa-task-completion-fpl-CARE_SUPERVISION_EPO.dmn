@@ -27,43 +27,9 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_04wqzjc">
-          <text>"reviewMessageJudge","reviewResponseJudge"</text>
+          <text>"reviewMessageJudge","reviewResponseJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h4awho">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1hj4yof">
-        <inputEntry id="UnaryTests_0y8lgvw">
-          <text>"replyToMessageJudgeOrLegalAdviser"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_04ufctt">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0c092b9">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1f9jv1n">
-        <inputEntry id="UnaryTests_1qfyxd7">
-          <text>"replyToMessageJudgeOrLegalAdviser"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0a8y5o4">
-          <text>"reviewMessageCTSC","reviewResponseCTSC"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1mhm5gp">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1jjsbej">
-        <description></description>
-        <inputEntry id="UnaryTests_0x64pfq">
-          <text>"replyToMessageJudgeOrLegalAdviser"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0fno3rm">
-          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1k2i5kj">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -123,17 +89,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0rpnsbw">
-        <inputEntry id="UnaryTests_0g54rqk">
-          <text>"reviewGatekeeperOrder"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ho760d">
-          <text>"reviewStandardDirectionOrder"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_12doxgu">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0r2pxh4">
         <inputEntry id="UnaryTests_0qc8h8j">
           <text>"sendOrderReminder"</text>
@@ -142,18 +97,6 @@
           <text>"chaseOutstandingOrder"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xiravz">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_18u8ibc">
-        <description></description>
-        <inputEntry id="UnaryTests_0beiyyw">
-          <text>"reviewAdditionalApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0zue4hy">
-          <text>"viewAdditionalApplications"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0a2dljh">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

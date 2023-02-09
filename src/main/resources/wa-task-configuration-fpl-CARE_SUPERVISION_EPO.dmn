@@ -18,7 +18,7 @@ null</text>
         </inputExpression>
       </input>
       <output id="Output_1" name="Name" typeRef="string" />
-      <output id="OutputClause_0n53zsu" label="Value" typeRef="string" biodi:width="344" />
+      <output id="OutputClause_0n53zsu" label="Value" typeRef="string" biodi:width="354" />
       <output id="OutputClause_0vog2vc" name="Can Reconfigure" typeRef="string" />
       <rule id="DecisionRule_0maqehe">
         <inputEntry id="UnaryTests_1m9yr5w">
@@ -453,7 +453,177 @@ null</text>
           <text>"[Approve orders](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewCMO)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04n1rtd">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01h1s1e">
+        <inputEntry id="UnaryTests_0z0uhcm">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b9sm9k">
+          <text>"reviewMessageJudge","reviewResponseJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k5jq4u">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uafmcd">
+          <text>"[Reply to message](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/replyToMessageJudgeOrLegalAdviser)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0luiefw">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0re8y9c">
+        <inputEntry id="UnaryTests_0h1q5ve">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mnibze">
+          <text>"viewAdditionalApplications"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rhvj2s">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_184qrc2">
+          <text>"[Review additional applications](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kzut7e">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b3jltq">
+        <inputEntry id="UnaryTests_1p6opwd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jivhdz">
+          <text>"reviewUrgentApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ppn8ro">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tk1bqp">
+          <text>"[Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rpkgu8">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mc9un3">
+        <inputEntry id="UnaryTests_0dqmavi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n6jg61">
+          <text>"reviewStandardApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13wpm96">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ipsp8q">
+          <text>"[Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10lviq5">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qd6waf">
+        <inputEntry id="UnaryTests_19zn0fe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y4lntf">
+          <text>"chaseOutstandingOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0upcktm">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oe1dt5">
+          <text>"[Send order reminder](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendOrderReminder)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0el8m85">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01l2k1j">
+        <inputEntry id="UnaryTests_0pm9tye">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dcugt2">
+          <text>"reviewStandardDirectionOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1siw21q">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14l1tya">
+          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jkl1m1">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rq9uac">
+        <inputEntry id="UnaryTests_0k0jgvs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_025w5p7">
+          <text>"reviewOrderCMO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eezo8k">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1afneiy">
+          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n786vb">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mjo9tr">
+        <inputEntry id="UnaryTests_0f6ptol">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14mzq8b">
+          <text>"reviewFailedPayment"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08pbho2">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qhfeq6">
+          <text>"Review payments on the [payments tab](/cases/case-details/${[CASE_REFERENCE]}#Payment%20History"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uau67d">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r25j37">
+        <inputEntry id="UnaryTests_1qhv996">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01oj97f">
+          <text>"reviewCorrespondence"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jacpp9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kkg3re">
+          <text>"Review correspondence on the [correspondence tab](/cases/case-details/${[CASE_REFERENCE]}#Correspondence"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1azi59u">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1k28ysx">
+        <inputEntry id="UnaryTests_16zmywx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_103r83d">
+          <text>"checkPlacementApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0h13nws">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_097layn">
+          <text>"Review placement applications on the [placements tab](/cases/case-details/${[CASE_REFERENCE]}#Placement"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0odndbs">
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1hx73kr">
@@ -554,7 +724,7 @@ null</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08fathr">
-          <text>-- todo - check this as it's not on confluence</text>
+          <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ozp8nz">
           <text>true</text>
