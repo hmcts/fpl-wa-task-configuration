@@ -14,7 +14,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0iiodq0">
-          <text>"reviewMessageJudge"</text>
+          <text>"reviewMessageAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04sbg41">
           <text>"Review Message"</text>
@@ -25,9 +25,31 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18eoe4r">
-          <text>"reviewResponseJudge"</text>
+          <text>"reviewResponseAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gjivtf">
+          <text>"Review Response"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17v0car">
+        <inputEntry id="UnaryTests_0hwpndv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02ef37w">
+          <text>"reviewMessageHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1en5t02">
+          <text>"Review Message"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ieuorw">
+        <inputEntry id="UnaryTests_16xh37r">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18kmqv2">
+          <text>"reviewResponseHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17037rt">
           <text>"Review Response"</text>
         </outputEntry>
       </rule>

@@ -27,7 +27,7 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_04wqzjc">
-          <text>"reviewMessageJudge","reviewResponseJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h4awho">
           <text>"Auto"</text>
