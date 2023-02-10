@@ -18,7 +18,7 @@ null</text>
         </inputExpression>
       </input>
       <output id="Output_1" name="Name" typeRef="string" />
-      <output id="OutputClause_0n53zsu" label="Value" typeRef="string" biodi:width="344" />
+      <output id="OutputClause_0n53zsu" label="Value" typeRef="string" biodi:width="354" />
       <output id="OutputClause_0vog2vc" name="Can Reconfigure" typeRef="string" />
       <rule id="DecisionRule_0maqehe">
         <inputEntry id="UnaryTests_1m9yr5w">
@@ -189,14 +189,14 @@ null</text>
           <text>"dueDateMustBeWorkingDay"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04q77n9">
-          <text>Next</text>
+          <text>next</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_01erx6v">
           <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0urm6bm">
-        <description>do not remove this</description>
+        <description>do not remove this or change ordering</description>
         <inputEntry id="UnaryTests_0gwqqb4">
           <text></text>
         </inputEntry>
@@ -207,7 +207,7 @@ null</text>
           <text>"calculatedDates"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sdhee5">
-          <text>nextHearingDate,dueDate,priorityDate</text>
+          <text>"nextHearingDate,hearingDatePreDate,dueDate,priorityDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zl2diy">
           <text>true</text>
@@ -225,7 +225,7 @@ null</text>
           <text>"dueDateOrigin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_070aejm">
-          <text>today()</text>
+          <text>"now()"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ga54n0">
           <text>true</text>
@@ -249,7 +249,7 @@ null</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1262tl9">
-        <description>-- todo - check the syntax if we don't want days</description>
+        <description>-- todo - check the syntax if we don't want days (perhaps we could use 0, as it's an urgent task and will be at the top of the list because majorPriority=1000, then it'll just be sorted by the time it came in)</description>
         <inputEntry id="UnaryTests_1o03zs8">
           <text></text>
         </inputEntry>
@@ -284,6 +284,75 @@ null</text>
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1a8n4vg">
+        <inputEntry id="UnaryTests_1evwxcf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m0v2t0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1whop0a">
+          <text>"hearingDatePreDateOriginRef"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d1h2xc">
+          <text>nextHearingDate</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1eb8n3q">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00bvc7e">
+        <description>next hearing date - 3days</description>
+        <inputEntry id="UnaryTests_09exhva">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aacbsb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11bi6p4">
+          <text>"hearingDatePreDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12g5lbm">
+          <text>-3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1asfec3">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05gddvl">
+        <inputEntry id="UnaryTests_0kt4m2j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r9km2y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15xrksh">
+          <text>"hearingDatePreDateSkipNonWorkingDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_009jo4f">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19vv4ft">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ho1jxp">
+        <inputEntry id="UnaryTests_1692yn8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rgcaw1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19ojbn9">
+          <text>"hearingDatePreDateMustBeWorkingDay"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gbksxk">
+          <text>next</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w3p23s">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_143eanc">
         <inputEntry id="UnaryTests_0q8sz4a">
           <text></text>
@@ -306,7 +375,7 @@ null</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageJudge","reviewResponseJudge","reviewMessageLocalCourt","reviewResponseLocalCourt","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+          <text>"reviewMessageAllocatedJudge","reviewMessageAllocatedJudge","reviewMessageHearingJudge","reviewMessageHearingJudge","reviewMessageLocalCourt","reviewResponseLocalCourt","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08sdeu3">
           <text>"workType"</text>
@@ -453,11 +522,181 @@ null</text>
           <text>"[Approve orders](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewCMO)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04n1rtd">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01h1s1e">
+        <inputEntry id="UnaryTests_0z0uhcm">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b9sm9k">
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k5jq4u">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uafmcd">
+          <text>"[Reply to message](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/replyToMessageJudgeOrLegalAdviser)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0luiefw">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0re8y9c">
+        <inputEntry id="UnaryTests_0h1q5ve">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mnibze">
+          <text>"viewAdditionalApplications"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rhvj2s">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_184qrc2">
+          <text>"[Review additional applications](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kzut7e">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b3jltq">
+        <inputEntry id="UnaryTests_1p6opwd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jivhdz">
+          <text>"reviewUrgentApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ppn8ro">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tk1bqp">
+          <text>"[Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rpkgu8">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mc9un3">
+        <inputEntry id="UnaryTests_0dqmavi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n6jg61">
+          <text>"reviewStandardApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13wpm96">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ipsp8q">
+          <text>"[Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10lviq5">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qd6waf">
+        <inputEntry id="UnaryTests_19zn0fe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y4lntf">
+          <text>"chaseOutstandingOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0upcktm">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oe1dt5">
+          <text>"[Send order reminder](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendOrderReminder)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0el8m85">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01l2k1j">
+        <inputEntry id="UnaryTests_0pm9tye">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dcugt2">
+          <text>"reviewStandardDirectionOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1siw21q">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14l1tya">
+          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jkl1m1">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rq9uac">
+        <inputEntry id="UnaryTests_0k0jgvs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_025w5p7">
+          <text>"reviewOrderCMO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eezo8k">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1afneiy">
+          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n786vb">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mjo9tr">
+        <inputEntry id="UnaryTests_0f6ptol">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14mzq8b">
+          <text>"reviewFailedPayment"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08pbho2">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qhfeq6">
+          <text>"Review payments on the [payments tab](/cases/case-details/${[CASE_REFERENCE]}#Payment%20History"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uau67d">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r25j37">
+        <inputEntry id="UnaryTests_1qhv996">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01oj97f">
+          <text>"reviewCorrespondence"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jacpp9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kkg3re">
+          <text>"Review correspondence on the [correspondence tab](/cases/case-details/${[CASE_REFERENCE]}#Correspondence"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1azi59u">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1k28ysx">
+        <inputEntry id="UnaryTests_16zmywx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_103r83d">
+          <text>"checkPlacementApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0h13nws">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_097layn">
+          <text>"Review placement applications on the [placements tab](/cases/case-details/${[CASE_REFERENCE]}#Placement"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0odndbs">
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1hx73kr">
-        <description> -- todo - add individual description links</description>
+        <description></description>
         <inputEntry id="UnaryTests_05776fz">
           <text></text>
         </inputEntry>
@@ -497,7 +736,7 @@ null</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1lfhje8">
-          <text>"reviewMessageJudge","reviewResponseJudge"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_09x3m6f">
           <text>"majorPriority"</text>
@@ -506,6 +745,23 @@ null</text>
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fha0sj">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19deutz">
+        <inputEntry id="UnaryTests_12indo7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uhjld3">
+          <text>"reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sjj2bi">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_006d2yy">
+          <text>3000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rlxpn9">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -554,7 +810,7 @@ null</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08fathr">
-          <text>-- todo - check this as it's not on confluence</text>
+          <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ozp8nz">
           <text>true</text>
@@ -731,20 +987,57 @@ null</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0pzq89p">
+        <description>all judge tasks to be sorted by date of the task</description>
         <inputEntry id="UnaryTests_098bvot">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0whmmnn">
-          <text></text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1jcrjbx">
-          <text></text>
+          <text>"priorityDateOriginRef"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ft7fli">
-          <text></text>
+          <text>"now()"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11vgddt">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05efh1l">
+        <description>use the closer of the SLA (due date) OR the hearing date - 3 days.</description>
+        <inputEntry id="UnaryTests_1uimsys">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hpwmrt">
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewStandardDirectionOrder","reviewOrderCMO","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dwih63">
+          <text>"priorityDateOriginEarliest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r77epk">
+          <text>dueDate,hearingDatePreDate</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_097xky0">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09dfrdj">
+        <description>no hearings on newly created cases, payments unrelated to hearings, use SLA (due date)</description>
+        <inputEntry id="UnaryTests_00d1xl8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xfqynr">
+          <text>"reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_167s2ay">
+          <text>"priorityDateOriginRef"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q0jgp9">
+          <text>dueDate</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cacllw">
+          <text>true</text>
         </outputEntry>
       </rule>
     </decisionTable>

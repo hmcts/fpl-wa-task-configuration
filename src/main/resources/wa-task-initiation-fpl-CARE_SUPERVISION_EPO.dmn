@@ -42,6 +42,7 @@
       <output id="OutputClause_04k5sns" label="Working Days Allowed" name="workingDaysAllowed" typeRef="integer" biodi:width="191" />
       <output id="OutputClause_17qu5hg" label="Process Categories Identifiers" name="processCategories" typeRef="string" />
       <rule id="DecisionRule_11n6aew">
+        <description>judiciary will be labelled in the ccd event as "Allocated Judge"</description>
         <inputEntry id="UnaryTests_14tvcbz">
           <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
@@ -49,7 +50,7 @@
           <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_073uim7">
-          <text>"Judiciary"</text>
+          <text>"JUDICIARY"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1iddlak">
           <text></text>
@@ -58,7 +59,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1gtn6d2">
-          <text>"reviewMessageJudge"</text>
+          <text>"reviewMessageAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1t763fh">
           <text>"Review Message"</text>
@@ -74,6 +75,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0l1dahb">
+        <description>judiciary will be labelled in the ccd event as "Allocated Judge"</description>
         <inputEntry id="UnaryTests_129lz80">
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
@@ -81,7 +83,7 @@
           <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0k6izq9">
-          <text>"Judiciary"</text>
+          <text>"JUDICIARY"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1x2csjl">
           <text></text>
@@ -90,7 +92,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0kt6o9k">
-          <text>"reviewResponseJudge"</text>
+          <text>"reviewResponseAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vn5g5s">
           <text>"Review Response"</text>
@@ -105,6 +107,70 @@
           <text>"case progression"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_125icvb">
+        <inputEntry id="UnaryTests_1a7cvsy">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k12b28">
+          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16pau30">
+          <text>"HEARING_JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rcxp2j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o77rag">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v3zz40">
+          <text>"reviewMessageHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c5z6g6">
+          <text>"Review Message"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ofj4sk">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1acvjwm">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kgrteb">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t71r3y">
+        <inputEntry id="UnaryTests_0v23ojy">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0feirta">
+          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04wvu04">
+          <text>"HEARING_JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zaqjbg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lyqtdz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qco7r3">
+          <text>"reviewResponseHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sl7nse">
+          <text>"Review Response"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0af9psb">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08ummzg">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pb492c">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1ly7w1o">
         <inputEntry id="UnaryTests_18zezak">
           <text>"messageJudgeOrLegalAdviser"</text>
@@ -113,7 +179,7 @@
           <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0iowh12">
-          <text>"Local Court Admin"</text>
+          <text>"LOCAL_COURT_ADMIN"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1phnl2d">
           <text></text>
@@ -145,7 +211,7 @@
           <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0n05dor">
-          <text>"Local Court Admin"</text>
+          <text>"LOCAL_COURT_ADMIN"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pzueci">
           <text></text>
@@ -234,6 +300,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0xpzl17">
+        <description>other will be labelled in the ccd event as "Legal Adviser"</description>
         <inputEntry id="UnaryTests_0hhep47">
           <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
@@ -241,7 +308,7 @@
           <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ohgjfi">
-          <text>"Other"</text>
+          <text>"OTHER"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0p1fcn7">
           <text></text>
@@ -266,6 +333,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_08saxdi">
+        <description>other will be labelled in the ccd event as "Legal Advisor"</description>
         <inputEntry id="UnaryTests_0ch61um">
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
@@ -273,7 +341,7 @@
           <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yi5df9">
-          <text>"Other"</text>
+          <text>"OTHER"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zpt52k">
           <text></text>
@@ -362,7 +430,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0l6xn2h">
-        <description>-- todo check 2 hours? might not be possible in this "old way"</description>
+        <description></description>
         <inputEntry id="UnaryTests_0vdrvff">
           <text>"submitApplication"</text>
         </inputEntry>
