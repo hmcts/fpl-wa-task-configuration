@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1iaots2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-completion-publiclaw-care_supervision_epo" name="Task completion DMN">
+    <decisionTable id="DecisionTable_14vgqqu" hitPolicy="COLLECT" biodi:annotationsWidth="708">
+      <input id="Input_1" label="Event ID" biodi:width="341" camunda:inputVariable="eventId">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Task Type" name="taskType" typeRef="string" biodi:width="573" />
+      <output id="OutputClause_11cuihz" label="Completion Mode" name="completionMode" typeRef="string" />
+      <rule id="DecisionRule_1fd34p5">
+        <description></description>
+        <inputEntry id="UnaryTests_1hz19s2">
+          <text>"reviewCMO"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lp0f06">
+          <text>"approveOrders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12llq4e">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kldlbd">
+        <description></description>
+        <inputEntry id="UnaryTests_0ph0udh">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04wqzjc">
+          <text>"reviewMessageAllocatedJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h4awho">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19uzv0c">
+        <inputEntry id="UnaryTests_087047u">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ppm7uw">
+          <text>"reviewResponseAllocatedJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16j0ajq">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qp17b7">
+        <inputEntry id="UnaryTests_17w3xc0">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0n199y8">
+          <text>"reviewMessageHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s98ozs">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dvfj93">
+        <inputEntry id="UnaryTests_14aypo8">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jxbn64">
+          <text>"reviewResponseHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zbo6u2">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uylc0n">
+        <inputEntry id="UnaryTests_1t50z5m">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0g7htrg">
+          <text>"reviewMessageHearingCentreAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16aeyto">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0105h48">
+        <inputEntry id="UnaryTests_01raurm">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0yhzj3n">
+          <text>"reviewResponseHearingCentreAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xsrbrc">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03zb5lw">
+        <inputEntry id="UnaryTests_0tog6ju">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dis58q">
+          <text>"reviewMessageCTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_066ra7g">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c0bxsk">
+        <inputEntry id="UnaryTests_1yipeg7">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1azs7ln">
+          <text>"reviewResponseCTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05sip9l">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0trav2o">
+        <inputEntry id="UnaryTests_0ooic7u">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0urttn9">
+          <text>"reviewMessageLegalAdviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kd69mp">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0a3rjv3">
+        <inputEntry id="UnaryTests_14min44">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jtx9lb">
+          <text>"reviewResponseLegalAdviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09lngvv">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sdavr9">
+        <description></description>
+        <inputEntry id="UnaryTests_1kpfn45">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gbvhtf">
+          <text>"viewAdditionalApplications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jegsfv">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0n7hkfv">
+        <inputEntry id="UnaryTests_1qq7je4">
+          <text>"sendToGatekeeper"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_046v7hu">
+          <text>"reviewUrgentApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_101sll0">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08e41cr">
+        <inputEntry id="UnaryTests_1gb5xgj">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gbdwh8">
+          <text>"reviewUrgentApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vg09qm">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11b93z6">
+        <inputEntry id="UnaryTests_09i3abf">
+          <text>"sendToGatekeeper"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m0s31c">
+          <text>"reviewStandardApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ppaint">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gyripa">
+        <inputEntry id="UnaryTests_0q6onvj">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jg6sd7">
+          <text>"reviewStandardApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0al22s5">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r2pxh4">
+        <inputEntry id="UnaryTests_0qc8h8j">
+          <text>"sendOrderReminder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zv2bno">
+          <text>"chaseOutstandingOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xiravz">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="wa-task-completion-publiclaw-care_supervision_epo">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

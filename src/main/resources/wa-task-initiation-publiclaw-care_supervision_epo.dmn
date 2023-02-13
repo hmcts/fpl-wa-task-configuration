@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
-  <decision id="wa-task-initiation-PUBLICLAW-CARE_SUPERVISION_EPO" name="Task initiation DMN">
-    <decisionTable id="DecisionTable_1fj3kaa">
+  <decision id="wa-task-initiation-publiclaw-care_supervision_epo" name="Task initiation DMN">
+    <decisionTable id="DecisionTable_1fj3kaa" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Event Id" camunda:inputVariable="eventId">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text>eventId</text>
@@ -12,25 +12,25 @@
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_0skdpxh" label="Latest Role Sent" biodi:width="192" camunda:inputVariable="additionalData">
+      <input id="InputClause_0skdpxh" label="Latest Role Sent" biodi:width="192" camunda:inputVariable="latestRoleSent">
         <inputExpression id="LiteralExpression_1u98sqo" typeRef="string">
-          <text>additionalData.data.latestRoleSent</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.latestRoleSent != null) then additionalData.Data.latestRoleSent else null</text>
         </inputExpression>
         <inputValues id="UnaryTests_0e8oq48">
-          <text>"CTSC","Local Court Admin","Judiciary","Other"</text>
+          <text>"CTSC","Local Court Admin","Judiciary","Other","HEARING_JUDGE"</text>
         </inputValues>
       </input>
-      <input id="InputClause_01shufq" label="Hearing Timeframe" camunda:inputVariable="additionalData">
+      <input id="InputClause_01shufq" label="Hearing Timeframe" camunda:inputVariable="timeFrame">
         <inputExpression id="LiteralExpression_13k9gdq" typeRef="string">
-          <text>additionalData.data.hearing.timeFrame</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.hearing != null and additionalData.Data.hearing.timeFrame != null) then additionalData.Data.hearing.timeFrame else null</text>
         </inputExpression>
         <inputValues id="UnaryTests_1e9vfmg">
           <text>"Within 5 days","Within 2 days","Same day"</text>
         </inputValues>
       </input>
-      <input id="InputClause_15h2ykf" label="Last Created WA Task" biodi:width="192" camunda:inputVariable="additionalData">
+      <input id="InputClause_15h2ykf" label="Last Created WA Task" biodi:width="192" camunda:inputVariable="lastCreatedWATask">
         <inputExpression id="LiteralExpression_0c2avuw" typeRef="string">
-          <text>additionalData.data.lastCreatedWATask</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.lastCreatedWATask != null) then additionalData.Data.lastCreatedWATask else null</text>
         </inputExpression>
         <inputValues id="UnaryTests_052aha7">
           <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED"</text>
@@ -47,7 +47,7 @@
           <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0t9fngz">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_073uim7">
           <text>"JUDICIARY"</text>
@@ -80,7 +80,7 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1nt65cy">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0k6izq9">
           <text>"JUDICIARY"</text>
@@ -109,10 +109,10 @@
       </rule>
       <rule id="DecisionRule_125icvb">
         <inputEntry id="UnaryTests_1a7cvsy">
-          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+          <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1k12b28">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_16pau30">
           <text>"HEARING_JUDGE"</text>
@@ -144,7 +144,7 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0feirta">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_04wvu04">
           <text>"HEARING_JUDGE"</text>
@@ -176,7 +176,7 @@
           <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0tignk5">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0iowh12">
           <text>"LOCAL_COURT_ADMIN"</text>
@@ -208,7 +208,7 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_01fpepe">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0n05dor">
           <text>"LOCAL_COURT_ADMIN"</text>
@@ -240,7 +240,7 @@
           <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_14yndyh">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jgh85d">
           <text>"CTSC"</text>
@@ -272,7 +272,7 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1l4db">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0154jme">
           <text>"CTSC"</text>
@@ -305,7 +305,7 @@
           <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1aw6h6d">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ohgjfi">
           <text>"OTHER"</text>
@@ -338,7 +338,7 @@
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qa32ej">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yi5df9">
           <text>"OTHER"</text>
@@ -370,7 +370,7 @@
           <text>"uploadAdditionalApplications"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0rsx36n">
-          <text>"PREPARE_FOR_HEARING","Gatekeeping","Submitted","FINAL_HEARING","CLOSED"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ojr4lq">
           <text></text>
@@ -402,7 +402,7 @@
           <text>"uploadCMO"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0iba57d">
-          <text>"FINAL_HEARING","PREPARE_FOR_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1lgd2wz">
           <text></text>
@@ -435,7 +435,7 @@
           <text>"submitApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02yysqy">
-          <text>"Submitted"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mok2w6">
           <text></text>
@@ -467,7 +467,7 @@
           <text>"submitApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1s6o21b">
-          <text>"Submitted"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0geb004">
           <text></text>
@@ -500,7 +500,7 @@
           <text>"addGatekeepingOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bl0b2a">
-          <text>"Gatekeeping"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0pjnd3k">
           <text></text>
@@ -533,7 +533,7 @@
           <text>"create-work-allocation-task"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jt6a9j">
-          <text>"Submitted","Gatekeeping","PREPARE_FOR_HEARING","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0frmful">
           <text></text>
@@ -565,7 +565,7 @@
           <text>"create-work-allocation-task"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_04377d8">
-          <text>"Submitted"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1oh83he">
           <text></text>
@@ -597,7 +597,7 @@
           <text>"create-work-allocation-task"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1af33t6">
-          <text>"Submitted"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1p4dasj">
           <text></text>
@@ -629,7 +629,7 @@
           <text>"uploadPlacementApplications"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0omn8mq">
-          <text>"PREPARE_FOR_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gro53n">
           <text></text>
@@ -661,7 +661,7 @@
           <text>"create-work-allocation-task"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_014trtd">
-          <text>"PREPARE_FOR_HEARING","FINAL_HEARING"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0do9n3l">
           <text></text>
@@ -692,7 +692,7 @@
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape dmnElementRef="wa-task-initiation-PUBLICLAW-CARE_SUPERVISION_EPO">
+      <dmndi:DMNShape dmnElementRef="wa-task-initiation-publiclaw-care_supervision_epo">
         <dc:Bounds height="80" width="180" x="160" y="100" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0i5xieu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
-  <decision id="Decision_0lqgula" name="Task Types DMN">
-    <decisionTable id="DecisionTable_1teyk0b">
+  <decision id="wa-task-types-publiclaw-care_supervision_epo" name="Task Types DMN">
+    <decisionTable id="DecisionTable_1teyk0b" hitPolicy="RULE ORDER">
       <input id="Input_1">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text></text>
@@ -17,7 +17,7 @@
           <text>"reviewMessageAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04sbg41">
-          <text>"Review Message"</text>
+          <text>"Review Message (Allocated Judge)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1q2n3v2">
@@ -28,7 +28,7 @@
           <text>"reviewResponseAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gjivtf">
-          <text>"Review Response"</text>
+          <text>"Review Response (Allocated Judge)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_17v0car">
@@ -39,7 +39,7 @@
           <text>"reviewMessageHearingJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1en5t02">
-          <text>"Review Message"</text>
+          <text>"Review Message (Hearing Judge)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ieuorw">
@@ -50,7 +50,7 @@
           <text>"reviewResponseHearingJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_17037rt">
-          <text>"Review Response"</text>
+          <text>"Review Response (Hearing Judge)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0p8526i">
@@ -61,7 +61,7 @@
           <text>"reviewMessageHearingCentreAdmin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ak60oc">
-          <text>"Review Message"</text>
+          <text>"Review Message (Local Court)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0fvck1b">
@@ -72,7 +72,7 @@
           <text>"reviewResponseHearingCentreAdmin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12erj6r">
-          <text>"Review Response"</text>
+          <text>"Review Response (Local Court)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ecyoi1">
@@ -83,7 +83,7 @@
           <text>"reviewMessageCTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08xuf5y">
-          <text>"Review Message"</text>
+          <text>"Review Message (CTSC)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0cwpy2y">
@@ -94,7 +94,7 @@
           <text>"reviewResponseCTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kzbqqb">
-          <text>"Review Response"</text>
+          <text>"Review Response (CTSC)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0kdm6v0">
@@ -105,7 +105,7 @@
           <text>"reviewMessageLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0snf98y">
-          <text>"Review Message"</text>
+          <text>"Review Message (Legal Adviser)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12qtpdg">
@@ -116,7 +116,7 @@
           <text>"reviewResponseLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m7kqm0">
-          <text>"Review Response"</text>
+          <text>"Review Response (Legal Adviser)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1dv38vf">
@@ -233,7 +233,7 @@
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape dmnElementRef="Decision_0lqgula">
+      <dmndi:DMNShape dmnElementRef="wa-task-types-publiclaw-care_supervision_epo">
         <dc:Bounds height="80" width="180" x="160" y="100" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>

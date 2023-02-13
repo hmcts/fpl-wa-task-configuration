@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1l97b4e" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-cancellation-publiclaw-care_supervision_epo" name="Task cancellation DMN">
+    <decisionTable id="DecisionTable_0gksf8r" hitPolicy="COLLECT">
+      <input id="Input_1" label="From State" camunda:inputVariable="fromState">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_13b1x1h" label="Event Id" camunda:inputVariable="eventId">
+        <inputExpression id="LiteralExpression_16kt9wd" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0f6u4qu" label="To State" camunda:inputVariable="toState">
+        <inputExpression id="LiteralExpression_0d7il84" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Action" name="action" typeRef="string" />
+      <output id="OutputClause_0ty3602" label="Warning Code" name="warningCode" typeRef="string" />
+      <output id="OutputClause_064noaa" label="Warning Text" name="warningText" typeRef="string" biodi:width="192" />
+      <output id="OutputClause_03gx6sx" label="Process Categories Identifiers" name="processCategories" typeRef="string" />
+      <rule id="DecisionRule_0c2s09f">
+        <inputEntry id="UnaryTests_0d3539s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1usd2ly">
+          <text>"manageHearings"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02hxrln">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v5trha">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08w4ix7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g6srh1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1690w12">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04e4fed">
+        <inputEntry id="UnaryTests_17vps4c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xox9au">
+          <text>"changeCaseName"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tcncxw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tls60a">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rsskp1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00fvjbn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uq69x4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xkktdj">
+        <inputEntry id="UnaryTests_0l9qcps">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15hf65b">
+          <text>"manageLocalAuthorities"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04ftzca">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tjg66n">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vo65u3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_148ltwh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xd8o88">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_004nvk0">
+        <description>Nightly job that updates the next hearing date</description>
+        <inputEntry id="UnaryTests_1owqrdf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pwdj9v">
+          <text>"internal-update-case-summary"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pdk6m8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1onbx15">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s3eo3r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_110e0sg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vfn538">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="wa-task-cancellation-publiclaw-care_supervision_epo">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
