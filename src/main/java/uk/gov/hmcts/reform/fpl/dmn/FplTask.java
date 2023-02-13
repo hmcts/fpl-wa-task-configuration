@@ -1,6 +1,6 @@
 package uk.gov.hmcts.reform.fpl.dmn;
 
-public enum FPLTask {
+public enum FplTask {
 
     REVIEW_MESSAGE_ALLOCATED_JUDGE("reviewMessageAllocatedJudge"),
     REVIEW_RESPONSE_ALLOCATED_JUDGE("reviewResponseAllocatedJudge"),
@@ -25,7 +25,7 @@ public enum FPLTask {
 
     private String value;
 
-    FPLTask(String value) {
+    FplTask(String value) {
         this.value = value;
     }
 

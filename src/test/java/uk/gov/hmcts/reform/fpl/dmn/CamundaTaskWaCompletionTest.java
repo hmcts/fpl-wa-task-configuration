@@ -18,8 +18,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -44,19 +42,21 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
 
     public static Stream<Arguments> scenarioProvider() {
         return Stream.of(
-            Arguments.of("reviewCMO", getAutoCompleteTaskTypes(FPLTask.APPROVE_ORDERS)),
+            Arguments.of("reviewCMO", getAutoCompleteTaskTypes(FplTask.APPROVE_ORDERS)),
             Arguments.of("replyToMessageJudgeOrLegalAdviser", getAutoCompleteTaskTypes(
-                FPLTask.REVIEW_MESSAGE_ALLOCATED_JUDGE, FPLTask.REVIEW_RESPONSE_ALLOCATED_JUDGE,
-                FPLTask.REVIEW_MESSAGE_HEARING_JUDGE, FPLTask.REVIEW_RESPONSE_HEARING_JUDGE,
-                FPLTask.REVIEW_MESSAGE_HEARING_CENTRE_ADMIN, FPLTask.REVIEW_RESPONSE_HEARING_CENTRE_ADMIN,
-                FPLTask.REVIEW_MESSAGE_CTSC, FPLTask.REVIEW_RESPONSE_CTSC, FPLTask.REVIEW_MESSAGE_LEGAL_ADVISOR,
-                FPLTask.REVIEW_RESPONSE_LEGAL_ADVISOR
+                FplTask.REVIEW_MESSAGE_ALLOCATED_JUDGE, FplTask.REVIEW_RESPONSE_ALLOCATED_JUDGE,
+                FplTask.REVIEW_MESSAGE_HEARING_JUDGE, FplTask.REVIEW_RESPONSE_HEARING_JUDGE,
+                FplTask.REVIEW_MESSAGE_HEARING_CENTRE_ADMIN, FplTask.REVIEW_RESPONSE_HEARING_CENTRE_ADMIN,
+                FplTask.REVIEW_MESSAGE_CTSC, FplTask.REVIEW_RESPONSE_CTSC, FplTask.REVIEW_MESSAGE_LEGAL_ADVISOR,
+                FplTask.REVIEW_RESPONSE_LEGAL_ADVISOR
             )),
-            Arguments.of("sendToGatekeeper", getAutoCompleteTaskTypes(FPLTask.REVIEW_URGENT_APPLICATION,
-                                                                              FPLTask.REVIEW_STANDARD_APPLICATION)),
-            Arguments.of("returnApplication", getAutoCompleteTaskTypes(FPLTask.REVIEW_URGENT_APPLICATION,
-                                                                              FPLTask.REVIEW_STANDARD_APPLICATION)),
-            Arguments.of("sendOrderReminder", getAutoCompleteTaskTypes(FPLTask.CHASE_OUTSTANDING_ORDER))
+            Arguments.of("sendToGatekeeper", getAutoCompleteTaskTypes(
+                FplTask.REVIEW_URGENT_APPLICATION,
+                FplTask.REVIEW_STANDARD_APPLICATION)),
+            Arguments.of("returnApplication", getAutoCompleteTaskTypes(
+                FplTask.REVIEW_URGENT_APPLICATION,
+                FplTask.REVIEW_STANDARD_APPLICATION)),
+            Arguments.of("sendOrderReminder", getAutoCompleteTaskTypes(FplTask.CHASE_OUTSTANDING_ORDER))
 
             );
     }
@@ -68,14 +68,14 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
         assertThat(logic.getRules().size(), is(17));
     }
 
-    private static Map<String, String> getAutoCompleteTaskType(FPLTask taskType) {
+    private static Map<String, String> getAutoCompleteTaskType(FplTask taskType) {
         return Map.of(
             "taskType", taskType.getValue(),
             "completionMode", "Auto"
         );
     }
 
-    private static List<Map<String, String>> getAutoCompleteTaskTypes(FPLTask... taskTypes) {
+    private static List<Map<String, String>> getAutoCompleteTaskTypes(FplTask... taskTypes) {
         return Stream.of(taskTypes).map(el -> getAutoCompleteTaskType(el)).collect(Collectors.toList());
     }
 }

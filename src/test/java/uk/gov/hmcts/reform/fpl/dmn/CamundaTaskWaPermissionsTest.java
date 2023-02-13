@@ -18,13 +18,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
-import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.CASE_CREATION;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.CASE_PROGRESSION;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.MANAGE_OUTCOME;
 
 class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
 
@@ -35,7 +31,7 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @MethodSource("scenarioProvider")
-    void givenInputShouldReturnOutcomeDmn(FPLTask taskType,
+    void givenInputShouldReturnOutcomeDmn(FplTask taskType,
                                           List<Map<String, ? extends Serializable>> expectedDmnOutcome) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskType", taskType.getValue());
@@ -47,7 +43,7 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
 
     public static Stream<Arguments> scenarioProvider() {
         return Stream.of(
-            Arguments.of(FPLTask.VIEW_ADDITIONAL_APPLICATIONS, List.of(
+            Arguments.of(FplTask.VIEW_ADDITIONAL_APPLICATIONS, List.of(
                 getRowResult(
                     "task-supervisor",
                     "Complete,Own,Assign,Claim,Unassign,Read,Cancel",

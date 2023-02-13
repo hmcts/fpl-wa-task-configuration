@@ -19,9 +19,6 @@ import java.util.stream.Stream;
 import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.CASE_CREATION;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.CASE_PROGRESSION;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.MANAGE_OUTCOME;
 
 class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
 
