@@ -177,9 +177,18 @@ repositories {
   maven { url 'https://jitpack.io' }
 }
 
-ext {
-  log4JVersion = "2.17.0"
-}
+def versions = [
+  junit           : '5.7.2',
+  junitPlatform   : '1.8.1',
+  reformLogging   : '5.1.7',
+  springBoot      : springBoot.class.package.implementationVersion,
+  springfoxSwagger: '2.9.2',
+  camunda         : '7.15.0',
+  pitest          : '1.5.2',
+  sonarPitest     : '0.5',
+  tomcat          : '9.0.68',
+  log4j           : '2.17.1'
+]
 
 dependencies {
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
@@ -195,10 +204,14 @@ dependencies {
   implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
   implementation group: 'com.fasterxml.jackson', name: 'jackson-bom', version: '2.13.3', ext: 'pom'
 
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: log4JVersion
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: log4JVersion
+  implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: versions.log4j
+  implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: versions.log4j
 
   implementation group: 'io.rest-assured', name: 'rest-assured'
+  implementation group: 'org.camunda.bpm', name: 'camunda-external-task-client', version: versions.camunda
+
+  annotationProcessor 'org.projectlombok:lombok:1.18.24'
+  compileOnly 'org.projectlombok:lombok:1.18.24'
 
   testImplementation(platform('org.junit:junit-bom:5.8.2'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
@@ -206,6 +219,10 @@ dependencies {
     exclude group: 'junit', module: 'junit'
     exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
   }
+
+  testImplementation group: 'org.camunda.bpm.dmn', name: 'camunda-engine-dmn', version: versions.camunda
+  testImplementation group: 'org.camunda.bpm.assert', name: 'camunda-bpm-assert', version: '8.0.0'
+  testImplementation group: 'org.camunda.bpm', name: 'camunda-engine', version: versions.camunda
 }
 
 mainClassName = 'uk.gov.hmcts.reform.demo.Application'
