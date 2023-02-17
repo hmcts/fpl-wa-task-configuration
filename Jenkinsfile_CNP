@@ -1,0 +1,23 @@
+#!groovy
+
+@Library('Infrastructure')
+
+def type = "java"
+def product = "fpl"
+def component = "task-configuration"
+def s2sServiceName = "wa_camunda_pipeline_upload"
+def tenantId = "publiclaw"
+def branchesToSync = ['demo', 'perftest', "ithc"]
+
+withCamundaOnlyPipeline(type, product, component, s2sServiceName, tenantId) {
+
+  afterSuccess('test') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/reports/tests/**/*'
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/reports/tests/integration/**/*'
+  }
+
+
+  // Sync environment specific branches with master branch
+  syncBranchesWithMaster(branchesToSync)
+
+}
