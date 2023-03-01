@@ -72,8 +72,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
             getRowResult("caseManagementCategory", "Public Law", "false"),
             getRowResult("region", "1", "true"),
             getRowResult("location", "111", "true"),
-            getRowResult("locationName", "Birmingham", "true"),
-            getRowResult("nextHearingDate", NOW.toString(), "true")
+            getRowResult("locationName", "Birmingham", "true")
         );
     }
 
