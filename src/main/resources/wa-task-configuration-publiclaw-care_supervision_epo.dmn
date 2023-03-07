@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
-  <decision id="wa-task-configuration-PUBLICLAW-CARE_SUPERVISION_EPO" name="Task configuration DMN">
-    <decisionTable id="DecisionTable_04h0po8">
-      <input id="Input_1" label="CCD Case Data">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-configuration-publiclaw-care_supervision_epo" name="Task configuration DMN">
+    <decisionTable id="DecisionTable_04h0po8" hitPolicy="RULE ORDER">
+      <input id="Input_1" label="CCD Case Data" camunda:inputVariable="caseData">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_0v6nbht" label="Task type" biodi:width="504">
+      <input id="InputClause_0v6nbht" label="Task type" biodi:width="504" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_0ea4yee" typeRef="string">
           <text>if(taskAttributes != null and taskAttributes.taskType != null) then
-            taskAttributes. taskType
-else if(taskType != null) then
-           taskType
-else
-null</text>
+                        taskAttributes. taskType
+                        else if(taskType != null) then
+                        taskType
+                        else
+                        null</text>
         </inputExpression>
       </input>
-      <output id="Output_1" name="Name" typeRef="string" />
-      <output id="OutputClause_0n53zsu" label="Value" typeRef="string" biodi:width="354" />
-      <output id="OutputClause_0vog2vc" name="Can Reconfigure" typeRef="string" />
+      <output id="Output_1" label="Name" name="name" typeRef="string" />
+      <output id="OutputClause_0n53zsu" label="Value" name="value" typeRef="string" biodi:width="354" />
+      <output id="OutputClause_0vog2vc" label="Can Reconfigure" name="canReconfigure" typeRef="string" />
       <rule id="DecisionRule_0maqehe">
         <inputEntry id="UnaryTests_1m9yr5w">
           <text></text>
@@ -105,251 +105,6 @@ null</text>
           <text>caseData.court.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m1o1nq">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1xr9d5w">
-        <inputEntry id="UnaryTests_0iihdsv">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1m78b7h">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1hne3tk">
-          <text>"nextHearingDate"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0c7ui53">
-          <text>caseData.caseSummaryNextHearingDate</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ou2p2j">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_199w3we">
-        <description></description>
-        <inputEntry id="UnaryTests_0jkj3fq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zogsp8">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1lxfkhw">
-          <text>"dueDateNonWorkingCalendar"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1j3w5jz">
-          <text>"https://github.com/hmcts/fpl-wa-task-configuration/blob/master/src/main/resources/fpl-specific-holidays.json"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_184z861">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1j144dr">
-        <inputEntry id="UnaryTests_0ixscjr">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lolwog">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_14ops7t">
-          <text>"dueDateNonWorkingDaysOfTheWeek"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_083jabe">
-          <text>"SATURDAY,SUNDAY"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0pf6hnx">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ri9rxv">
-        <inputEntry id="UnaryTests_0h761gk">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1sxc6zq">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0o7u12j">
-          <text>"dueDateSkipNonWorkingDays"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1wfi48j">
-          <text>true</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0439rlr">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0u1sb75">
-        <description>redundant as above field always takes into account weekends + bank hols</description>
-        <inputEntry id="UnaryTests_15a52jo">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14qr1z7">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0a25meg">
-          <text>"dueDateMustBeWorkingDay"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_04q77n9">
-          <text>next</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01erx6v">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0urm6bm">
-        <description>do not remove this or change ordering</description>
-        <inputEntry id="UnaryTests_0gwqqb4">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0dqcgk3">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1z02pdd">
-          <text>"calculatedDates"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0sdhee5">
-          <text>"nextHearingDate,hearingDatePreDate,dueDate,priorityDate"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0zl2diy">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0nbxij0">
-        <description>always start the due date calculation from task creation date</description>
-        <inputEntry id="UnaryTests_1yc6xay">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_103bkrw">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ufgs9j">
-          <text>"dueDateOrigin"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_070aejm">
-          <text>"now()"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0ga54n0">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1ej3c4p">
-        <inputEntry id="UnaryTests_0wlo1wk">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00mwj0v">
-          <text>"reviewStandardApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_08w03e8">
-          <text>"dueDateIntervalDays"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0vrbenp">
-          <text>1</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0ruggli">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1262tl9">
-        <description>-- todo - check the syntax if we don't want days (perhaps we could use 0, as it's an urgent task and will be at the top of the list because majorPriority=1000, then it'll just be sorted by the time it came in)</description>
-        <inputEntry id="UnaryTests_1o03zs8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1s4i4y2">
-          <text>"reviewUrgentApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1ldqjbl">
-          <text>"dueDateIntervalDays"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1fp8jxj">
-          <text>2 hours</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1v3lseo">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0dsot1u">
-        <description>default to 5 days unless specified</description>
-        <inputEntry id="UnaryTests_044h74w">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hbqv2v">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ynr7g2">
-          <text>"dueDateIntervalDays"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1kzg645">
-          <text>5</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1dssdnz">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1a8n4vg">
-        <inputEntry id="UnaryTests_1evwxcf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0m0v2t0">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1whop0a">
-          <text>"hearingDatePreDateOriginRef"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1d1h2xc">
-          <text>nextHearingDate</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1eb8n3q">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_00bvc7e">
-        <description>next hearing date - 3days</description>
-        <inputEntry id="UnaryTests_09exhva">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1aacbsb">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_11bi6p4">
-          <text>"hearingDatePreDateIntervalDays"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_12g5lbm">
-          <text>-3</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1asfec3">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_05gddvl">
-        <inputEntry id="UnaryTests_0kt4m2j">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1r9km2y">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_15xrksh">
-          <text>"hearingDatePreDateSkipNonWorkingDays"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_009jo4f">
-          <text>true</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_19vv4ft">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ho1jxp">
-        <inputEntry id="UnaryTests_1692yn8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0rgcaw1">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_19ojbn9">
-          <text>"hearingDatePreDateMustBeWorkingDay"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1gbksxk">
-          <text>next</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1w3p23s">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -444,7 +199,7 @@ null</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ox5s2">
-          <text>"reviewSpecificAccessRequestAdmin","reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment",</text>
+          <text>"reviewSpecificAccessRequestAdmin","reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_020dk9k">
           <text>"roleCategory"</text>
@@ -461,7 +216,7 @@ null</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewSpecificAccessRequestJudiciary","viewAdditionalApplications","approveOrders","reviewMessageJudge","reviewResponseJudge"</text>
+          <text>"reviewSpecificAccessRequestJudiciary","viewAdditionalApplications","approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -783,6 +538,7 @@ null</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12aldmx">
+        <description>should this be 3000?</description>
         <inputEntry id="UnaryTests_0no48hl">
           <text></text>
         </inputEntry>
@@ -986,65 +742,11 @@ null</text>
           <text>true</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0pzq89p">
-        <description>all judge tasks to be sorted by date of the task</description>
-        <inputEntry id="UnaryTests_098bvot">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0whmmnn">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1jcrjbx">
-          <text>"priorityDateOriginRef"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ft7fli">
-          <text>"now()"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_11vgddt">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_05efh1l">
-        <description>use the closer of the SLA (due date) OR the hearing date - 3 days.</description>
-        <inputEntry id="UnaryTests_1uimsys">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hpwmrt">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewStandardDirectionOrder","reviewOrderCMO","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1dwih63">
-          <text>"priorityDateOriginEarliest"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1r77epk">
-          <text>dueDate,hearingDatePreDate</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_097xky0">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_09dfrdj">
-        <description>no hearings on newly created cases, payments unrelated to hearings, use SLA (due date)</description>
-        <inputEntry id="UnaryTests_00d1xl8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xfqynr">
-          <text>"reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_167s2ay">
-          <text>"priorityDateOriginRef"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0q0jgp9">
-          <text>dueDate</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1cacllw">
-          <text>true</text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape dmnElementRef="wa-task-configuration-PUBLICLAW-CARE_SUPERVISION_EPO">
+      <dmndi:DMNShape dmnElementRef="wa-task-configuration-publiclaw-care_supervision_epo">
         <dc:Bounds height="80" width="180" x="160" y="100" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
