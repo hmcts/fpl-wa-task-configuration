@@ -7,8 +7,8 @@
           <text></text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Task Type Id" typeRef="string" biodi:width="192" />
-      <output id="OutputClause_0z4v517" label="Task Type Name" typeRef="string" />
+      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="192" />
+      <output id="OutputClause_0z4v517" label="Task Type Name" name="taskTypeName" typeRef="string" />
       <rule id="DecisionRule_0qzhm6f">
         <inputEntry id="UnaryTests_0zr8wde">
           <text></text>
