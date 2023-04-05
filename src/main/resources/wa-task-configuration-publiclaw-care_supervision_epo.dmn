@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-configuration-publiclaw-care_supervision_epo" name="Task configuration DMN">
     <decisionTable id="DecisionTable_04h0po8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -108,6 +108,24 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0urm6bm">
+        <description>do not remove this or change ordering</description>
+        <inputEntry id="UnaryTests_0gwqqb4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dqcgk3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1z02pdd">
+          <text>"calculatedDates"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sdhee5">
+          <text>"nextHearingDate,hearingDatePreDate,dueDate,priorityDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zl2diy">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1xr9d5w">
         <inputEntry id="UnaryTests_0iihdsv">
           <text></text>
@@ -143,6 +161,23 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1yp9g1y">
+        <inputEntry id="UnaryTests_1591ptl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05qseiz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mms8fa">
+          <text>"hearingDatePreDateNonWorkingCalendar"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kid8w3">
+          <text>"https://github.com/hmcts/fpl-wa-task-configuration/blob/master/src/main/resources/fpl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06sn4a5">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1j144dr">
         <inputEntry id="UnaryTests_0ixscjr">
           <text></text>
@@ -157,7 +192,7 @@
           <text>"SATURDAY,SUNDAY"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0pf6hnx">
-          <text>false</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ri9rxv">
@@ -193,24 +228,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_01erx6v">
           <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0urm6bm">
-        <description>do not remove this or change ordering</description>
-        <inputEntry id="UnaryTests_0gwqqb4">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0dqcgk3">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1z02pdd">
-          <text>"calculatedDates"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0sdhee5">
-          <text>"nextHearingDate,hearingDatePreDate,dueDate,priorityDate"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0zl2diy">
-          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0nbxij0">
@@ -293,12 +310,29 @@
           <text>"reviewUrgentApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ldqjbl">
-          <text>"dueDate"</text>
+          <text>"dueDateIntervalDays"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fp8jxj">
-          <text>now() + duration("PT2H")</text>
+          <text>0</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1v3lseo">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nk2hoe">
+        <inputEntry id="UnaryTests_1r9b8st">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vcleco">
+          <text>"reviewUrgentApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1igs121">
+          <text>"dueDateTime"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j2q8zm">
+          <text>now() + duration("PT2H")</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16db70z">
           <text>false</text>
         </outputEntry>
       </rule>
@@ -385,7 +419,7 @@
           <text>"SATURDAY,SUNDAY"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0yo7yng">
-          <text>false</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1h4v26m">
