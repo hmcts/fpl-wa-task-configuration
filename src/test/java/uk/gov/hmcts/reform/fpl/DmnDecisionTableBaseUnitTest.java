@@ -21,7 +21,7 @@ public class DmnDecisionTableBaseUnitTest {
             .createDefaultDmnEngineConfiguration()
             .buildEngine();
 
-        // Parse decision
+        // Parse decision (test)
         ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
         InputStream inputStream = contextClassLoader.getResourceAsStream(CURRENT_DMN_DECISION_TABLE.getFileName());
         decision = dmnEngine.parseDecision(CURRENT_DMN_DECISION_TABLE.getKey(), inputStream);
