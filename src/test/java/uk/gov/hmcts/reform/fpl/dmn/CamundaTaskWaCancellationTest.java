@@ -32,7 +32,9 @@ class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
     void givenInputShouldReturnOutcomeDmn(String eventId,
                                                Map<String, ? extends Serializable> expectedDmnOutcome) {
         VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("eventId", eventId);
+        inputVariables.putValue("event", eventId);
+        inputVariables.putValue("fromState", "");
+        inputVariables.putValue("state", "");
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
