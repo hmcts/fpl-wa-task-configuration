@@ -4,17 +4,17 @@
     <decisionTable id="DecisionTable_0gksf8r" hitPolicy="COLLECT">
       <input id="Input_1" label="From State" camunda:inputVariable="fromState">
         <inputExpression id="InputExpression_1" typeRef="string">
-          <text></text>
+          <text>fromState</text>
         </inputExpression>
       </input>
       <input id="InputClause_13b1x1h" label="Event Id" camunda:inputVariable="eventId">
         <inputExpression id="LiteralExpression_16kt9wd" typeRef="string">
-          <text></text>
+          <text>event</text>
         </inputExpression>
       </input>
       <input id="InputClause_0f6u4qu" label="To State" camunda:inputVariable="toState">
         <inputExpression id="LiteralExpression_0d7il84" typeRef="string">
-          <text></text>
+          <text>state</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Action" name="action" typeRef="string" />
