@@ -19,7 +19,7 @@
       </input>
       <output id="Output_1" label="Name" name="name" typeRef="string" />
       <output id="OutputClause_0n53zsu" label="Value" name="value" typeRef="string" biodi:width="354" />
-      <output id="OutputClause_0vog2vc" label="Can Reconfigure" name="canReconfigure" typeRef="string" />
+      <output id="OutputClause_0vog2vc" label="Can Reconfigure" name="canReconfigure" typeRef="boolean" />
       <rule id="DecisionRule_0maqehe">
         <inputEntry id="UnaryTests_1m9yr5w">
           <text></text>
@@ -34,7 +34,7 @@
           <text>if caseData.caseName !=null then caseData.caseName else "Public Law"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1uecj96">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0lmc0xa">
@@ -51,7 +51,7 @@
           <text>"Public Law"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gltgk0">
-          <text>"false"</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0wxbdoh">
@@ -69,7 +69,7 @@
           <text>caseData.caseManagementLocation.region</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1d7zv96">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1xmukll">
@@ -87,7 +87,7 @@
           <text>caseData.caseManagementLocation.baseLocation </text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02e3u51">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0wt7gcl">
@@ -105,7 +105,7 @@
           <text>caseData.court.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m1o1nq">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_143eanc">
@@ -122,7 +122,7 @@
           <text>"decision_making_work"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1k4lq5m">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_03zv29s">
@@ -139,7 +139,7 @@
           <text>"routine_work"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_184v81y">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0i365sk">
@@ -156,7 +156,7 @@
           <text>"applications"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0yekdr4">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0vxpxj5">
@@ -173,7 +173,7 @@
           <text>"access_requests"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dqfk6h">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0u28eoa">
@@ -191,7 +191,7 @@
           <text>taskAttributes.roleAssignmentId</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0tdvep3">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06vnygn">
@@ -208,7 +208,7 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sxe289">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_15c68rw">
@@ -225,7 +225,7 @@
           <text>"JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19h8eda">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1uba887">
@@ -242,7 +242,7 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15jm3sy">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_090qhef">
@@ -260,7 +260,7 @@
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mpxusj">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1mwn1hl">
@@ -277,7 +277,7 @@
           <text>"[Approve orders](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewCMO)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04n1rtd">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_01h1s1e">
@@ -294,7 +294,7 @@
           <text>"[Reply to message](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/replyToMessageJudgeOrLegalAdviser)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0luiefw">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0re8y9c">
@@ -311,7 +311,7 @@
           <text>"[Review additional applications](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kzut7e">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1b3jltq">
@@ -328,7 +328,7 @@
           <text>"[Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rpkgu8">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0mc9un3">
@@ -345,7 +345,7 @@
           <text>"[Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_10lviq5">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0qd6waf">
@@ -362,7 +362,7 @@
           <text>"[Send order reminder](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendOrderReminder)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0el8m85">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_01l2k1j">
@@ -379,7 +379,7 @@
           <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jkl1m1">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0rq9uac">
@@ -396,7 +396,7 @@
           <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0n786vb">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0mjo9tr">
@@ -413,7 +413,7 @@
           <text>"Review payments on the [payments tab](/cases/case-details/${[CASE_REFERENCE]}#Payment%20History"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0uau67d">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0r25j37">
@@ -430,7 +430,7 @@
           <text>"Review correspondence on the [correspondence tab](/cases/case-details/${[CASE_REFERENCE]}#Correspondence"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1azi59u">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1k28ysx">
@@ -447,7 +447,7 @@
           <text>"Review placement applications on the [placements tab](/cases/case-details/${[CASE_REFERENCE]}#Placement"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0odndbs">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1hx73kr">
@@ -465,7 +465,7 @@
           <text>"taskAttributes.name"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fnf8hq">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_18r5w06">
@@ -483,7 +483,7 @@
           <text>500</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_078snrm">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0cpnxq9">
@@ -500,7 +500,7 @@
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fha0sj">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_19deutz">
@@ -517,7 +517,7 @@
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rlxpn9">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ncrti2">
@@ -534,7 +534,7 @@
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1idplt1">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12aldmx">
@@ -552,7 +552,7 @@
           <text>2000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02azr2b">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1r9erb3">
@@ -569,7 +569,7 @@
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ozp8nz">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0jyvt7i">
@@ -586,7 +586,7 @@
           <text>2000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0g815ew">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0u2fv5e">
@@ -603,7 +603,7 @@
           <text>4000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nlo5oi">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0rdjhot">
@@ -620,7 +620,7 @@
           <text>1000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m4az2a">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_05thsas">
@@ -637,7 +637,7 @@
           <text>2000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1heqlas">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12cdxqu">
@@ -654,7 +654,7 @@
           <text>2000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_110utbn">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1d9pjbm">
@@ -671,7 +671,7 @@
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02l2c2g">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1jo8pn7">
@@ -688,7 +688,7 @@
           <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05d2fmj">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1sjo1jt">
@@ -705,7 +705,7 @@
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0z2xrgo">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1updfxd">
@@ -722,7 +722,7 @@
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1reym9k">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12gscj2">
@@ -739,7 +739,7 @@
           <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0877p3e">
-          <text>"true"</text>
+          <text>true</text>
         </outputEntry>
       </rule>
     </decisionTable>
