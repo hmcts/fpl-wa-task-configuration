@@ -450,24 +450,6 @@
           <text>true</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1hx73kr">
-        <description></description>
-        <inputEntry id="UnaryTests_05776fz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0tmkyqm">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1xvuxdc">
-          <text>"description"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_15h4g38">
-          <text>"taskAttributes.name"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0fnf8hq">
-          <text>true</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_18r5w06">
         <description>all tasks have the default 500</description>
         <inputEntry id="UnaryTests_18mvv82">
