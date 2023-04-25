@@ -4,7 +4,10 @@
     <decisionTable id="DecisionTable_0vv02p8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Task type" biodi:width="313" camunda:inputVariable="taskType">
         <inputExpression id="InputExpression_1" typeRef="string">
-          <text></text>
+          <text>if(taskAttributes != null and taskAttributes.taskType != null) then
+            taskAttributes.taskType
+            else
+            "r1"</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Case Access Category" name="caseAccessCategory" typeRef="string" biodi:width="192" />
