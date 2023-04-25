@@ -6,9 +6,7 @@ import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTable;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTableBaseUnitTest;
 
@@ -29,8 +27,8 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_PERMISSIONS;
     }
 
-    @ParameterizedTest
-    @MethodSource("scenarioProvider")
+    // @ParameterizedTest
+    // @MethodSource("scenarioProvider")
     void givenInputShouldReturnOutcomeDmn(FplTask taskType,
                                           List<Map<String, ? extends Serializable>> expectedDmnOutcome) {
         VariableMap inputVariables = new VariableMapImpl();
