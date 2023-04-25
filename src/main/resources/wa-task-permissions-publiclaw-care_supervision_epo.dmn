@@ -319,7 +319,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i4hf4k">
-          <text>"ctsc"</text>
+          <text>"hmcts-ctsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0d1qqf7">
           <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
@@ -494,32 +494,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1cikucp">
           <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1gcdsul">
-        <inputEntry id="UnaryTests_1sra4wp">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_15g8d25">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1pmvb3x">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0o89r3j">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0tepzkr">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_03i5rps">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01mzkst">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0gs3a99">
-          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
