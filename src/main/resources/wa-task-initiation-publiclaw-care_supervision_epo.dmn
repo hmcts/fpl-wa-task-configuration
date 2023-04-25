@@ -497,7 +497,7 @@
       <rule id="DecisionRule_0lktk48">
         <description></description>
         <inputEntry id="UnaryTests_01q9d9j">
-          <text>"addGatekeepingOrder"</text>
+          <text>"listGatekeepingHearing"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bl0b2a">
           <text></text>
