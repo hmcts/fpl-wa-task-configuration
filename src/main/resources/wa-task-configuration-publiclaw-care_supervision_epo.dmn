@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-configuration-publiclaw-care_supervision_epo" name="Task configuration DMN">
-    <decisionTable id="DecisionTable_04h0po8" hitPolicy="COLLECT">
+    <decisionTable id="DecisionTable_04h0po8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="CCD Case Data" camunda:inputVariable="caseData">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text></text>
@@ -31,7 +31,7 @@
           <text>"caseName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kxli13">
-          <text>if caseData.caseName !=null then caseData.caseName else "Public Law"</text>
+          <text>if caseData.caseName !=null then caseData.caseName else "Public Law Case"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1uecj96">
           <text>true</text>
@@ -66,7 +66,7 @@
           <text>"region"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nq2bh1">
-          <text>caseData.caseManagementLocation.region</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.region != null) then  caseData.caseManagementLocation.region else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1d7zv96">
           <text>true</text>
@@ -84,7 +84,7 @@
           <text>"location"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16at2lk">
-          <text>caseData.caseManagementLocation.baseLocation </text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocation != null) then caseData.caseManagementLocation.baseLocation else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02e3u51">
           <text>true</text>
@@ -102,7 +102,7 @@
           <text>"locationName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0z5dl4t">
-          <text>caseData.court.name</text>
+          <text>if (caseData.court != null and caseData.court.name != null) then caseData.court.name else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m1o1nq">
           <text>true</text>
@@ -130,7 +130,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewMessageAllocatedJudge","reviewMessageHearingJudge","reviewMessageHearingJudge","reviewMessageLocalCourt","reviewResponseLocalCourt","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageLocalCourt","reviewResponseLocalCourt","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08sdeu3">
           <text>"workType"</text>
