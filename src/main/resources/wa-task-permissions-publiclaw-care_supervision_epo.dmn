@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-permissions-publiclaw-care_supervision_epo" name="Permissions DMN">
     <decisionTable id="DecisionTable_0vv02p8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Task type" biodi:width="313" camunda:inputVariable="taskType">
@@ -319,7 +319,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i4hf4k">
-          <text>"ctsc"</text>
+          <text>"hmcts-ctsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0d1qqf7">
           <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
@@ -393,7 +393,7 @@
       </rule>
       <rule id="DecisionRule_1n5hisj">
         <inputEntry id="UnaryTests_084wyb5">
-          <text>"reviewSpecificAccessRequestLegalOps" </text>
+          <text>"reviewSpecificAccessRequestLegalOps"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1v9go1i">
           <text></text>
@@ -494,32 +494,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1cikucp">
           <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1gcdsul">
-        <inputEntry id="UnaryTests_1sra4wp">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_15g8d25">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1pmvb3x">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0o89r3j">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0tepzkr">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_03i5rps">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01mzkst">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0gs3a99">
-          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
