@@ -69,7 +69,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     private static List<Map<String, Object>> getBaseValues() {
         return List.of(
             getRowResult("caseName", "Test v Smith", true),
-            getRowResult("caseManagementCategory", "Public Law", false),
+            getRowResult("caseManagementCategory", "PUBLICLAW", false),
             getRowResult("region", "1", true),
             getRowResult("location", "111", true),
             getRowResult("locationName", "Birmingham", true)
