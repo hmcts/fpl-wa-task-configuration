@@ -626,7 +626,7 @@
       </rule>
       <rule id="DecisionRule_0z5c01v">
         <inputEntry id="UnaryTests_14qu4kl">
-          <text>"uploadPlacementApplications"</text>
+          <text>"placement"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0omn8mq">
           <text></text>
