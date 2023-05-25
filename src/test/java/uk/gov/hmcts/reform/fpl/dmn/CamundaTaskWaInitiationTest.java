@@ -140,7 +140,7 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "submitApplication",
                 Map.of(
-                    "hearing", Map.of("timeFrame", "Within 5 days")
+                    "hearing", Map.of("timeFrame", "Within 7 days")
                 ),
                 Map.of(
                     "taskId", "reviewStandardApplication",
