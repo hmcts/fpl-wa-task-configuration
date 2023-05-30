@@ -38,8 +38,7 @@
       </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="217" />
       <output id="OutputClause_002axxi" label="Name" name="name" typeRef="string" />
-      <output id="OutputClause_0nhxkm7" label="Delay Duration" name="delayDuration" typeRef="integer" />
-      <output id="OutputClause_04k5sns" label="Working Days Allowed" name="workingDaysAllowed" typeRef="integer" biodi:width="191" />
+      <output id="OutputClause_0nhxkm7" label="Delay Until" name="delayUntil" typeRef="json" />
       <output id="OutputClause_17qu5hg" label="Process Categories Identifiers" name="processCategories" typeRef="string" />
       <rule id="DecisionRule_11n6aew">
         <description>judiciary will be labelled in the ccd event as "Allocated Judge"</description>
@@ -65,10 +64,7 @@
           <text>"Review Message (Allocated Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rdug08">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0ybegxw">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_154c778">
           <text>"case progression"</text>
@@ -98,10 +94,7 @@
           <text>"Review Response (Allocated Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0v622xr">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_128mzkj">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qsu1y1">
           <text>"case progression"</text>
@@ -130,10 +123,7 @@
           <text>"Review Message (Hearing Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ofj4sk">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1acvjwm">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kgrteb">
           <text>"case progression"</text>
@@ -162,10 +152,7 @@
           <text>"Review Response (Hearing Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0af9psb">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_08ummzg">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1pb492c">
           <text>"case progression"</text>
@@ -194,10 +181,7 @@
           <text>"Review Message (Local Court)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_019oc5j">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1qmndc0">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1980vgl">
           <text>"case progression"</text>
@@ -226,10 +210,7 @@
           <text>"Review Response (Local Court)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ggoglf">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1px20gr">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wsr1fx">
           <text>"case progression"</text>
@@ -258,10 +239,7 @@
           <text>"Review Message (CTSC)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oc4n8j">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1hzarmi">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0l4qma3">
           <text>"case progression"</text>
@@ -290,10 +268,7 @@
           <text>"Review Response (CTSC)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_01qdcl9">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0xomefc">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qew45g">
           <text>"case progression"</text>
@@ -323,10 +298,7 @@
           <text>"Review Message (Legal Adviser)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1swkc9j">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_17w49wt">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ki3f3a">
           <text>"case progression"</text>
@@ -356,10 +328,7 @@
           <text>"Review Response (Legal Adviser)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dh2umt">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_149vnkg">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1n9gdj6">
           <text>"case progression"</text>
@@ -388,10 +357,7 @@
           <text>"View Additional Applications"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09us3vj">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1j7i9wv">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1d8sks8">
           <text>"case progression"</text>
@@ -420,10 +386,7 @@
           <text>"Approve Orders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sx0acl">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0dubjtl">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1mi8gx4">
           <text>"case progression"</text>
@@ -453,10 +416,7 @@
           <text>"Review Urgent Application"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1waj3n0">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0d6o5mz">
-          <text>1</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ucao7d">
           <text>"case creation"</text>
@@ -485,10 +445,7 @@
           <text>"Review Standard Application"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1yjefa7">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_18ai694">
-          <text>1</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ovocr4">
           <text>"case creation"</text>
@@ -518,10 +475,7 @@
           <text>"Review Standard Direction Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_007ydw4">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_06jca5i">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0o4d0fk">
           <text>"case progression"</text>
@@ -551,10 +505,7 @@
           <text>"Review Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1srvt9x">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0f2p23p">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1yhdh1s">
           <text>"manage outcome"</text>
@@ -583,10 +534,7 @@
           <text>"Review Failed Payment"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03hk29h">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0r6bdhv">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hjxgpr">
           <text>"case progression"</text>
@@ -615,10 +563,7 @@
           <text>"Review Correspondence"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0s1eu95">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1hi8zxp">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nz9qa7">
           <text>"case progression"</text>
@@ -647,10 +592,7 @@
           <text>"Check Placement Application"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1l4kvur">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_00qyhcn">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16kn5j9">
           <text>"case progression"</text>
@@ -679,10 +621,7 @@
           <text>"Chase Outstanding Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1xbgmnm">
-          <text>0</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_02uaq27">
-          <text>5</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15yqcjr">
           <text>"case progression"</text>

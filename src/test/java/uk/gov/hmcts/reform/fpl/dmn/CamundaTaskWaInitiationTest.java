@@ -54,8 +54,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewMessageAllocatedJudge",
                     "name", "Review Message (Allocated Judge)",
-                    "workingDaysAllowed", 5,
-                    "delayDuration", 0,
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -67,8 +65,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewResponseAllocatedJudge",
                     "name", "Review Response (Allocated Judge)",
-                    "workingDaysAllowed", 5,
-                    "delayDuration", 0,
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -80,8 +76,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewMessageHearingJudge",
                     "name", "Review Message (Hearing Judge)",
-                    "workingDaysAllowed", 5,
-                    "delayDuration", 0,
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -93,8 +87,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewMessageHearingCentreAdmin",
                     "name", "Review Message (Local Court)",
-                    "workingDaysAllowed", 5,
-                    "delayDuration", 0,
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -106,8 +98,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewMessageCTSC",
                     "name", "Review Message (CTSC)",
-                    "workingDaysAllowed", 5,
-                    "delayDuration", 0,
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -119,8 +109,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewMessageLegalAdviser",
                     "name", "Review Message (Legal Adviser)",
-                    "workingDaysAllowed", 5,
-                    "delayDuration", 0,
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -132,8 +120,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewUrgentApplication",
                     "name", "Review Urgent Application",
-                    "workingDaysAllowed", 1,
-                    "delayDuration", 0,
                     "processCategories", CASE_CREATION.getValue()
                 )
             ),
@@ -145,8 +131,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewStandardApplication",
                     "name", "Review Standard Application",
-                    "workingDaysAllowed", 1,
-                    "delayDuration", 0,
                     "processCategories", CASE_CREATION.getValue()
                 )
             ),
@@ -158,8 +142,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of(
                     "taskId", "reviewOrderCMO",
                     "name", "Review Order",
-                    "workingDaysAllowed", 5,
-                    "delayDuration", 0,
                     "processCategories", MANAGE_OUTCOME.getValue()
                 )
             )
