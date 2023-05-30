@@ -340,7 +340,7 @@
       <rule id="DecisionRule_03nv4et">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_0kypttb">
-          <text>"reviewMessageLegalAdvisor","reviewResponseLegalAdvisor"</text>
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0xtjl0u">
           <text></text>
@@ -367,7 +367,7 @@
       <rule id="DecisionRule_1oooaja">
         <description></description>
         <inputEntry id="UnaryTests_11vlyzo">
-          <text>"reviewMessageLegalAdvisor","reviewResponseLegalAdvisor"</text>
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1p37gn8">
           <text></text>
