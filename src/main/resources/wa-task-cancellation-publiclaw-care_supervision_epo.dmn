@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1l97b4e" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1l97b4e" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-cancellation-publiclaw-care_supervision_epo" name="Task cancellation DMN">
     <decisionTable id="DecisionTable_0gksf8r" hitPolicy="COLLECT">
       <input id="Input_1" label="From State" camunda:inputVariable="fromState">
         <inputExpression id="InputExpression_1" typeRef="string">
-          <text></text>
+          <text>fromState</text>
         </inputExpression>
       </input>
       <input id="InputClause_13b1x1h" label="Event Id" camunda:inputVariable="eventId">
         <inputExpression id="LiteralExpression_16kt9wd" typeRef="string">
-          <text></text>
+          <text>event</text>
         </inputExpression>
       </input>
       <input id="InputClause_0f6u4qu" label="To State" camunda:inputVariable="toState">
         <inputExpression id="LiteralExpression_0d7il84" typeRef="string">
-          <text></text>
+          <text>state</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Action" name="action" typeRef="string" />

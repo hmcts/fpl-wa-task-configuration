@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-initiation-publiclaw-care_supervision_epo" name="Task initiation DMN">
     <decisionTable id="DecisionTable_1fj3kaa" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Event Id" camunda:inputVariable="eventId">
@@ -61,7 +61,7 @@
           <text>"reviewMessageAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1t763fh">
-          <text>"Review Message"</text>
+          <text>"Review Message (Allocated Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rdug08">
           <text></text>
@@ -91,7 +91,7 @@
           <text>"reviewResponseAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vn5g5s">
-          <text>"Review Response"</text>
+          <text>"Review Response (Allocated Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0v622xr">
           <text></text>
@@ -120,7 +120,7 @@
           <text>"reviewMessageHearingJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c5z6g6">
-          <text>"Review Message"</text>
+          <text>"Review Message (Hearing Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ofj4sk">
           <text></text>
@@ -149,7 +149,7 @@
           <text>"reviewResponseHearingJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sl7nse">
-          <text>"Review Response"</text>
+          <text>"Review Response (Hearing Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0af9psb">
           <text></text>
@@ -178,7 +178,7 @@
           <text>"reviewMessageHearingCentreAdmin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12pi3z1">
-          <text>"Review Message"</text>
+          <text>"Review Message (Local Court)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_019oc5j">
           <text></text>
@@ -207,7 +207,7 @@
           <text>"reviewResponseHearingCentreAdmin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rzrvvz">
-          <text>"Review Response"</text>
+          <text>"Review Response (Local Court)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ggoglf">
           <text></text>
@@ -236,7 +236,7 @@
           <text>"reviewMessageCTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nclh6l">
-          <text>"Review Message"</text>
+          <text>"Review Message (CTSC)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oc4n8j">
           <text></text>
@@ -265,7 +265,7 @@
           <text>"reviewResponseCTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ino8jm">
-          <text>"Review Response"</text>
+          <text>"Review Response (CTSC)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_01qdcl9">
           <text></text>
@@ -295,7 +295,7 @@
           <text>"reviewMessageLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ot1ycd">
-          <text>"Review Message"</text>
+          <text>"Review Message (Legal Adviser)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1swkc9j">
           <text></text>
@@ -325,7 +325,7 @@
           <text>"reviewResponseLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_01wni72">
-          <text>"Review Response"</text>
+          <text>"Review Response (Legal Adviser)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dh2umt">
           <text></text>
@@ -433,7 +433,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1uc0id1">
-          <text>"Within 5 days"</text>
+          <text>"Other","Within 18 days","Within 12 days","Within 7 days"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1odrgtx">
           <text></text>
@@ -454,7 +454,7 @@
       <rule id="DecisionRule_0lktk48">
         <description></description>
         <inputEntry id="UnaryTests_01q9d9j">
-          <text>"addGatekeepingOrder"</text>
+          <text>"listGatekeepingHearing"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bl0b2a">
           <text></text>
@@ -571,7 +571,7 @@
       </rule>
       <rule id="DecisionRule_0z5c01v">
         <inputEntry id="UnaryTests_14qu4kl">
-          <text>"uploadPlacementApplications"</text>
+          <text>"placement"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0omn8mq">
           <text></text>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-configuration-publiclaw-care_supervision_epo" name="Task configuration DMN">
     <decisionTable id="DecisionTable_04h0po8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -19,7 +19,7 @@
       </input>
       <output id="Output_1" label="Name" name="name" typeRef="string" />
       <output id="OutputClause_0n53zsu" label="Value" name="value" typeRef="string" biodi:width="354" />
-      <output id="OutputClause_0vog2vc" label="Can Reconfigure" name="canReconfigure" typeRef="string" />
+      <output id="OutputClause_0vog2vc" label="Can Reconfigure" name="canReconfigure" typeRef="boolean" />
       <rule id="DecisionRule_0maqehe">
         <inputEntry id="UnaryTests_1m9yr5w">
           <text></text>
@@ -31,7 +31,7 @@
           <text>"caseName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kxli13">
-          <text>if caseData.caseName !=null then caseData.caseName else "Public Law"</text>
+          <text>if caseData.caseName !=null then caseData.caseName else "Public Law Case"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1uecj96">
           <text>true</text>
@@ -48,7 +48,7 @@
           <text>"caseManagementCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1s3nxeg">
-          <text>"Public Law"</text>
+          <text>"PUBLICLAW"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gltgk0">
           <text>false</text>
@@ -66,7 +66,7 @@
           <text>"region"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nq2bh1">
-          <text>caseData.caseManagementLocation.region</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.region != null) then  caseData.caseManagementLocation.region else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1d7zv96">
           <text>true</text>
@@ -84,7 +84,7 @@
           <text>"location"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16at2lk">
-          <text>caseData.caseManagementLocation.baseLocation </text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocation != null) then caseData.caseManagementLocation.baseLocation else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02e3u51">
           <text>true</text>
@@ -102,7 +102,7 @@
           <text>"locationName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0z5dl4t">
-          <text>caseData.court.name</text>
+          <text>if (caseData.court != null and caseData.court.name != null) then caseData.court.name else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m1o1nq">
           <text>true</text>
@@ -461,7 +461,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewMessageAllocatedJudge","reviewMessageHearingJudge","reviewMessageHearingJudge","reviewMessageLocalCourt","reviewResponseLocalCourt","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageLocalCourt","reviewResponseLocalCourt","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08sdeu3">
           <text>"workType"</text>
@@ -530,7 +530,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ox5s2">
-          <text>"reviewSpecificAccessRequestAdmin","reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_020dk9k">
           <text>"roleCategory"</text>
@@ -547,7 +547,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewSpecificAccessRequestJudiciary","viewAdditionalApplications","approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -564,7 +564,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uuvjqh">
-          <text>"reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionsOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewOrderCMO","reviewSpecificAccessRequestCTSC"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_011ayls">
           <text>"roleCategory"</text>
@@ -582,7 +582,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mciq3d">
-          <text>"reviewSpecificAccessRequestLegalOps","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewSpecificAccessRequestLegalOps"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0n4tene">
           <text>"roleCategory"</text>
@@ -707,7 +707,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14l1tya">
-          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
+          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jkl1m1">
           <text>true</text>
@@ -724,7 +724,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1afneiy">
-          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
+          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0n786vb">
           <text>true</text>
@@ -741,7 +741,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1qhfeq6">
-          <text>"Review payments on the [payments tab](/cases/case-details/${[CASE_REFERENCE]}#Payment%20History"</text>
+          <text>"Review payments on the [payments tab](/cases/case-details/${[CASE_REFERENCE]}#Payment%20History)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0uau67d">
           <text>true</text>
@@ -758,7 +758,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kkg3re">
-          <text>"Review correspondence on the [correspondence tab](/cases/case-details/${[CASE_REFERENCE]}#Correspondence"</text>
+          <text>"Review correspondence on the [correspondence tab](/cases/case-details/${[CASE_REFERENCE]}#Correspondence)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1azi59u">
           <text>true</text>
@@ -775,27 +775,9 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_097layn">
-          <text>"Review placement applications on the [placements tab](/cases/case-details/${[CASE_REFERENCE]}#Placement"</text>
+          <text>"Review placement applications on the [placements tab](/cases/case-details/${[CASE_REFERENCE]}#Placement)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0odndbs">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1hx73kr">
-        <description></description>
-        <inputEntry id="UnaryTests_05776fz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0tmkyqm">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1xvuxdc">
-          <text>"description"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_15h4g38">
-          <text>"taskAttributes.name"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0fnf8hq">
           <text>true</text>
         </outputEntry>
       </rule>

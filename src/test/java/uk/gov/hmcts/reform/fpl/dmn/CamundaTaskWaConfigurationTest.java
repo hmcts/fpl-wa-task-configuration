@@ -54,8 +54,8 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
         assertTrue(dmnDecisionTableResult.getResultList().containsAll(List.of(
-            getRowResult("minorPriority", "500", "true"),
-            getRowResult("majorPriority", "3000", "true")
+            getRowResult("minorPriority", "500", true),
+            getRowResult("majorPriority", "3000", true)
         )));
     }
 
@@ -63,20 +63,20 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(42));
+        assertThat(logic.getRules().size(), is(41));
     }
 
-    private static List<Map<String, String>> getBaseValues() {
+    private static List<Map<String, Object>> getBaseValues() {
         return List.of(
-            getRowResult("caseName", "Test v Smith", "true"),
-            getRowResult("caseManagementCategory", "Public Law", "false"),
-            getRowResult("region", "1", "true"),
-            getRowResult("location", "111", "true"),
-            getRowResult("locationName", "Birmingham", "true")
+            getRowResult("caseName", "Test v Smith", true),
+            getRowResult("caseManagementCategory", "PUBLICLAW", false),
+            getRowResult("region", "1", true),
+            getRowResult("location", "111", true),
+            getRowResult("locationName", "Birmingham", true)
         );
     }
 
-    private static Map<String, String> getRowResult(String name, String value, String canReconfigure) {
+    private static Map<String, Object> getRowResult(String name, String value, boolean canReconfigure) {
         return Map.of(
             "canReconfigure", canReconfigure,
             "name", name,
