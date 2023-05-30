@@ -62,7 +62,7 @@
           <text>"reviewMessageAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1t763fh">
-          <text>"Review Message"</text>
+          <text>"Review Message (Allocated Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rdug08">
           <text>0</text>
@@ -95,7 +95,7 @@
           <text>"reviewResponseAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vn5g5s">
-          <text>"Review Response"</text>
+          <text>"Review Response (Allocated Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0v622xr">
           <text>0</text>
@@ -127,7 +127,7 @@
           <text>"reviewMessageHearingJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c5z6g6">
-          <text>"Review Message"</text>
+          <text>"Review Message (Hearing Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ofj4sk">
           <text>0</text>
@@ -159,7 +159,7 @@
           <text>"reviewResponseHearingJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sl7nse">
-          <text>"Review Response"</text>
+          <text>"Review Response (Hearing Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0af9psb">
           <text>0</text>
@@ -191,7 +191,7 @@
           <text>"reviewMessageHearingCentreAdmin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12pi3z1">
-          <text>"Review Message"</text>
+          <text>"Review Message (Local Court)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_019oc5j">
           <text>0</text>
@@ -223,7 +223,7 @@
           <text>"reviewResponseHearingCentreAdmin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rzrvvz">
-          <text>"Review Response"</text>
+          <text>"Review Response (Local Court)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ggoglf">
           <text>0</text>
@@ -255,7 +255,7 @@
           <text>"reviewMessageCTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nclh6l">
-          <text>"Review Message"</text>
+          <text>"Review Message (CTSC)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oc4n8j">
           <text>0</text>
@@ -287,7 +287,7 @@
           <text>"reviewResponseCTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ino8jm">
-          <text>"Review Response"</text>
+          <text>"Review Response (CTSC)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_01qdcl9">
           <text>0</text>
@@ -320,7 +320,7 @@
           <text>"reviewMessageLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ot1ycd">
-          <text>"Review Message"</text>
+          <text>"Review Message (Legal Adviser)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1swkc9j">
           <text>0</text>
@@ -353,7 +353,7 @@
           <text>"reviewResponseLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_01wni72">
-          <text>"Review Response"</text>
+          <text>"Review Response (Legal Adviser)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dh2umt">
           <text>0</text>

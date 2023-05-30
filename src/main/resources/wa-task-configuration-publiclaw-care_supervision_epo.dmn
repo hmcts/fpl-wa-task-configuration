@@ -199,7 +199,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ox5s2">
-          <text>"reviewSpecificAccessRequestAdmin","reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_020dk9k">
           <text>"roleCategory"</text>
@@ -216,7 +216,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewSpecificAccessRequestJudiciary","viewAdditionalApplications","approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -233,7 +233,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uuvjqh">
-          <text>"reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionsOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewOrderCMO","reviewSpecificAccessRequestCTSC"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_011ayls">
           <text>"roleCategory"</text>
@@ -251,7 +251,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mciq3d">
-          <text>"reviewSpecificAccessRequestLegalOps","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewSpecificAccessRequestLegalOps"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0n4tene">
           <text>"roleCategory"</text>
@@ -376,7 +376,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14l1tya">
-          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
+          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jkl1m1">
           <text>true</text>
@@ -393,7 +393,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1afneiy">
-          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders"</text>
+          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0n786vb">
           <text>true</text>
@@ -410,7 +410,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1qhfeq6">
-          <text>"Review payments on the [payments tab](/cases/case-details/${[CASE_REFERENCE]}#Payment%20History"</text>
+          <text>"Review payments on the [payments tab](/cases/case-details/${[CASE_REFERENCE]}#Payment%20History)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0uau67d">
           <text>true</text>
@@ -427,7 +427,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kkg3re">
-          <text>"Review correspondence on the [correspondence tab](/cases/case-details/${[CASE_REFERENCE]}#Correspondence"</text>
+          <text>"Review correspondence on the [correspondence tab](/cases/case-details/${[CASE_REFERENCE]}#Correspondence)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1azi59u">
           <text>true</text>
@@ -444,7 +444,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_097layn">
-          <text>"Review placement applications on the [placements tab](/cases/case-details/${[CASE_REFERENCE]}#Placement"</text>
+          <text>"Review placement applications on the [placements tab](/cases/case-details/${[CASE_REFERENCE]}#Placement)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0odndbs">
           <text>true</text>
