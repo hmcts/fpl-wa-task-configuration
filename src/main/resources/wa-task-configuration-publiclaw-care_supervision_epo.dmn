@@ -137,7 +137,7 @@
           <text>"nextHearingDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c7ui53">
-          <text>caseData.caseSummaryNextHearingDate</text>
+          <text>if (caseData.caseSummaryNextHearingDateTime != null) then caseData.caseSummaryNextHearingDateTime else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ou2p2j">
           <text>true</text>
