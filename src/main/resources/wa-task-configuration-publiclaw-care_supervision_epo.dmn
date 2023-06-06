@@ -851,7 +851,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12aldmx">
-        <description>should this be 3000?</description>
+        <description></description>
         <inputEntry id="UnaryTests_0no48hl">
           <text></text>
         </inputEntry>
@@ -862,7 +862,7 @@
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0etm8vn">
-          <text>2000</text>
+          <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02azr2b">
           <text>true</text>
