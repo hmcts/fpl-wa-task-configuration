@@ -707,7 +707,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14l1tya">
-          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders)"</text>
+          <text>"Review orders on the orders tab"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jkl1m1">
           <text>true</text>
@@ -724,7 +724,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1afneiy">
-          <text>"Review orders on the [orders tab](/cases/case-details/${[CASE_REFERENCE]}#Orders)"</text>
+          <text>"Review orders on the orders tab"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0n786vb">
           <text>true</text>
@@ -741,7 +741,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1qhfeq6">
-          <text>"Review payments on the [payments tab](/cases/case-details/${[CASE_REFERENCE]}#Payment%20History)"</text>
+          <text>"Review payments on the payments tab"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0uau67d">
           <text>true</text>
@@ -758,7 +758,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kkg3re">
-          <text>"Review correspondence on the [correspondence tab](/cases/case-details/${[CASE_REFERENCE]}#Correspondence)"</text>
+          <text>"Review correspondence on the correspondence tab"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1azi59u">
           <text>true</text>
@@ -775,7 +775,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_097layn">
-          <text>"Review placement applications on the [placements tab](/cases/case-details/${[CASE_REFERENCE]}#Placement)"</text>
+          <text>"Review placement applications on the placements tab"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0odndbs">
           <text>true</text>
@@ -851,7 +851,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12aldmx">
-        <description>should this be 3000?</description>
+        <description></description>
         <inputEntry id="UnaryTests_0no48hl">
           <text></text>
         </inputEntry>
@@ -862,7 +862,7 @@
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0etm8vn">
-          <text>2000</text>
+          <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02azr2b">
           <text>true</text>
