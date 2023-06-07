@@ -29,7 +29,7 @@
           <text>"task-supervisor"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_031urzk">
-          <text>"Complete,Own,Assign,Claim,Unassign,Read,Cancel,Manage"</text>
+          <text>"Complete,Assign,Unassign,Read,Cancel,Manage"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c0juuw">
           <text></text>
