@@ -656,7 +656,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1tk1bqp">
-          <text>"[Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
+          <text>"First [Add case number](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/addFamilyManCaseNumber) then [Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rpkgu8">
           <text>true</text>
@@ -673,7 +673,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ipsp8q">
-          <text>"[Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
+          <text>"First [Add case number](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/addFamilyManCaseNumber) then [Send to gatekeeper](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendToGatekeeper) or [Return application](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/returnApplication)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_10lviq5">
           <text>true</text>
