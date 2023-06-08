@@ -330,7 +330,7 @@
           <text>"dueDateTime"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1j2q8zm">
-          <text>time(now() + duration("PT2H"))</text>
+          <text>substring(string(time(now() + duration("PT2H"))), 1, 8)</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16db70z">
           <text>false</text>
