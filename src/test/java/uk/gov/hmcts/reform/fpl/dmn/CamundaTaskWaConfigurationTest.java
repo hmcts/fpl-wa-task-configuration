@@ -55,7 +55,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
         assertTrue(dmnDecisionTableResult.getResultList().containsAll(List.of(
             getRowResult("minorPriority", "500", true),
-            getRowResult("majorPriority", "3000", true)
+            getRowResult("majorPriority", "5000", true)
         )));
     }
 
