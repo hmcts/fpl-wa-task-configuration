@@ -45,6 +45,7 @@ class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
         return Stream.of(
             Arguments.of("manageHearings", Map.of("action", "Reconfigure")),
             Arguments.of("changeCaseName", Map.of("action", "Reconfigure")),
+            Arguments.of("changeCaseName-superuser", Map.of("action", "Reconfigure")),
             Arguments.of("manageLocalAuthorities", Map.of("action", "Reconfigure")),
             Arguments.of("internal-update-case-summary", Map.of("action", "Reconfigure"))
         );
@@ -54,6 +55,6 @@ class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(4));
+        assertThat(logic.getRules().size(), is(5));
     }
 }
