@@ -67,6 +67,29 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1ol6gsu">
+        <inputEntry id="UnaryTests_127fxuy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lodt4h">
+          <text>"changeCaseName-superuser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tih9p7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10fvyqg">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tt81sn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_017zcxi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wrc7mr">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1xkktdj">
         <inputEntry id="UnaryTests_0l9qcps">
           <text></text>
