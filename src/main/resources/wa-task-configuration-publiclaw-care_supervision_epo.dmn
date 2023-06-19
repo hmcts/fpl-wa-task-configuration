@@ -781,6 +781,23 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1sp0pl5">
+        <inputEntry id="UnaryTests_11rf2gb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jqtl0a">
+          <text>"reviewSpecificAccessRequestCTSC", "reviewSpecificAccessRequestAdmin", "reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iul15a">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fpz771">
+          <text>if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId+ "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nhmfdj">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_18r5w06">
         <description>all tasks have the default 500</description>
         <inputEntry id="UnaryTests_18mvv82">
