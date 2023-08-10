@@ -444,7 +444,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08wb4e8">
-          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO"</text>
+          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO","reviewStandardDirectionOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0uxu3q4">
           <text>"workType"</text>
@@ -461,7 +461,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewStandardDirectionOrder","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewCorrespondence","chaseOutstandingOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08sdeu3">
           <text>"workType"</text>
@@ -478,7 +478,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_178m83z">
-          <text>"reviewUrgentApplication","reviewStandardApplication","reviewFailedPayment"</text>
+          <text>"reviewUrgentApplication","reviewStandardApplication","checkPlacementApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tzsh4h">
           <text>"workType"</text>
@@ -487,6 +487,23 @@
           <text>"applications"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0yekdr4">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tquo8z">
+        <inputEntry id="UnaryTests_0m77n9i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ivrmz6">
+          <text>"reviewFailedPayment"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18gtgat">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mrzeni">
+          <text>"error_management"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bqhn39">
           <text>true</text>
         </outputEntry>
       </rule>
