@@ -98,6 +98,33 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0ytac21">
+        <description>Auto assigning</description>
+        <inputEntry id="UnaryTests_1a0ljrj">
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qh7zor">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m4me1s">
+          <text>"allocated-legal-adviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bbiov6">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15n2gsm">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0addcef">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s5129z">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fxv06l">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1vc7wl3">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_05orfx0">
@@ -122,6 +149,33 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ybfy1r">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18y776v">
+        <description>Auto assigning</description>
+        <inputEntry id="UnaryTests_19t8w4o">
+          <text>"reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0967lem">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0eg54m7">
+          <text>"hearing-legal-adviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yv1c8w">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13b7zoz">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pvf7y7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ezgvdt">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0aiuyoc">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -205,6 +259,33 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0urbbi8">
+        <description>Auto assigning</description>
+        <inputEntry id="UnaryTests_0fu4qre">
+          <text>"viewAdditionalApplications"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12b4bo7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wctujd">
+          <text>"allocated-legal-adviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ht5y1p">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_128edem">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dz3ckh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xv65mx">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qg5z2e">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_10ux7wt">
         <description></description>
         <inputEntry id="UnaryTests_1kf3gzz">
@@ -282,6 +363,33 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12mldj1">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_002pzao">
+        <description>Auto assigning</description>
+        <inputEntry id="UnaryTests_1g0d3xf">
+          <text>"approveOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hf0l9t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10w561m">
+          <text>"hearing-legal-adviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d0thc1">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1erm8yd">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xutk8r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17bvc6d">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l6z28r">
           <text>true</text>
         </outputEntry>
       </rule>
