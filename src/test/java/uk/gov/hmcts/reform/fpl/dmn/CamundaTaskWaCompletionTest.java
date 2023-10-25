@@ -65,7 +65,7 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(17));
+        assertThat(logic.getRules().size(), is(18));
     }
 
     private static Map<String, String> getAutoCompleteTaskType(FplTask taskType) {
@@ -76,6 +76,10 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
     }
 
     private static List<Map<String, String>> getAutoCompleteTaskTypes(FplTask... taskTypes) {
-        return Stream.of(taskTypes).map(el -> getAutoCompleteTaskType(el)).collect(Collectors.toList());
+        List<Map<String, String>> tasks = Stream.of(taskTypes)
+            .map(el -> getAutoCompleteTaskType(el))
+            .collect(Collectors.toList());
+        tasks.add(Map.of()); // add non-completion events
+        return tasks;
     }
 }
