@@ -76,6 +76,10 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
     }
 
     private static List<Map<String, String>> getAutoCompleteTaskTypes(FplTask... taskTypes) {
-        return Stream.of(taskTypes).map(el -> getAutoCompleteTaskType(el)).collect(Collectors.toList());
+        List<Map<String, String>> tasks = Stream.of(taskTypes)
+            .map(el -> getAutoCompleteTaskType(el))
+            .collect(Collectors.toList());
+        tasks.add(Map.of()); // add non-completion events
+        return tasks;
     }
 }
