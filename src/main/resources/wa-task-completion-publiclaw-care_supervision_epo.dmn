@@ -201,7 +201,7 @@
       </rule>
       <rule id="DecisionRule_1nzha00">
         <inputEntry id="UnaryTests_14ft3ua">
-          <text>"reviewCMO","replyToMessageJudgeOrLegalAdviser","reviewAdditionalApplication","sendToGatekeeper","returnApplication","sendToGatekeeper","sendOrderReminder"</text>
+          <text>"reviewCMO","replyToMessageJudgeOrLegalAdviser","reviewAdditionalApplication","sendToGatekeeper","returnApplication","sendOrderReminder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12z0rov">
           <text></text>
