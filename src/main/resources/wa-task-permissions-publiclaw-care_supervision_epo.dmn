@@ -125,6 +125,32 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_13sgk0i">
+        <inputEntry id="UnaryTests_1fu5i9q">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gc1rqw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17ow8rb">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rxk4xx">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s1r21m">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1atn8vo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zod7rv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pf0jvl">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1s2rbf3">
         <description></description>
         <inputEntry id="UnaryTests_1gultec">
