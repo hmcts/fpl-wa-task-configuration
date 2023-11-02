@@ -44,6 +44,87 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0av9sxj">
+        <description>Let everyone using WA see all tasks, even if they're not completing them</description>
+        <inputEntry id="UnaryTests_05cw6b4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0npbc96">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_057otp8">
+          <text>"judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1muyh01">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10tqxas">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0piwyhc">
+          <text>316</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yh1llw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04pbdtz">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b2xsf7">
+        <description>Let everyone using WA see all tasks, even if they're not completing them</description>
+        <inputEntry id="UnaryTests_0tr4xqf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tt51gm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bewvbl">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ksj96y">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_161eowo">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vf76vg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ul2kbu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02kby63">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11eq6t8">
+        <description>Let everyone using WA see all tasks, even if they're not completing them</description>
+        <inputEntry id="UnaryTests_1llng7s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1aaz41t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08t4981">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01slali">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09bkgzb">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_135a9sd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pjkh99">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08udc72">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1s2rbf3">
         <description></description>
         <inputEntry id="UnaryTests_1gultec">
