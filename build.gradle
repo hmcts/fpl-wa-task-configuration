@@ -199,8 +199,8 @@ dependencies {
   implementation group: 'io.rest-assured', name: 'rest-assured'
   implementation group: 'org.camunda.bpm', name: 'camunda-external-task-client', version: versions.camunda
 
-  annotationProcessor 'org.projectlombok:lombok:1.18.24'
-  compileOnly 'org.projectlombok:lombok:1.18.24'
+  annotationProcessor 'org.projectlombok:lombok:1.18.30'
+  compileOnly 'org.projectlombok:lombok:1.18.30'
 
   testImplementation(platform('org.junit:junit-bom:5.8.2'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
