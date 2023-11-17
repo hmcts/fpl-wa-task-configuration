@@ -44,113 +44,6 @@
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0av9sxj">
-        <description>Let everyone using WA see all tasks, even if they're not completing them</description>
-        <inputEntry id="UnaryTests_05cw6b4">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0npbc96">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_057otp8">
-          <text>"judge"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1muyh01">
-          <text>"Read"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_10tqxas">
-          <text>"JUDICIAL"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0piwyhc">
-          <text>316</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0yh1llw">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_04pbdtz">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1b2xsf7">
-        <description>Let everyone using WA see all tasks, even if they're not completing them</description>
-        <inputEntry id="UnaryTests_0tr4xqf">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1tt51gm">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1bewvbl">
-          <text>"ctsc"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0ksj96y">
-          <text>"Read"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_161eowo">
-          <text>"CTSC"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0vf76vg">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ul2kbu">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_02kby63">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_11eq6t8">
-        <description>Let everyone using WA see all tasks, even if they're not completing them</description>
-        <inputEntry id="UnaryTests_1llng7s">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1aaz41t">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_08t4981">
-          <text>"tribunal-caseworker"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01slali">
-          <text>"Read"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09bkgzb">
-          <text>"LEGAL_OPERATIONS"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_135a9sd">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0pjkh99">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_08udc72">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_13sgk0i">
-        <inputEntry id="UnaryTests_1fu5i9q">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0gc1rqw">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_17ow8rb">
-          <text>"hearing-centre-admin"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1rxk4xx">
-          <text>"Read"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0s1r21m">
-          <text>"LEGAL_OPERATIONS"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1atn8vo">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0zod7rv">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1pf0jvl">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1s2rbf3">
         <description></description>
         <inputEntry id="UnaryTests_1gultec">
@@ -176,6 +69,84 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1gvf0gz">
           <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1jouldi">
+        <inputEntry id="UnaryTests_0hpio1a">
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t9c5cr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1abezk9">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xt4olh">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1um3ipq">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wio3bl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_153h4q6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06829q4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1h9zc4b">
+        <inputEntry id="UnaryTests_0bmv9pp">
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1my8vrn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1akx2pf">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f3fks7">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zghq1y">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hw0s4d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hxjseg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nke2op">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1s795at">
+        <inputEntry id="UnaryTests_1rg45lc">
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_150jcdi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16ygwcw">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09fwh0d">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p4ghi7">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01afamf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fxn7d7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f5ed64">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0kail0l">
@@ -393,6 +364,58 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0px42fc">
+        <inputEntry id="UnaryTests_1nianws">
+          <text>"viewAdditionalApplications"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kax82a">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0onv0ei">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17jf14h">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1770u7u">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hubgil">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lnyifa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k2qv81">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1efrp0u">
+        <inputEntry id="UnaryTests_0czzaev">
+          <text>"viewAdditionalApplications"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_113e4ze">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mu8962">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o724pq">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lxdikc">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0trnada">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o8lla2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00xl3jy">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_10ux7wt">
         <description></description>
         <inputEntry id="UnaryTests_1kf3gzz">
@@ -500,6 +523,58 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1w4mbq6">
+        <inputEntry id="UnaryTests_00fu586">
+          <text>"approveOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0smj90r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gbroxr">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z0f1u3">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q3lzkt">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e44f3o">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03hzk9w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13qdj2v">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ihhg4q">
+        <inputEntry id="UnaryTests_010mfen">
+          <text>"approveOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05ohkr5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pyieet">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cpdxjt">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0niwp3d">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ywvsvx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l97zfp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g21crs">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_09x1weo">
         <inputEntry id="UnaryTests_1an08mt">
           <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
@@ -526,6 +601,84 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0e2llyx">
+        <inputEntry id="UnaryTests_11nbrii">
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ui5uew">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uv4m0o">
+          <text>"judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0syfj0r">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ve3ivw">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18nz4sj">
+          <text>316</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1upb8fs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k3txl3">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0uy2yiz">
+        <inputEntry id="UnaryTests_1votk8j">
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05e6ln2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03iqo4a">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_051528t">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jjr4yj">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ogvqj9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o4si19">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nmsgl2">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rl7jwd">
+        <inputEntry id="UnaryTests_0mjamua">
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_031aj9c">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0osltsa">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dgi8dr">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tijshx">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b69lj9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07n61yh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kuuoes">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1liss5w">
         <inputEntry id="UnaryTests_0tbv583">
           <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
@@ -550,6 +703,84 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0vm93m2">
           <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1j1xsc1">
+        <inputEntry id="UnaryTests_1hivf7p">
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jvt2fn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11lzbx0">
+          <text>"judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dj48py">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hxvown">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cajdbz">
+          <text>316</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hg61jr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06nthnw">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0i0rbub">
+        <inputEntry id="UnaryTests_11ds6rp">
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d6uqgm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uuq878">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a8pkoj">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k3ujcu">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0voug7b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qejaek">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x3vuuk">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09aezqb">
+        <inputEntry id="UnaryTests_1i2gjc4">
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f3xsz7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ydv8d8">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s0i894">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0eyhgrh">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1011677">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pqqjgq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cwssxr">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1oooaja">
@@ -604,6 +835,84 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0xop8uz">
           <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gf6e0c">
+        <inputEntry id="UnaryTests_08c30oz">
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19vl23j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bsx98w">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19z7jyu">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1atk7de">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n1c72u">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08lucek">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f4uoei">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0a6wimf">
+        <inputEntry id="UnaryTests_114y7ft">
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tf3ll5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k89i0m">
+          <text>"judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06oha3t">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14qogyd">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vevwug">
+          <text>316</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mte98f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kwcffy">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04dqg7y">
+        <inputEntry id="UnaryTests_135ip1d">
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wja4p9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u3yo0z">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h8hgkw">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vnyyth">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01sx7wm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b64bsx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ibuaa2">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1n5hisj">
