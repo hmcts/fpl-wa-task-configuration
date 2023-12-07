@@ -36,13 +36,10 @@
           <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED"</text>
         </inputValues>
       </input>
-      <input id="InputClause_18jmjnx" label="should create approve draft order task" camunda:inputVariable="draftOrderNeedsReviewUploaded">
-        <inputExpression id="LiteralExpression_1dmzjv4" typeRef="string">
+      <input id="InputClause_18jmjnx" label="Should create approve draft order task" camunda:inputVariable="draftOrderNeedsReviewUploaded">
+        <inputExpression id="LiteralExpression_1dmzjv4" typeRef="boolean">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.draftOrderNeedsReviewUploaded != null) then additionalData.Data.draftOrderNeedsReviewUploaded else null</text>
         </inputExpression>
-        <inputValues id="UnaryTests_02pz0f5">
-          <text>"YES","NO"</text>
-        </inputValues>
       </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="217" />
       <output id="OutputClause_002axxi" label="Name" name="name" typeRef="string" />
@@ -421,7 +418,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08s8xqa">
-          <text>"YES"</text>
+          <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0csn711">
           <text>"approveOrders"</text>

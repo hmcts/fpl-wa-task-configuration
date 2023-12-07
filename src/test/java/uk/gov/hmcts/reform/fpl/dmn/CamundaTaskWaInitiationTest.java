@@ -148,7 +148,7 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "uploadCMO",
                 Map.of(
-                    "draftOrderNeedsReviewUploaded", "YES"
+                    "draftOrderNeedsReviewUploaded", true
                 ),
                 Map.of(
                     "taskId", "approveOrders",
