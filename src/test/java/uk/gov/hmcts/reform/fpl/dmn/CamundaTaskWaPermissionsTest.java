@@ -74,8 +74,7 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        // todo - check this after evaluation period
-        assertThat(logic.getRules().size(), is(0));
+        assertThat(logic.getRules().size(), is(22));
     }
 
     private static Map<String, Object> getRowResult(String name, String value, String roleCategory, String auth,
