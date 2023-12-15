@@ -49,7 +49,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "messageJudgeOrLegalAdviser",
                 Map.of(
-                    "latestRoleSent", "JUDICIARY"
+                    "latestRoleSent", "JUDICIARY",
+                    "shouldCreateJudicialTask", "YES"
                 ),
                 Map.of(
                     "taskId", "reviewMessageAllocatedJudge",
@@ -71,7 +72,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "messageJudgeOrLegalAdviser",
                 Map.of(
-                    "latestRoleSent", "HEARING_JUDGE"
+                    "latestRoleSent", "HEARING_JUDGE",
+                    "shouldCreateJudicialTask", "YES"
                 ),
                 Map.of(
                     "taskId", "reviewMessageHearingJudge",
