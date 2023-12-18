@@ -31,8 +31,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     // TODO: Re-enable post-evaluation period
-     @ParameterizedTest
-     @MethodSource("scenarioProvider")
+    @ParameterizedTest
+    @MethodSource("scenarioProvider")
     void givenInputShouldReturnOutcomeDmn(String eventId,
                                                Map<String, String> additionalData,
                                                Map<String, ? extends Serializable> expectedDmnOutcome) {
