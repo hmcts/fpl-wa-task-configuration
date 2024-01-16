@@ -6,7 +6,9 @@ import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTable;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTableBaseUnitTest;
 
@@ -28,9 +30,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_INITIATION;
     }
 
-    // TODO: Re-enable post-evaluation period
-    // @ParameterizedTest
-    // @MethodSource("scenarioProvider")
+    @ParameterizedTest
+    @MethodSource("scenarioProvider")
     void givenInputShouldReturnOutcomeDmn(String eventId,
                                                Map<String, String> additionalData,
                                                Map<String, ? extends Serializable> expectedDmnOutcome) {
@@ -151,7 +152,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        // todo - check this after evaluation period
-        assertThat(logic.getRules().size(), is(0));
+        assertThat(logic.getRules().size(), is(20));
     }
 }
