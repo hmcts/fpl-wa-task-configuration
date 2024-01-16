@@ -137,6 +137,78 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1qu7o48">
+        <description>Allow a migration to cancel all outstanding tasks</description>
+        <inputEntry id="UnaryTests_15toito">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pxec20">
+          <text>"migrateCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xuf6r2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o76v8o">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k6ly5g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s58p9g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s4ybmw">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12r9lqr">
+        <description>Allow a migration to cancel all outstanding tasks</description>
+        <inputEntry id="UnaryTests_1rpg23x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u8dg7z">
+          <text>"migrateCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gu0wrl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vwcmc0">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1aqn61s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ctvjj5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c57dbb">
+          <text>"case creation"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y87zzt">
+        <description>Allow a migration to cancel all outstanding tasks</description>
+        <inputEntry id="UnaryTests_1l6r74p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eub5m4">
+          <text>"migrateCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0flgsiw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kqk2pj">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ai7a0h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ono54h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w9svub">
+          <text>"manage outcome"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
