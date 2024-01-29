@@ -9,7 +9,7 @@ def s2sServiceName = "wa_camunda_pipeline_upload"
 def tenantId = "publiclaw"
 //def branchesToSync = ['demo', 'perftest', "ithc"]
 def branchesToSync = ['perftest', "ithc"]
-
+// test comment
 withCamundaOnlyPipeline(type, product, component, s2sServiceName, tenantId) {
 
   afterSuccess('test') {
