@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.19.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-permissions-publiclaw-care_supervision_epo" name="Permissions DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_0vv02p8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Task type" biodi:width="313" camunda:inputVariable="taskType">
@@ -442,6 +442,32 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0vm93m2">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1w788bo">
+        <inputEntry id="UnaryTests_0nhcc2y">
+          <text>"reviewStandardDirectionOrderHighCourt"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09onc92">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vgowqc">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0djqls5">
+          <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04kflmq">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i5at71">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jayhlt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l06axz">
           <text>false</text>
         </outputEntry>
       </rule>
