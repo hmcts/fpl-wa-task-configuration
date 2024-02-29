@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.16.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.19.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-initiation-publiclaw-care_supervision_epo" name="Task initiation DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_1fj3kaa" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Event Id" camunda:inputVariable="eventId">
@@ -596,6 +596,38 @@
           <text>"manage outcome"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1r23ta5">
+        <inputEntry id="UnaryTests_15f01do">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1be426w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09dxmvy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07fga7p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a33133">
+          <text>"ORDER_UPLOADED", "CMO_REVIEWED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03h0ph8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mrzps8">
+          <text>"reviewOrderCMOHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mz1cdd">
+          <text>"Review Order (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_056w7un">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c5pelr">
+          <text>"manage outcome"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0idtv4n">
         <inputEntry id="UnaryTests_1i39tz1">
           <text>"create-work-allocation-task"</text>
@@ -625,6 +657,38 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hjxgpr">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_084if6i">
+        <inputEntry id="UnaryTests_100z78i">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aytpva">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ricroi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o1npxm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1knkjl3">
+          <text>"FAILED_PAYMENT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14bm87w">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07namio">
+          <text>"reviewFailedPaymentHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06f5kh5">
+          <text>"Review Failed Payment (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ypdfdc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mzig57">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
@@ -660,6 +724,38 @@
           <text>"case progression"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1nkum9n">
+        <inputEntry id="UnaryTests_05vtgnm">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06qlbog">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hv5mni">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_119k8ym">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11j3ejd">
+          <text>"CORRESPONDENCE_UPLOADED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04705fj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0roq1yk">
+          <text>"reviewCorrespondenceHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05lzq7y">
+          <text>"Review Correspondence (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_062dfn8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u4wd90">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0z5c01v">
         <inputEntry id="UnaryTests_14qu4kl">
           <text>"placement"</text>
@@ -689,6 +785,38 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16kn5j9">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nboa8s">
+        <inputEntry id="UnaryTests_0szhh8g">
+          <text>"placement"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ivw4xn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f476bt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04vxl2j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sfhgrp">
+          <text>"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wetpv1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09oen25">
+          <text>"checkPlacementApplicationHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vh9k9n">
+          <text>"Check Placement Application (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ygzyqn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ni8d2d">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
