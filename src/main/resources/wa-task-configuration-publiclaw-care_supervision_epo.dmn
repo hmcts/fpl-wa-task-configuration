@@ -444,7 +444,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08wb4e8">
-          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt"</text>
+          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0uxu3q4">
           <text>"workType"</text>
@@ -461,7 +461,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewCorrespondence","chaseOutstandingOrder"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08sdeu3">
           <text>"workType"</text>
@@ -478,7 +478,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_178m83z">
-          <text>"reviewUrgentApplication","reviewStandardApplication","checkPlacementApplication"</text>
+          <text>"reviewUrgentApplication","reviewStandardApplication","checkPlacementApplication","checkPlacementApplicationHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tzsh4h">
           <text>"workType"</text>
@@ -495,7 +495,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ivrmz6">
-          <text>"reviewFailedPayment"</text>
+          <text>"reviewFailedPayment","reviewFailedPaymentHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18gtgat">
           <text>"workType"</text>
@@ -547,7 +547,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ox5s2">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewSpecificAccessRequestAdmin","reviewStandardDirectionOrderHighCourt"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewSpecificAccessRequestAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_020dk9k">
           <text>"roleCategory"</text>
@@ -1019,7 +1019,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0kcore6">
-          <text>"reviewOrderCMO"</text>
+          <text>"reviewOrderCMO","reviewOrderCMOHightCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tlad3g">
           <text>"majorPriority"</text>
@@ -1037,7 +1037,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0cd7i8l">
-          <text>"reviewFailedPayment"</text>
+          <text>"reviewFailedPayment","reviewFailedPaymentHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0s6zv2d">
           <text>"majorPriority"</text>
@@ -1055,7 +1055,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1t16t2x">
-          <text>"reviewCorrespondence"</text>
+          <text>"reviewCorrespondence","reviewCorrespondenceHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_125yakf">
           <text>"majorPriority"</text>
@@ -1073,7 +1073,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_01hrm0h">
-          <text>"checkPlacementApplication"</text>
+          <text>"checkPlacementApplication","checkPlacementApplicationHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0bz1qhd">
           <text>"majorPriority"</text>
