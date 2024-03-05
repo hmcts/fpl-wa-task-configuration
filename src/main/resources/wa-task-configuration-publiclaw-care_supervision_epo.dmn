@@ -612,20 +612,20 @@ else "roleAssignmentId"</text>
           <text>true</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0474ego">
-        <inputEntry id="UnaryTests_0v3vn2u">
+      <rule id="DecisionRule_0eajrfx">
+        <inputEntry id="UnaryTests_0641o2n">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1csmr7k">
+        <inputEntry id="UnaryTests_1236doa">
           <text>"viewAdditionalApplications"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_00ur4j8">
+        <outputEntry id="LiteralExpression_14sp4x1">
           <text>"roleCategory"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_01ouudu">
-          <text>if (caseData.allocatedJudge != null and caseData.allocatedJudge.judgeEmailAddress != null and ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")) then "LEGAL_OPERATIONS" else "JUDICIAL"</text>
+        <outputEntry id="LiteralExpression_13wjipi">
+          <text>if (caseData.allocatedJudge != null and caseData.allocatedJudge.judgeTitle != null and caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR" then "LEGAL_OPERATIONS" else "JUDICIAL"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1fia1tz">
+        <outputEntry id="LiteralExpression_106iqxi">
           <text>true</text>
         </outputEntry>
       </rule>
