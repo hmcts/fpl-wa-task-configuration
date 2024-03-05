@@ -565,7 +565,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -609,23 +609,6 @@ else "roleAssignmentId"</text>
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mpxusj">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0474ego">
-        <inputEntry id="UnaryTests_0v3vn2u">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1csmr7k">
-          <text>"viewAdditionalApplications"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_00ur4j8">
-          <text>"roleCategory"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01ouudu">
-          <text>if (caseData.allocatedJudge != null and caseData.allocatedJudge.judgeEmailAddress != null and ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")) then "LEGAL_OPERATIONS" else "JUDICIAL"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1fia1tz">
           <text>true</text>
         </outputEntry>
       </rule>
