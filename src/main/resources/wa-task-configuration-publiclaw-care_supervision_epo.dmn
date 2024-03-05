@@ -565,7 +565,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -600,7 +600,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mciq3d">
-          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewSpecificAccessRequestLegalOps"</text>
+          <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewSpecificAccessRequestLegalOps","viewAdditionalApplications"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0n4tene">
           <text>"roleCategory"</text>
