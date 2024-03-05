@@ -625,6 +625,9 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1c5pelr">
+        <text></text>
+        </outputEntry>  
+      </rule>
       <rule id="DecisionRule_07tyghs">
         <inputEntry id="UnaryTests_1xxilia">
           <text>"create-work-allocation-task"</text>
