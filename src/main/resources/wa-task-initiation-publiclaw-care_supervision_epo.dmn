@@ -33,7 +33,7 @@
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.lastCreatedWATask != null) then additionalData.Data.lastCreatedWATask else null</text>
         </inputExpression>
         <inputValues id="UnaryTests_052aha7">
-          <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED"</text>
+          <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED","URGENT_CMO_REVIEWED"</text>
         </inputValues>
       </input>
       <input id="InputClause_0924fp2" label="Court Code is 100" camunda:inputVariable="courtCode">
@@ -625,6 +625,32 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1c5pelr">
+      <rule id="DecisionRule_07tyghs">
+        <inputEntry id="UnaryTests_1xxilia">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nhms9z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w71u2f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04yurk0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11supka">
+          <text>"URGENT_CMO_REVIEWED"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y5ugc0">
+          <text>"reviewOrderCMOUrgent"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qls50n">
+          <text>"Review Order (Urgent)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zck997">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1in9mle">
           <text>"manage outcome"</text>
         </outputEntry>
       </rule>

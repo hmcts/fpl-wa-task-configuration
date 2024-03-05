@@ -444,7 +444,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08wb4e8">
-          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt"</text>
+          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO","reviewOrderCMOUrgent","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0uxu3q4">
           <text>"workType"</text>
@@ -536,7 +536,8 @@
           <text>"additionalProperties_roleAssignmentId"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1bhk0ws">
-          <text>taskAttributes.roleAssignmentId</text>
+          <text>if (taskAttributes != null and taskAttributes.roleAssignmentId != null) then taskAttributes.roleAssignmentId else if (taskAttributes != null and taskAttributes.additionalProperties != null and taskAttributes.additionalProperties.roleAssignmentId != null) then taskAttributes.additionalProperties.roleAssignmentId
+else "roleAssignmentId"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0tdvep3">
           <text>true</text>
@@ -564,7 +565,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -581,7 +582,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uuvjqh">
-          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewOrderCMOUrgent","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_011ayls">
           <text>"roleCategory"</text>
@@ -608,6 +609,23 @@
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mpxusj">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0474ego">
+        <inputEntry id="UnaryTests_0v3vn2u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1csmr7k">
+          <text>"viewAdditionalApplications"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00ur4j8">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01ouudu">
+          <text>if (caseData.allocatedJudge != null and caseData.allocatedJudge.judgeEmailAddress != null and ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")) then "LEGAL_OPERATIONS" else "JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fia1tz">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -735,7 +753,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_025w5p7">
-          <text>"reviewOrderCMO","reviewOrderCMOHighCourt"</text>
+          <text>"reviewOrderCMO","reviewOrderCMOUrgent","reviewOrderCMOHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0eezo8k">
           <text>"description"</text>
@@ -1031,6 +1049,24 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_084ms02">
+        <description>Always urgent</description>
+        <inputEntry id="UnaryTests_0auxqie">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w8b5v7">
+          <text>"reviewOrderCMOUrgent"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_102tyv4">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b7oink">
+          <text>1000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05txopu">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1jo8pn7">
         <description>Low, Medium, High based on priority date</description>
         <inputEntry id="UnaryTests_0yawcea">
@@ -1101,6 +1137,23 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0877p3e">
           <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sumgf3">
+        <inputEntry id="UnaryTests_1oc8kos">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qd59ye">
+          <text>"viewAdditionalApplications","reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageHearingJudge","reviewMessageAllocatedJudge","approveOrders","reviewOrderCMO","reviewOrderCMOUrgent","reviewResponseAllocatedJudge","reviewResponseHearingJudge","reviewResponseHearingCentreAdmin","reviewResponseCTSC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19vr5yu">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_040jt2c">
+          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + " (" + substring(string(date(now())), 1, 10) + " " + substring(string(time(now())), 1, 5) + ")" else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03vf2mq">
+          <text>false</text>
         </outputEntry>
       </rule>
     </decisionTable>
