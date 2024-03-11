@@ -645,7 +645,7 @@ else "roleAssignmentId"</text>
                                                               return hearingStartDate &lt;= new Date().toISOString().split('T')[0];
                                                             }).sort((a, b) =&gt; {
                                                      return new Date(b.value.startDate) - new Date(a.value.startDate);
-                                                   })[0].value.judgeAndLegalAdvisor).judgeTitle == 'LEGAL_ADVISOR' ? 'LEGAL_OPERATIONS' : 'JUDICIAL';</text>
+                                                   })[0].value.judgeAndLegalAdvisor.judgeTitle== 'LEGAL_ADVISOR' ? 'LEGAL_OPERATIONS' : 'JUDICIAL'</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zeaw9z">
           <text>true</text>
