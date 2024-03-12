@@ -38,7 +38,7 @@
       </input>
       <input id="InputClause_11c116j" label="Court Code is 100" camunda:inputVariable="courtCode">
         <inputExpression id="LiteralExpression_0d2hgt1" typeRef="boolean" expressionLanguage="">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.court != null and additionalData.Data.court.code != null and additionalData.Data.court.code = “100”) then true else false</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.court != null and additionalData.Data.court.code != null and additionalData.Data.court.code = '100') then true else false</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="217" />
