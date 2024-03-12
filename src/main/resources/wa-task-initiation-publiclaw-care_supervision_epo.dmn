@@ -516,7 +516,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0nkajeo">
-          <text></text>
+          <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1prnege">
           <text>"reviewStandardDirectionOrder"</text>
@@ -528,6 +528,38 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0o4d0fk">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q657jw">
+        <inputEntry id="UnaryTests_0too2rq">
+          <text>"listGatekeepingHearing"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ampbxd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_028mmcs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h59wr6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vljo8z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eq5urd">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uomz4m">
+          <text>"reviewStandardDirectionOrderHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p50h2o">
+          <text>"Review Standard Direction Order (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v6s159">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lzmj8i">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
@@ -549,7 +581,7 @@
           <text>"ORDER_UPLOADED","CMO_REVIEWED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hx43ye">
-          <text></text>
+          <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0iigomq">
           <text>"reviewOrderCMO"</text>
@@ -561,6 +593,38 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1yhdh1s">
+          <text>"manage outcome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ass1u6">
+        <inputEntry id="UnaryTests_1x4om0q">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0484wam">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cup6qk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e4r2ed">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1csm2va">
+          <text>"ORDER_UPLOADED","CMO_REVIEWED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a3mxl2">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y838x9">
+          <text>"reviewOrderCMOHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wj60aj">
+          <text>"Review Order (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tnrgd0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fah9i7">
           <text>"manage outcome"</text>
         </outputEntry>
       </rule>
@@ -613,7 +677,7 @@
           <text>"FAILED_PAYMENT"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_10d2tgg">
-          <text></text>
+          <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vy2kdp">
           <text>"reviewFailedPayment"</text>
@@ -625,6 +689,38 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hjxgpr">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t7ytwi">
+        <inputEntry id="UnaryTests_0mf9zed">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cd3ukf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_005qx5k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0evxox3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i174ip">
+          <text>"FAILED_PAYMENT"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0go1ykc">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0euclu6">
+          <text>"reviewFailedPaymentHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xnlysz">
+          <text>"Review Failed Payment (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o01v05">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07io1ph">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
@@ -645,7 +741,7 @@
           <text>"CORRESPONDENCE_UPLOADED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1st5mjq">
-          <text></text>
+          <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0fneeoh">
           <text>"reviewCorrespondence"</text>
@@ -657,6 +753,38 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nz9qa7">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1r2sjfm">
+        <inputEntry id="UnaryTests_0c4p2px">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jrzc6j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y54tlt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y8icjy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0op60kz">
+          <text>"CORRESPONDENCE_UPLOADED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qtwhts">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0146skf">
+          <text>"reviewCorrespondenceHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j7gdu5">
+          <text>"Review Correspondence (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s4sotx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dp93pn">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
@@ -677,7 +805,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_138764d">
-          <text></text>
+          <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_11hgygm">
           <text>"checkPlacementApplication"</text>
@@ -689,6 +817,38 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16kn5j9">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03z2qwt">
+        <inputEntry id="UnaryTests_0dkriha">
+          <text>"placement"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x31nt1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c0cvrg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03ud6rc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_013al06">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mkc67l">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eowenj">
+          <text>"checkPlacementApplicationHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mafhgp">
+          <text>"Check Placement Application (High Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qgvm2t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dtbz6w">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
