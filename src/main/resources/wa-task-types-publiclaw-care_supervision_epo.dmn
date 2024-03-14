@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0i5xieu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0i5xieu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.19.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-types-publiclaw-care_supervision_epo" name="Task Types DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_1teyk0b" hitPolicy="COLLECT">
       <input id="Input_1">
@@ -7,7 +7,7 @@
           <text></text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="192" />
+      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="423" />
       <output id="OutputClause_0z4v517" label="Task Type Name" name="taskTypeName" typeRef="string" />
       <rule id="DecisionRule_0qzhm6f">
         <inputEntry id="UnaryTests_0zr8wde">
@@ -174,15 +174,15 @@
           <text>"Review Standard Direction Order"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0a8a4a6">
-        <inputEntry id="UnaryTests_1g47373">
+      <rule id="DecisionRule_1tdrlws">
+        <inputEntry id="UnaryTests_1cqh3gk">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0ajt1df">
-          <text>"reviewOrderCMOUrgent"</text>
+        <outputEntry id="LiteralExpression_0youqbh">
+          <text>reviewStandardDirectionOrderHighCourt</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0xprp2u">
-          <text>"Review Order (Urgent)"</text>
+        <outputEntry id="LiteralExpression_03k48i2">
+          <text>"Review Standard Direction Order (High Court)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_146c7pm">
@@ -196,6 +196,17 @@
           <text>"Review Order"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0if1ix9">
+        <inputEntry id="UnaryTests_0d9v3il">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1c7dst4">
+          <text>"reviewOrderCMOHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_163n2lz">
+          <text>"Review Order (High Court)"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0veas7v">
         <inputEntry id="UnaryTests_0ap6uot">
           <text></text>
@@ -205,6 +216,17 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1oa03cn">
           <text>"Review Failed Payment"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0en3ji4">
+        <inputEntry id="UnaryTests_1du1lfl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1oh9kqi">
+          <text>"reviewFailedPaymentHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gu4vfx">
+          <text>"Review Failed Payment (High Court)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1jnggim">
@@ -218,6 +240,17 @@
           <text>"Review Correspondence"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0vwgx0m">
+        <inputEntry id="UnaryTests_1dexqcg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1e8mcux">
+          <text>"reviewCorrespondenceHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y3ejz9">
+          <text>"Review Correspondence (High Court)"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0wny9rm">
         <inputEntry id="UnaryTests_0or04vj">
           <text></text>
@@ -229,6 +262,17 @@
           <text>"Check Placement Application"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0mz2elw">
+        <inputEntry id="UnaryTests_013zb4p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15j11qz">
+          <text>"checkPlacementApplicationHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dxuuq8">
+          <text>"Check Placement Application (High Court)"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_06ov59a">
         <inputEntry id="UnaryTests_1na4zzn">
           <text></text>
@@ -238,6 +282,17 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0milp45">
           <text>"Chase Outstanding Order"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0972qcs">
+        <inputEntry id="UnaryTests_17em3ml">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_006764i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11rgq3v">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
