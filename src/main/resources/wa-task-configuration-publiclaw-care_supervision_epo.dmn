@@ -1026,12 +1026,12 @@ else "roleAssignmentId"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1io2kqb">
-          <text>if (caseData.orderReviewUrgency != null 
+          <text>(if (caseData.orderReviewUrgency != null 
     and caseData.orderReviewUrgency.urgency != null 
     and count(caseData.orderReviewUrgency.urgency) &gt; 0) then
     for each in caseData.orderReviewUrgency.urgency
     return if each = "YES" then 1000 else 5000
-else 5000</text>
+else 5000)[1]</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02l2c2g">
           <text>true</text>
