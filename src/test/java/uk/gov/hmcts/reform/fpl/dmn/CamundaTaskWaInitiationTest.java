@@ -155,17 +155,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                     "name", "Review Order",
                     "processCategories", MANAGE_OUTCOME.getValue()
                 )
-            ),
-            Arguments.of(
-                "create-work-allocation-task",
-                Map.of(
-                    "lastCreatedWATask", "URGENT_CMO_REVIEWED"
-                ),
-                Map.of(
-                    "taskId", "reviewOrderCMOUrgent",
-                    "name", "Review Order (Urgent)",
-                    "processCategories", MANAGE_OUTCOME.getValue()
-                )
             )
         );
     }
