@@ -1015,7 +1015,7 @@ else "roleAssignmentId"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1d9pjbm">
-        <description>Low, Medium, High based on priority date</description>
+        <description>Low, Medium, High based on priority date. (A single-element array [urgency] that stores "YES" or "NO".)</description>
         <inputEntry id="UnaryTests_0co1qce">
           <text></text>
         </inputEntry>
@@ -1031,7 +1031,7 @@ else "roleAssignmentId"</text>
     and count(caseData.orderReviewUrgency.urgency) &gt; 0) then
     for each in caseData.orderReviewUrgency.urgency
     return if each = "YES" then 1000 else 5000
-else 5000)[1]</text>
+else [5000])[1]</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02l2c2g">
           <text>true</text>
