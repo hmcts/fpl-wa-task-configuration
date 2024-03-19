@@ -628,35 +628,6 @@
         <text></text>
         </outputEntry>  
       </rule>
-      <rule id="DecisionRule_07tyghs">
-        <inputEntry id="UnaryTests_1xxilia">
-          <text>"create-work-allocation-task"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0nhms9z">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0w71u2f">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_04yurk0">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11supka">
-          <text>"URGENT_CMO_REVIEWED"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0y5ugc0">
-          <text>"reviewOrderCMOUrgent"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0qls50n">
-          <text>"Review Order (Urgent)"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0zck997">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1in9mle">
-          <text>"manage outcome"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0idtv4n">
         <inputEntry id="UnaryTests_1i39tz1">
           <text>"create-work-allocation-task"</text>
