@@ -624,14 +624,16 @@ else "roleAssignmentId"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13wjipi">
           <text>if (
-    get or else(
-        ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
-        or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR", false
+    caseData.allocatedJudge != null 
+    and (
+        (caseData.allocatedJudge.judgeEmailAddress != null 
+        and ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk"))
+        or (caseData.allocatedJudge.judgeTitle != null 
+        and caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
     )
 ) 
 then "LEGAL_OPERATIONS" 
-else "JUDICIAL"
-</text>
+else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_106iqxi">
           <text>true</text>
