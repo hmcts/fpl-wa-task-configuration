@@ -137,6 +137,75 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0go2hu3">
+        <inputEntry id="UnaryTests_1q49chb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gvrz3d">
+          <text>"manageDocumentsV2"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04r3utk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16zilv4">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13nzxsq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bjjl1d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rsel86">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nljdju">
+        <inputEntry id="UnaryTests_0i6l1d9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uabydj">
+          <text>"manageDocumentsV2"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18fxzib">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jn4pl9">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1imfo3i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05l5jnd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bborge">
+          <text>"case creation"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cfqye6">
+        <inputEntry id="UnaryTests_07bm3gd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hah5hs">
+          <text>"manageDocumentsV2"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sz2bda">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uvwpod">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ukadvg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_192jkc7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06ufei7">
+          <text>"manage outcome"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
