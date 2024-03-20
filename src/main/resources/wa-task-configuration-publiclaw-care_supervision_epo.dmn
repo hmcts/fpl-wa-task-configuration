@@ -565,7 +565,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewSpecificAccessRequestJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -609,6 +609,68 @@ else "roleAssignmentId"</text>
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mpxusj">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eajrfx">
+        <inputEntry id="UnaryTests_0641o2n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1236doa">
+          <text>"viewAdditionalApplications"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14sp4x1">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13wjipi">
+          <text>if (
+    ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
+) 
+then "LEGAL_OPERATIONS" 
+else "JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_106iqxi">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bganw9">
+        <inputEntry id="UnaryTests_1e9fbyi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hoz5te">
+          <text>"approveOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a34azo">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hvnkhr">
+          <text>if (
+        sort(
+            list: caseData.hearingDetails[
+                date and time(item.value.startDate) 
+                &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+            ].value,
+            precedes: function(x, y) x.startDate &gt;= y.startDate
+        )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
+        or ends with(
+            sort(
+                list: caseData.hearingDetails[
+                    date and time(item.value.startDate) 
+                    &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+                ].value,
+                precedes: function(x, y) x.startDate &gt;= y.startDate
+            )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk")
+    ) 
+    then "LEGAL_OPERATIONS" 
+    else if (
+    ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
+) 
+then "LEGAL_OPERATIONS" 
+else "JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zeaw9z">
           <text>true</text>
         </outputEntry>
       </rule>
