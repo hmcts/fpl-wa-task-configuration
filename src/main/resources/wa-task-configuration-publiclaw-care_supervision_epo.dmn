@@ -624,13 +624,8 @@ else "roleAssignmentId"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13wjipi">
           <text>if (
-    caseData.allocatedJudge != null 
-    and (
-        (caseData.allocatedJudge.judgeEmailAddress != null 
-        and ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk"))
-        or (caseData.allocatedJudge.judgeTitle != null 
-        and caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
-    )
+    ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
 ) 
 then "LEGAL_OPERATIONS" 
 else "JUDICIAL"</text>
@@ -650,14 +645,13 @@ else "JUDICIAL"</text>
           <text>"roleCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hvnkhr">
-          <text>get or else(
-    if (
+          <text>if (
         sort(
             list: caseData.hearingDetails[
                 date and time(item.value.startDate) 
                 &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
             ].value,
-            precedes: function(x,y) x.startDate &gt;= y.startDate
+            precedes: function(x, y) x.startDate &gt;= y.startDate
         )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
         or ends with(
             sort(
@@ -665,20 +659,16 @@ else "JUDICIAL"</text>
                     date and time(item.value.startDate) 
                     &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
                 ].value,
-                precedes: function(x,y) x.startDate &gt;= y.startDate
+                precedes: function(x, y) x.startDate &gt;= y.startDate
             )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk")
     ) 
     then "LEGAL_OPERATIONS" 
-    else null
-, 
-if (
-    get or else(
-        ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
-        or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR", false
-    )
+    else if (
+    ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
 ) 
 then "LEGAL_OPERATIONS" 
-else "JUDICIAL")</text>
+else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zeaw9z">
           <text>true</text>
