@@ -571,7 +571,7 @@ else "roleAssignmentId"</text>
           <text>"roleCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fvsumy">
-          <text>"JUDICIAL"</text>
+          <text>if (date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8)) != null) then "LEGAL_OPERATIONS" else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19h8eda">
           <text>true</text>
