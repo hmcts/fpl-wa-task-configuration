@@ -623,10 +623,12 @@ else "roleAssignmentId"</text>
           <text>"roleCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13wjipi">
-          <text>if (get or else(
+          <text>if (
+    get or else(
         ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
         or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR", false
-    )) 
+    )
+) 
 then "LEGAL_OPERATIONS" 
 else "JUDICIAL"
 </text>
@@ -647,7 +649,8 @@ else "JUDICIAL"
         </outputEntry>
         <outputEntry id="LiteralExpression_0hvnkhr">
           <text>get or else(
-    if (sort(
+    if (
+        sort(
             list: caseData.hearingDetails[
                 date and time(item.value.startDate) 
                 &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
@@ -666,7 +669,8 @@ else "JUDICIAL"
     then "LEGAL_OPERATIONS" 
     else null
 , 
-if (get or else(
+if (
+    get or else(
         ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
         or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR", false
     )
