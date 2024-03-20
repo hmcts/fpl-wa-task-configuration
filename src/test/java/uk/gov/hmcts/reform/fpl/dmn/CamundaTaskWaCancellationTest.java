@@ -13,12 +13,13 @@ import uk.gov.hmcts.reform.fpl.DmnDecisionTable;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTableBaseUnitTest;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
-import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
 
@@ -30,7 +31,7 @@ class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @MethodSource("scenarioProvider")
     void givenInputShouldReturnOutcomeDmn(String eventId,
-                                               Map<String, ? extends Serializable> expectedDmnOutcome) {
+                                               List<Map<String, ? extends Serializable>> expectedDmnOutcome) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("event", eventId);
         inputVariables.putValue("fromState", "");
@@ -38,16 +39,20 @@ class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
-        assertThat(dmnDecisionTableResult.getResultList(), is(singletonList(expectedDmnOutcome)));
+        assertTrue(dmnDecisionTableResult.getResultList().containsAll(expectedDmnOutcome));
     }
 
     public static Stream<Arguments> scenarioProvider() {
         return Stream.of(
-            Arguments.of("manageHearings", Map.of("action", "Reconfigure")),
-            Arguments.of("changeCaseName", Map.of("action", "Reconfigure")),
-            Arguments.of("changeCaseName-superuser", Map.of("action", "Reconfigure")),
-            Arguments.of("manageLocalAuthorities", Map.of("action", "Reconfigure")),
-            Arguments.of("internal-update-case-summary", Map.of("action", "Reconfigure"))
+            Arguments.of("manageHearings", List.of(Map.of("action", "Reconfigure"))),
+            Arguments.of("changeCaseName", List.of(Map.of("action", "Reconfigure"))),
+            Arguments.of("changeCaseName-superuser", List.of(Map.of("action", "Reconfigure"))),
+            Arguments.of("manageLocalAuthorities", List.of(Map.of("action", "Reconfigure"))),
+            Arguments.of("internal-update-case-summary", List.of(Map.of("action", "Reconfigure"))),
+            Arguments.of("migrateCase", List.of(
+                Map.of("action", "Cancel", "processCategories", "case progression"),
+                Map.of("action", "Cancel", "processCategories", "case creation"),
+                Map.of("action", "Cancel", "processCategories", "manage outcome")))
         );
     }
 
@@ -55,6 +60,6 @@ class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(5));
+        assertThat(logic.getRules().size(), is(8));
     }
 }
