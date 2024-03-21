@@ -646,26 +646,27 @@ else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hvnkhr">
           <text>if (
+    sort(
+        list: caseData.hearingDetails[
+            date and time(item.value.startDate) 
+            &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+        ].value,
+        precedes: function(x, y) x.startDate &gt;= y.startDate
+    )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
+    or ends with(
         sort(
             list: caseData.hearingDetails[
                 date and time(item.value.startDate) 
                 &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
             ].value,
             precedes: function(x, y) x.startDate &gt;= y.startDate
-        )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
-        or ends with(
-            sort(
-                list: caseData.hearingDetails[
-                    date and time(item.value.startDate) 
-                    &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
-                ].value,
-                precedes: function(x, y) x.startDate &gt;= y.startDate
-            )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk")
-    ) 
-    then "LEGAL_OPERATIONS" 
-    else if (
-    ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
-    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
+        )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk")
+) 
+then "LEGAL_OPERATIONS" 
+else if (
+    (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0) and    
+    (ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
 ) 
 then "LEGAL_OPERATIONS" 
 else "JUDICIAL"</text>
