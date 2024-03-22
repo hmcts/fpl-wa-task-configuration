@@ -664,7 +664,7 @@ else "JUDICIAL"</text>
 ) 
 then "LEGAL_OPERATIONS" 
 else if (
-    count(caseData.hearingDetails) = 0 and    
+    (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0) and    
     (ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
     or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
 ) 
