@@ -14,7 +14,10 @@ import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTable;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTableBaseUnitTest;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -135,38 +138,292 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertEquals(expected, result.toOption().get());
     }
 
+    private static String formatString(Date date) {
+        return new SimpleDateFormat("yyyy-MM-dd").format(date) + "T" +
+            new SimpleDateFormat("HH:mm:ss").format(date);
+    }
+
+    private static String getFutureStartDate() {
+        return getStartDate(1);
+    }
+
+    private static String getPastStartDate() {
+        return getStartDate(-1);
+    }
+
+    private static String getStartDate(int delta) {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DAY_OF_MONTH, delta);
+        return formatString(cal.getTime());
+    }
+
     private static Stream<Arguments> approveOrdersScenarios() {
         return Stream.of(
+            // empty hearingDetails, determined by allocatedJudge.judgeTitle
             Arguments.of("LEGAL_OPERATIONS",
-                Map.of("allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR"),
-                    "hearingDetails", List.of())),
-            Arguments.of("LEGAL_OPERATIONS",
-                Map.of("allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR"))),
+                Map.of("hearingDetails", List.of(),
+                    "allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR")
+                    )),
             Arguments.of("JUDICIAL",
-                Map.of("allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR"),
-                    "hearingDetails", List.of(
+                Map.of("hearingDetails", List.of(),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE")
+                    )),
+            // empty hearingDetails, determined by allocatedJudge.judgeEmailAddress
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@justice.gov.uk")
+                )),
+            Arguments.of("JUDICIAL",
+                Map.of("hearingDetails", List.of(),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@whatever.com")
+                )),
+            // null hearingDetails, determined by allocatedJudge.judgeTitle
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR")
+                )),
+            Arguments.of("JUDICIAL",
+                Map.of("allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE")
+                )),
+            // null hearingDetails, determined by allocatedJudge.judgeEmailAddress
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@justice.gov.uk")
+                )),
+            Arguments.of("JUDICIAL",
+                Map.of("allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@whatever.com")
+                )),
+            // future hearing only, determined by allocatedJudge.judgeTitle
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(
                         Map.of("id", UUID.randomUUID(),
                             "value", Map.of(
-                                "startDate", "2022-02-11T09:00:00",
+                                "startDate", getFutureStartDate(),
                                 "judgeAndLegalAdvisor", Map.of(
                                     "judgeTitle", "MR_JUSTICE",
                                     "judgeEmailAddress", "whatever@whatever.com"
                                 )
                             ))
-                    )
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR")
                 )),
+            // future hearing only, determined by allocatedJudge.judgeEmailAddress
             Arguments.of("LEGAL_OPERATIONS",
-                Map.of("allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE"),
-                    "hearingDetails", List.of(
+                Map.of("hearingDetails", List.of(
                         Map.of("id", UUID.randomUUID(),
                             "value", Map.of(
-                                "startDate", "2022-02-11T09:00:00",
+                                "startDate", getFutureStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@justice.gov.uk")
+                )),
+            // Determined by active hearing (only one hearing)
+            Arguments.of("JUDICIAL",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getPastStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR",
+                        "judgeEmailAddress", "whatever@justice.gov.uk")
+                )),
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getPastStartDate(),
                                 "judgeAndLegalAdvisor", Map.of(
                                     "judgeTitle", "MR_JUSTICE",
                                     "judgeEmailAddress", "whatever@justice.gov.uk"
                                 )
                             ))
-                    )
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@whatever.com")
+                )),
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getPastStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "LEGAL_ADVISOR",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@whatever.com")
+                )),
+            // Determined by active hearing (1st hearing is active)
+            Arguments.of("JUDICIAL",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getPastStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getFutureStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "LEGAL_ADVISOR",
+                                    "judgeEmailAddress", "whatever@justice.gov.uk"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR",
+                        "judgeEmailAddress", "whatever@justice.gov.uk")
+                )),
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getPastStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "LEGAL_ADVISOR",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getFutureStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@whatever.com")
+                )),
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getPastStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@justice.gov.uk"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getFutureStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@whatever.com")
+                )),
+            // Determined by active hearing (2nd hearing is active)
+            Arguments.of("JUDICIAL",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getStartDate(-2),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "LEGAL_ADVISOR",
+                                    "judgeEmailAddress", "whatever@justice.gob.uk"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getStartDate(-1),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getFutureStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "LEGAL_ADVISOR",
+                                    "judgeEmailAddress", "whatever@justice.gob.uk"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR",
+                        "judgeEmailAddress", "whatever@justice.gov.uk")
+                )),
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getStartDate(-2),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getStartDate(-1),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "LEGAL_ADVISOR",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getFutureStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@whatever.com")
+                )),
+            Arguments.of("LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getStartDate(-2),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getStartDate(-1),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@justice.gov.uk"
+                                )
+                            )),
+                        Map.of("id", UUID.randomUUID(),
+                            "value", Map.of(
+                                "startDate", getFutureStartDate(),
+                                "judgeAndLegalAdvisor", Map.of(
+                                    "judgeTitle", "MR_JUSTICE",
+                                    "judgeEmailAddress", "whatever@whatever.com"
+                                )
+                            ))
+                    ),
+                    "allocatedJudge", Map.of("judgeTitle", "MR_JUSTICE",
+                        "judgeEmailAddress", "whatever@whatever.com")
                 ))
         );
     }

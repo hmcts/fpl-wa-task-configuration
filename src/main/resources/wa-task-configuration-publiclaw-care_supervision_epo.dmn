@@ -664,7 +664,13 @@ else "JUDICIAL"</text>
 ) 
 then "LEGAL_OPERATIONS" 
 else if (
-    (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0) and    
+    (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0 or sort(
+        list: caseData.hearingDetails[
+            date and time(item.value.startDate) 
+            &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+        ].value,
+        precedes: function(x, y) x.startDate &gt;= y.startDate
+    )[1] = null) and    
     (ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
     or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
 ) 
