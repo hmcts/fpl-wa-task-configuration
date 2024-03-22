@@ -139,8 +139,8 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     private static String formatString(Date date) {
-        return new SimpleDateFormat("yyyy-MM-dd").format(date) + "T" +
-            new SimpleDateFormat("HH:mm:ss").format(date);
+        return new SimpleDateFormat("yyyy-MM-dd").format(date) + "T"
+            + new SimpleDateFormat("HH:mm:ss").format(date);
     }
 
     private static String getFutureStartDate() {
