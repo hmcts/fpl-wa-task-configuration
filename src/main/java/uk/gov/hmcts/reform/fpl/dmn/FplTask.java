@@ -17,10 +17,15 @@ public enum FplTask {
     REVIEW_URGENT_APPLICATION("reviewUrgentApplication"),
     REVIEW_STANDARD_APPLICATION("reviewStandardApplication"),
     REVIEW_STANDARD_DIRECTION_ORDER("reviewStandardDirectionOrder"),
+    REVIEW_STANDARD_DIRECTION_ORDER_HIGH_COURT("reviewStandardDirectionOrderHighCourt"),
     REVIEW_ORDER_CMO("reviewOrderCMO"),
+    REVIEW_ORDER_CMO_HIGH_COURT("reviewOrderCMOHighCourt"),
     REVIEW_FAILED_PAYMENT("reviewFailedPayment"),
+    REVIEW_FAILED_PAYMENT_HIGH_COURT("reviewFailedPaymentHighCourt"),
     REVIEW_CORRESPONDENCE("reviewCorrespondence"),
+    REVIEW_CORRESPONDENCE_HIGH_COURT("reviewCorrespondenceHighCourt"),
     CHECK_PLACEMENT_APPLICATION("checkPlacementApplication"),
+    CHECK_PLACEMENT_APPLICATION_HIGH_COURT("checkPlacementApplicationHighCourt"),
     CHASE_OUTSTANDING_ORDER("chaseOutstandingOrder");
 
     private String value;
