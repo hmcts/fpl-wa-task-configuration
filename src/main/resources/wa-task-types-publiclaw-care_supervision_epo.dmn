@@ -284,17 +284,6 @@
           <text>"Chase Outstanding Order"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0972qcs">
-        <inputEntry id="UnaryTests_17em3ml">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_006764i">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_11rgq3v">
-          <text></text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
