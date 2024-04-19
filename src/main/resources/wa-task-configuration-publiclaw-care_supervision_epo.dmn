@@ -960,7 +960,7 @@ else "roleAssignmentId"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0u2fv5e">
-        <description>Always high</description>
+        <description>Always high. (A single-element array [urgency] that stores "YES" or "NO".)</description>
         <inputEntry id="UnaryTests_0kyy5l7">
           <text></text>
         </inputEntry>
@@ -971,7 +971,12 @@ else "roleAssignmentId"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mdgkb3">
-          <text>4000</text>
+          <text>(if (caseData.draftOrderUrgency != null 
+    and caseData.draftOrderUrgency.urgency != null 
+    and count(caseData.draftOrderUrgency.urgency) &gt; 0) then
+    for each in caseData.draftOrderUrgency.urgency
+    return if each = "YES" then 1000 else 4000
+else [4000])[1]</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nlo5oi">
           <text>true</text>
