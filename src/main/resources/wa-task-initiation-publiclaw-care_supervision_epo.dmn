@@ -22,7 +22,7 @@
       </input>
       <input id="InputClause_01shufq" label="Hearing Timeframe" camunda:inputVariable="timeFrame">
         <inputExpression id="LiteralExpression_13k9gdq" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null) then if(additionalData.hearing.timeFrame != null and additionalData.Data.hearing != null) then additionalData.hearing.timeFrame else “Other” else null</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.hearing != null and additionalData.Data.hearing.timeFrame != null) then additionalData.Data.hearing.timeFrame else "Other"</text>
         </inputExpression>
         <inputValues id="UnaryTests_1e9vfmg">
           <text>"Within 5 days","Within 2 days","Same day"</text>
