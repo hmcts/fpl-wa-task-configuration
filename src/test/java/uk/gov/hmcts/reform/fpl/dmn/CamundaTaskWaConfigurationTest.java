@@ -1,5 +1,6 @@
 package uk.gov.hmcts.reform.fpl.dmn;
 
+import camundajar.impl.scala.math.BigDecimal;
 import camundajar.impl.scala.util.Either;
 import org.camunda.bpm.dmn.engine.DmnDecisionTableResult;
 import org.camunda.bpm.dmn.engine.impl.DmnDecisionTableImpl;
@@ -18,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -108,6 +110,12 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
             .orElseThrow(() -> new NoSuchElementException("Unable to locate " + taskType + " and " + name
                 + " from the DMN table"))
             .getConclusions().get(1).getExpression();
+    }
+
+    private static Map<String, Object> toNullValueMap(String key) {
+        Map<String, Object> ret =  new HashMap<>();
+        ret.put(key, null);
+        return ret;
     }
 
     private static Stream<Arguments> viewAdditionalApplicationsScenarios() {
@@ -439,5 +447,29 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
         Either<FeelEngine.Failure, Object> result =
             feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData));
         assertEquals(expected, result.toOption().get());
+    }
+
+    private static Stream<Arguments> approveOrdersMajorPriorityScenarios() {
+        return Stream.of(
+            Arguments.of(1000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("YES")))),
+            Arguments.of(4000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("NO")))),
+            Arguments.of(4000, Map.of("draftOrderUrgency", toNullValueMap("urgency"))),
+            Arguments.of(4000, toNullValueMap("draftOrderUrgency")),
+            Arguments.of(4000, null)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("approveOrdersMajorPriorityScenarios")
+    void testApproveOrdersMajorPriority(int expected, Map<String, Object> caseData) {
+        DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
+        String feelExpression = getValueFromWaConfiguration(logic, "approveOrders", "majorPriority");
+
+        FeelEngine feelEngine = new FeelEngine.Builder().build();
+
+        Either<FeelEngine.Failure, Object> result =
+            feelEngine.evalExpression(feelExpression, caseData == null ? toNullValueMap("caseData")
+                : Map.of("caseData", caseData));
+        assertEquals(BigDecimal.decimal(expected), result.toOption().get());
     }
 }
