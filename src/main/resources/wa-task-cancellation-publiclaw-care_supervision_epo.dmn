@@ -206,6 +206,75 @@
           <text>"manage outcome"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_17c6jsd">
+        <inputEntry id="UnaryTests_1wjgd4j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ec3whs">
+          <text>"migrateCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pju3g7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06usshn">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1btdqe4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iv36qv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kd3ual">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ibku3m">
+        <inputEntry id="UnaryTests_0q7ip68">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p6ex3s">
+          <text>"migrateCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xhym05">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16cr8s7">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ll9ra4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02ma6lc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lxypdz">
+          <text>"case creation"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0trjag3">
+        <inputEntry id="UnaryTests_106i6ni">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0anij4x">
+          <text>"migrateCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tvller">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_173yk2j">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nhqk0f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w5a15f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0glll1m">
+          <text>"manage outcome"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
