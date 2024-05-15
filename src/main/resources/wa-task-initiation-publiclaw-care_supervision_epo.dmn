@@ -33,7 +33,7 @@
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.lastCreatedWATask != null) then additionalData.Data.lastCreatedWATask else null</text>
         </inputExpression>
         <inputValues id="UnaryTests_052aha7">
-          <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED","URGENT_CMO_REVIEWED"</text>
+          <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED","URGENT_CMO_REVIEWED","DRAFT_UPLOADED_WITH_C2"</text>
         </inputValues>
       </input>
       <input id="InputClause_11c116j" label="Court Code is 100" camunda:inputVariable="courtCode">
@@ -849,6 +849,39 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15yqcjr">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zglxwd">
+        <inputEntry id="UnaryTests_19yjt6j">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xrl1pz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mb30ew">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1reqeur">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kwcomx">
+          <text>"DRAFT_UPLOADED_WITH_C2
+"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hccljw">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0abxvwp">
+          <text>"approveDraftOrders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o7e4d7">
+          <text>"Approve Orders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bolbw4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gq5ezg">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
