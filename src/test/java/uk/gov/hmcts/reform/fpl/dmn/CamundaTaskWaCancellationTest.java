@@ -52,6 +52,11 @@ class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
                 Map.of("action", "Cancel", "processCategories", "case progression"),
                 Map.of("action", "Cancel", "processCategories", "case creation"),
                 Map.of("action", "Cancel", "processCategories", "manage outcome")
+            )),
+            Arguments.of("migrateCase", List.of(
+                Map.of("action", "Cancel", "processCategories", "case progression"),
+                Map.of("action", "Cancel", "processCategories", "case creation"),
+                Map.of("action", "Cancel", "processCategories", "manage outcome")
             ))
         );
     }
@@ -60,6 +65,6 @@ class CamundaTaskWaCancellationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(8));
+        assertThat(logic.getRules().size(), is(11));
     }
 }
