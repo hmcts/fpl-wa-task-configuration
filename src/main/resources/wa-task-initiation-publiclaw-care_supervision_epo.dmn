@@ -870,10 +870,10 @@
 "</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hccljw">
-          <text>false</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0abxvwp">
-          <text>"approveDraftOrders"</text>
+          <text>"approveOrders"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0o7e4d7">
           <text>"Approve Orders"</text>
