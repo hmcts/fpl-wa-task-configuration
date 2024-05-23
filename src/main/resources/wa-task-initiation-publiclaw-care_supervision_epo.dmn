@@ -33,7 +33,7 @@
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.lastCreatedWATask != null) then additionalData.Data.lastCreatedWATask else null</text>
         </inputExpression>
         <inputValues id="UnaryTests_052aha7">
-          <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED","URGENT_CMO_REVIEWED","DRAFT_UPLOADED_WITH_C2"</text>
+          <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED","URGENT_CMO_REVIEWED","DRAFT_ORDER_UPLOADED_WITH_C2"</text>
         </inputValues>
       </input>
       <input id="InputClause_11c116j" label="Court Code is 100" camunda:inputVariable="courtCode">
@@ -866,7 +866,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0kwcomx">
-          <text>"DRAFT_UPLOADED_WITH_C2
+          <text>"DRAFT_ORDER_UPLOADED_WITH_C2
 "</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hccljw">
