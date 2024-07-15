@@ -188,17 +188,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0r2pxh4">
-        <inputEntry id="UnaryTests_0qc8h8j">
-          <text>"sendOrderReminder"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0zv2bno">
-          <text>"chaseOutstandingOrder"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0xiravz">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1nzha00">
         <inputEntry id="UnaryTests_14ft3ua">
           <text>"reviewCMO","replyToMessageJudgeOrLegalAdviser","reviewAdditionalApplication","sendToGatekeeper","returnApplication","sendOrderReminder"</text>

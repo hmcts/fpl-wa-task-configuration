@@ -31,7 +31,7 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @MethodSource("scenarioProvider")
     void givenInputShouldReturnOutcomeDmn(String eventId,
-                                               List<Map<String, ? extends Serializable>> expectedDmnOutcome) {
+                                          List<Map<String, ? extends Serializable>> expectedDmnOutcome) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("eventId", eventId);
 
@@ -52,20 +52,20 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
             )),
             Arguments.of("sendToGatekeeper", getAutoCompleteTaskTypes(
                 FplTask.REVIEW_URGENT_APPLICATION,
-                FplTask.REVIEW_STANDARD_APPLICATION)),
+                FplTask.REVIEW_STANDARD_APPLICATION
+            )),
             Arguments.of("returnApplication", getAutoCompleteTaskTypes(
                 FplTask.REVIEW_URGENT_APPLICATION,
-                FplTask.REVIEW_STANDARD_APPLICATION)),
-            Arguments.of("sendOrderReminder", getAutoCompleteTaskTypes(FplTask.CHASE_OUTSTANDING_ORDER))
-
-            );
+                FplTask.REVIEW_STANDARD_APPLICATION
+            ))
+        );
     }
 
     @Test
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(18));
+        assertThat(logic.getRules().size(), is(17));
     }
 
     private static Map<String, String> getAutoCompleteTaskType(FplTask taskType) {
