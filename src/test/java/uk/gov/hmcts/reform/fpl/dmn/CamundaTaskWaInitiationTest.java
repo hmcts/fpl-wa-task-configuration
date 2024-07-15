@@ -19,9 +19,7 @@ import java.util.stream.Stream;
 import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.CASE_CREATION;
 import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.CASE_PROGRESSION;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.MANAGE_OUTCOME;
 
 class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
 
@@ -31,8 +29,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     // TODO: Re-enable post-evaluation period
-     @ParameterizedTest
-     @MethodSource("scenarioProvider")
+    @ParameterizedTest
+    @MethodSource("scenarioProvider")
     void givenInputShouldReturnOutcomeDmn(String eventId,
                                           Map<String, String> additionalData,
                                           Map<String, ? extends Serializable> expectedDmnOutcome) {
