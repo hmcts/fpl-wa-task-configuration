@@ -28,7 +28,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_INITIATION;
     }
 
-    // TODO: Re-enable post-evaluation period
     @ParameterizedTest
     @MethodSource("scenarioProvider")
     void givenInputShouldReturnOutcomeDmn(String eventId,
