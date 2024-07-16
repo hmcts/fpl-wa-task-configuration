@@ -421,7 +421,7 @@
       </rule>
       <rule id="DecisionRule_1liss5w">
         <inputEntry id="UnaryTests_0tbv583">
-          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewOrderCMOUrgent","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0c7jinl">
           <text></text>
@@ -442,6 +442,32 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0vm93m2">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1w788bo">
+        <inputEntry id="UnaryTests_0nhcc2y">
+          <text>"reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09onc92">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vgowqc">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0djqls5">
+          <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04kflmq">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i5at71">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jayhlt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l06axz">
           <text>false</text>
         </outputEntry>
       </rule>

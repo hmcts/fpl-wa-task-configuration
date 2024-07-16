@@ -143,6 +143,23 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1yp9g1y">
+        <inputEntry id="UnaryTests_1591ptl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05qseiz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mms8fa">
+          <text>"hearingDatePreDateNonWorkingCalendar"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kid8w3">
+          <text>"https://raw.githubusercontent.com/hmcts/fpl-wa-task-configuration/master/src/main/resources/fpl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06sn4a5">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_199w3we">
         <description></description>
         <inputEntry id="UnaryTests_0jkj3fq">
@@ -158,23 +175,6 @@
           <text>"https://raw.githubusercontent.com/hmcts/fpl-wa-task-configuration/master/src/main/resources/fpl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_184z861">
-          <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1yp9g1y">
-        <inputEntry id="UnaryTests_1591ptl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_05qseiz">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1mms8fa">
-          <text>"hearingDatePreDateNonWorkingCalendar"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0kid8w3">
-          <text>"https://raw.githubusercontent.com/hmcts/fpl-wa-task-configuration/master/src/main/resources/fpl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_06sn4a5">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -444,7 +444,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08wb4e8">
-          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO","reviewStandardDirectionOrder"</text>
+          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0uxu3q4">
           <text>"workType"</text>
@@ -461,7 +461,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewCorrespondence","chaseOutstandingOrder"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08sdeu3">
           <text>"workType"</text>
@@ -478,7 +478,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_178m83z">
-          <text>"reviewUrgentApplication","reviewStandardApplication","checkPlacementApplication"</text>
+          <text>"reviewUrgentApplication","reviewStandardApplication","checkPlacementApplication","checkPlacementApplicationHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tzsh4h">
           <text>"workType"</text>
@@ -495,7 +495,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ivrmz6">
-          <text>"reviewFailedPayment"</text>
+          <text>"reviewFailedPayment","reviewFailedPaymentHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18gtgat">
           <text>"workType"</text>
@@ -548,7 +548,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ox5s2">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewSpecificAccessRequestAdmin"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewSpecificAccessRequestAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_020dk9k">
           <text>"roleCategory"</text>
@@ -565,7 +565,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","viewAdditionalApplications","approveOrders","reviewSpecificAccessRequestJudiciary"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewSpecificAccessRequestJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hcgau3">
           <text>"roleCategory"</text>
@@ -609,6 +609,75 @@ else "roleAssignmentId"</text>
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mpxusj">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eajrfx">
+        <inputEntry id="UnaryTests_0641o2n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1236doa">
+          <text>"viewAdditionalApplications"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14sp4x1">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13wjipi">
+          <text>if (
+    ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
+) 
+then "LEGAL_OPERATIONS" 
+else "JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_106iqxi">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bganw9">
+        <inputEntry id="UnaryTests_1e9fbyi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hoz5te">
+          <text>"approveOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a34azo">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hvnkhr">
+          <text>if (
+    sort(
+        list: caseData.hearingDetails[
+            date and time(item.value.startDate) 
+            &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+        ].value,
+        precedes: function(x, y) x.startDate &gt;= y.startDate
+    )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
+    or ends with(
+        sort(
+            list: caseData.hearingDetails[
+                date and time(item.value.startDate) 
+                &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+            ].value,
+            precedes: function(x, y) x.startDate &gt;= y.startDate
+        )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk")
+) 
+then "LEGAL_OPERATIONS" 
+else if (
+    (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0 or sort(
+        list: caseData.hearingDetails[
+            date and time(item.value.startDate) 
+            &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+        ].value,
+        precedes: function(x, y) x.startDate &gt;= y.startDate
+    )[1] = null) and    
+    (ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
+) 
+then "LEGAL_OPERATIONS" 
+else "JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zeaw9z">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -719,7 +788,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1dcugt2">
-          <text>"reviewStandardDirectionOrder"</text>
+          <text>"reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1siw21q">
           <text>"description"</text>
@@ -736,7 +805,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_025w5p7">
-          <text>"reviewOrderCMO"</text>
+          <text>"reviewOrderCMO","reviewOrderCMOHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0eezo8k">
           <text>"description"</text>
@@ -753,7 +822,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_14mzq8b">
-          <text>"reviewFailedPayment"</text>
+          <text>"reviewFailedPayment","reviewFailedPaymentHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08pbho2">
           <text>"description"</text>
@@ -770,7 +839,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_01oj97f">
-          <text>"reviewCorrespondence"</text>
+          <text>"reviewCorrespondence","reviewCorrespondenceHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1jacpp9">
           <text>"description"</text>
@@ -787,7 +856,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_103r83d">
-          <text>"checkPlacementApplication"</text>
+          <text>"checkPlacementApplication","checkPlacementApplicationHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0h13nws">
           <text>"description"</text>
@@ -943,7 +1012,7 @@ else "roleAssignmentId"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0u2fv5e">
-        <description>Always high</description>
+        <description>Always high. (A single-element array [urgency] that stores "YES" or "NO".)</description>
         <inputEntry id="UnaryTests_0kyy5l7">
           <text></text>
         </inputEntry>
@@ -954,7 +1023,12 @@ else "roleAssignmentId"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mdgkb3">
-          <text>4000</text>
+          <text>(if (caseData.draftOrderUrgency != null 
+    and caseData.draftOrderUrgency.urgency != null 
+    and count(caseData.draftOrderUrgency.urgency) &gt; 0) then
+    for each in caseData.draftOrderUrgency.urgency
+    return if each = "YES" then 1000 else 4000
+else [4000])[1]</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nlo5oi">
           <text>true</text>
@@ -1002,7 +1076,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0361f9b">
-          <text>"reviewStandardDirectionOrder"</text>
+          <text>"reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0naevo8">
           <text>"majorPriority"</text>
@@ -1015,30 +1089,35 @@ else "roleAssignmentId"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1d9pjbm">
-        <description>Low, Medium, High based on due date</description>
+        <description>Low, Medium, High based on priority date. (A single-element array [urgency] that stores "YES" or "NO".)</description>
         <inputEntry id="UnaryTests_0co1qce">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0kcore6">
-          <text>"reviewOrderCMO"</text>
+          <text>"reviewOrderCMO","reviewOrderCMOHightCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tlad3g">
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1io2kqb">
-          <text>5000</text>
+          <text>(if (caseData.orderReviewUrgency != null 
+    and caseData.orderReviewUrgency.urgency != null 
+    and count(caseData.orderReviewUrgency.urgency) &gt; 0) then
+    for each in caseData.orderReviewUrgency.urgency
+    return if each = "YES" then 1000 else 5000
+else [5000])[1]</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02l2c2g">
           <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1jo8pn7">
-        <description>Low, Medium, High based on due date</description>
+        <description>Low, Medium, High based on priority date</description>
         <inputEntry id="UnaryTests_0yawcea">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0cd7i8l">
-          <text>"reviewFailedPayment"</text>
+          <text>"reviewFailedPayment","reviewFailedPaymentHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0s6zv2d">
           <text>"majorPriority"</text>
@@ -1051,12 +1130,12 @@ else "roleAssignmentId"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1sjo1jt">
-        <description>Low, Medium, High based on due date</description>
+        <description>Low, Medium, High based on priority date</description>
         <inputEntry id="UnaryTests_018lkef">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1t16t2x">
-          <text>"reviewCorrespondence"</text>
+          <text>"reviewCorrespondence","reviewCorrespondenceHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_125yakf">
           <text>"majorPriority"</text>
@@ -1069,12 +1148,12 @@ else "roleAssignmentId"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1updfxd">
-        <description>Low, Medium, High based on due date</description>
+        <description>Low, Medium, High based on priority date</description>
         <inputEntry id="UnaryTests_0np50bf">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_01hrm0h">
-          <text>"checkPlacementApplication"</text>
+          <text>"checkPlacementApplication","checkPlacementApplicationHighCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0bz1qhd">
           <text>"majorPriority"</text>
@@ -1087,7 +1166,7 @@ else "roleAssignmentId"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12gscj2">
-        <description>Low, Medium, High based on due date</description>
+        <description>Low, Medium, High based on priority date</description>
         <inputEntry id="UnaryTests_0o5bvk0">
           <text></text>
         </inputEntry>
@@ -1115,7 +1194,7 @@ else "roleAssignmentId"</text>
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_040jt2c">
-          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + " (" + substring(string(date(now())), 9, 2) + "/" + substring(string(date(now())), 6, 2) + "/" + substring(string(date(now())), 1, 4) + " " + substring(string(time(now())), 1, 5) + ")" else ""</text>
+          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03vf2mq">
           <text>false</text>

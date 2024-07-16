@@ -6,7 +6,9 @@ import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTable;
 import uk.gov.hmcts.reform.fpl.DmnDecisionTableBaseUnitTest;
 
@@ -17,9 +19,7 @@ import java.util.stream.Stream;
 import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.CASE_CREATION;
 import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.CASE_PROGRESSION;
-import static uk.gov.hmcts.reform.fpl.dmn.ProcessCategory.MANAGE_OUTCOME;
 
 class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
 
@@ -28,12 +28,11 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_INITIATION;
     }
 
-    // TODO: Re-enable post-evaluation period
-    // @ParameterizedTest
-    // @MethodSource("scenarioProvider")
+    @ParameterizedTest
+    @MethodSource("scenarioProvider")
     void givenInputShouldReturnOutcomeDmn(String eventId,
-                                               Map<String, String> additionalData,
-                                               Map<String, ? extends Serializable> expectedDmnOutcome) {
+                                          Map<String, String> additionalData,
+                                          Map<String, ? extends Serializable> expectedDmnOutcome) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("eventId", eventId);
         inputVariables.putValue("additionalData", Map.of("Data", additionalData));
@@ -48,7 +47,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "messageJudgeOrLegalAdviser",
                 Map.of(
-                    "latestRoleSent", "JUDICIARY"
+                    "latestRoleSent", "JUDICIARY",
+                    "court", Map.of("code", "151")
                 ),
                 Map.of(
                     "taskId", "reviewMessageAllocatedJudge",
@@ -59,7 +59,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "replyToMessageJudgeOrLegalAdviser",
                 Map.of(
-                    "latestRoleSent", "JUDICIARY"
+                    "latestRoleSent", "JUDICIARY",
+                    "court", Map.of("code", "151")
                 ),
                 Map.of(
                     "taskId", "reviewResponseAllocatedJudge",
@@ -70,7 +71,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "messageJudgeOrLegalAdviser",
                 Map.of(
-                    "latestRoleSent", "HEARING_JUDGE"
+                    "latestRoleSent", "HEARING_JUDGE",
+                    "court", Map.of("code", "151")
                 ),
                 Map.of(
                     "taskId", "reviewMessageHearingJudge",
@@ -81,7 +83,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "messageJudgeOrLegalAdviser",
                 Map.of(
-                    "latestRoleSent", "LOCAL_COURT_ADMIN"
+                    "latestRoleSent", "LOCAL_COURT_ADMIN",
+                    "court", Map.of("code", "151")
                 ),
                 Map.of(
                     "taskId", "reviewMessageHearingCentreAdmin",
@@ -92,18 +95,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "messageJudgeOrLegalAdviser",
                 Map.of(
-                    "latestRoleSent", "CTSC"
-                ),
-                Map.of(
-                    "taskId", "reviewMessageCTSC",
-                    "name", "Review Message (CTSC)",
-                    "processCategories", CASE_PROGRESSION.getValue()
-                )
-            ),
-            Arguments.of(
-                "messageJudgeOrLegalAdviser",
-                Map.of(
-                    "latestRoleSent", "OTHER"
+                    "latestRoleSent", "OTHER",
+                    "court", Map.of("code", "151")
                 ),
                 Map.of(
                     "taskId", "reviewMessageLegalAdviser",
@@ -112,36 +105,15 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "submitApplication",
+                "uploadCMO",
                 Map.of(
-                    "hearing", Map.of("timeFrame", "Within 2 days")
+                    "draftOrderNeedsReviewUploaded", true,
+                    "court", Map.of("code", "151")
                 ),
                 Map.of(
-                    "taskId", "reviewUrgentApplication",
-                    "name", "Review Urgent Application",
-                    "processCategories", CASE_CREATION.getValue()
-                )
-            ),
-            Arguments.of(
-                "submitApplication",
-                Map.of(
-                    "hearing", Map.of("timeFrame", "Within 7 days")
-                ),
-                Map.of(
-                    "taskId", "reviewStandardApplication",
-                    "name", "Review Standard Application",
-                    "processCategories", CASE_CREATION.getValue()
-                )
-            ),
-            Arguments.of(
-                "create-work-allocation-task",
-                Map.of(
-                    "lastCreatedWATask", "ORDER_UPLOADED"
-                ),
-                Map.of(
-                    "taskId", "reviewOrderCMO",
-                    "name", "Review Order",
-                    "processCategories", MANAGE_OUTCOME.getValue()
+                    "taskId", "approveOrders",
+                    "name", "Approve Orders",
+                    "processCategories", CASE_PROGRESSION.getValue()
                 )
             )
         );
@@ -152,6 +124,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         // todo - check this after evaluation period
-        assertThat(logic.getRules().size(), is(0));
+        assertThat(logic.getRules().size(), is(10));
     }
 }

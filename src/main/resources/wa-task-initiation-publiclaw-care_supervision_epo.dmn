@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.19.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-initiation-publiclaw-care_supervision_epo" name="Task initiation DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_1fj3kaa" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Event Id" camunda:inputVariable="eventId">
@@ -22,7 +22,7 @@
       </input>
       <input id="InputClause_01shufq" label="Hearing Timeframe" camunda:inputVariable="timeFrame">
         <inputExpression id="LiteralExpression_13k9gdq" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.hearing != null and additionalData.Data.hearing.timeFrame != null) then additionalData.Data.hearing.timeFrame else null</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.hearing != null and additionalData.Data.hearing.timeFrame != null) then additionalData.Data.hearing.timeFrame else "Other"</text>
         </inputExpression>
         <inputValues id="UnaryTests_1e9vfmg">
           <text>"Within 5 days","Within 2 days","Same day"</text>
@@ -33,13 +33,415 @@
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.lastCreatedWATask != null) then additionalData.Data.lastCreatedWATask else null</text>
         </inputExpression>
         <inputValues id="UnaryTests_052aha7">
-          <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED"</text>
+          <text>"FAILED_PAYMENT","CORRESPONDENCE_UPLOADED","ORDER_NOT_UPLOADED","ORDER_UPLOADED","CMO_REVIEWED","URGENT_CMO_REVIEWED"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_11c116j" label="Court Code is 100" camunda:inputVariable="courtCode">
+        <inputExpression id="LiteralExpression_0d2hgt1" typeRef="boolean" expressionLanguage="juel">
+          <text>additionalData != null and additionalData.Data != null and additionalData.Data.court != null and additionalData.Data.court.code != null and additionalData.Data.court.code.equals("100")</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ube3ye" label="Draft order needs review?" camunda:inputVariable="draftOrderNeedsReviewUploaded">
+        <inputExpression id="LiteralExpression_1728tcn" typeRef="boolean">
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.draftOrderNeedsReviewUploaded != null) then additionalData.Data.draftOrderNeedsReviewUploaded else null</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0l31fru" label="Courts taking part" camunda:inputVariable="court">
+        <inputExpression id="LiteralExpression_0xyhjh8" typeRef="string" expressionLanguage="feel">
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.court != null and additionalData.Data.court.code != null) then additionalData.Data.court.code else null</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1tin0vl">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
         </inputValues>
       </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="217" />
       <output id="OutputClause_002axxi" label="Name" name="name" typeRef="string" />
       <output id="OutputClause_0nhxkm7" label="Delay Until" name="delayUntil" typeRef="json" />
       <output id="OutputClause_17qu5hg" label="Process Categories Identifiers" name="processCategories" typeRef="string" />
+      <rule id="DecisionRule_11n6aew">
+        <description>judiciary will be labelled in the ccd event as "Allocated Judge"</description>
+        <inputEntry id="UnaryTests_14tvcbz">
+          <text>"messageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t9fngz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_073uim7">
+          <text>"JUDICIARY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iddlak">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rsbxop">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jx8z64">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b9b2sd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05rpsxf">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gtn6d2">
+          <text>"reviewMessageAllocatedJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t763fh">
+          <text>"Review Message (Allocated Judge)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rdug08">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_154c778">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l1dahb">
+        <description>judiciary will be labelled in the ccd event as "Allocated Judge"</description>
+        <inputEntry id="UnaryTests_129lz80">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nt65cy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k6izq9">
+          <text>"JUDICIARY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x2csjl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17uw2ux">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pwo15q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a06blu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bk51yi">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kt6o9k">
+          <text>"reviewResponseAllocatedJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vn5g5s">
+          <text>"Review Response (Allocated Judge)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v622xr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qsu1y1">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_125icvb">
+        <inputEntry id="UnaryTests_1a7cvsy">
+          <text>"messageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k12b28">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16pau30">
+          <text>"HEARING_JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rcxp2j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o77rag">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r3vovg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xcnavg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03wzke2">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v3zz40">
+          <text>"reviewMessageHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c5z6g6">
+          <text>"Review Message (Hearing Judge)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ofj4sk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kgrteb">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t71r3y">
+        <inputEntry id="UnaryTests_0v23ojy">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0feirta">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04wvu04">
+          <text>"HEARING_JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zaqjbg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lyqtdz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13r02i5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ly7guu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hhdtei">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qco7r3">
+          <text>"reviewResponseHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sl7nse">
+          <text>"Review Response (Hearing Judge)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0af9psb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pb492c">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ly7w1o">
+        <inputEntry id="UnaryTests_18zezak">
+          <text>"messageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tignk5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iowh12">
+          <text>"LOCAL_COURT_ADMIN"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1phnl2d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_028j9rw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u2gqtj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18cn1k5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03xw5ga">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q69w4p">
+          <text>"reviewMessageHearingCentreAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12pi3z1">
+          <text>"Review Message (Local Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_019oc5j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1980vgl">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_083o0e2">
+        <inputEntry id="UnaryTests_12dgqqk">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01fpepe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n05dor">
+          <text>"LOCAL_COURT_ADMIN"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pzueci">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eywawe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rwey0n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hleffd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a8oilr">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0melnll">
+          <text>"reviewResponseHearingCentreAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rzrvvz">
+          <text>"Review Response (Local Court)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ggoglf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wsr1fx">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xpzl17">
+        <description>other will be labelled in the ccd event as "Legal Adviser"</description>
+        <inputEntry id="UnaryTests_0hhep47">
+          <text>"messageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aw6h6d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ohgjfi">
+          <text>"OTHER"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p1fcn7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ijnick">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07v0bwe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kisg70">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hdel3r">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r3jvwx">
+          <text>"reviewMessageLegalAdviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ot1ycd">
+          <text>"Review Message (Legal Adviser)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1swkc9j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ki3f3a">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08saxdi">
+        <description>other will be labelled in the ccd event as "Legal Advisor"</description>
+        <inputEntry id="UnaryTests_0ch61um">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qa32ej">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yi5df9">
+          <text>"OTHER"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zpt52k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1voa58x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03kg987">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y47swn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uend9u">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r67fkh">
+          <text>"reviewResponseLegalAdviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01wni72">
+          <text>"Review Response (Legal Adviser)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dh2umt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n9gdj6">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1h9ox6h">
+        <inputEntry id="UnaryTests_0yduhmx">
+          <text>"uploadAdditionalApplications"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rsx36n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ojr4lq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_083ns8a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ajl8c9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rl2whs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pbmnct">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a3fqso">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15vnak5">
+          <text>"viewAdditionalApplications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_160oaxk">
+          <text>"View Additional Applications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09us3vj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d8sks8">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wndqzo">
+        <inputEntry id="UnaryTests_0f8guqf">
+          <text>"uploadCMO"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iba57d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lgd2wz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m27ac1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q0anqv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ticzsw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jhwzvp">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ccompc">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0csn711">
+          <text>"approveOrders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02szmi6">
+          <text>"Approve Orders"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sx0acl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mi8gx4">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
