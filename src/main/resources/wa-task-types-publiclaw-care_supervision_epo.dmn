@@ -179,7 +179,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0youqbh">
-          <text>reviewStandardDirectionOrderHighCourt</text>
+          <text>"reviewStandardDirectionOrderHighCourt"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03k48i2">
           <text>"Review Standard Direction Order (High Court)"</text>
@@ -271,17 +271,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0dxuuq8">
           <text>"Check Placement Application (High Court)"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0972qcs">
-        <inputEntry id="UnaryTests_17em3ml">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_006764i">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_11rgq3v">
-          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
