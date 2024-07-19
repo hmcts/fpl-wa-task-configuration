@@ -30,6 +30,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.springframework.util.ObjectUtils.isEmpty;
 
 class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
@@ -109,7 +110,8 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     private static String getValueFromWaConfiguration(DmnDecisionTableImpl logic, String taskType, String name) {
         return logic.getRules().stream()
-            .filter(d -> encloseDoubleQuote(taskType).equals(d.getConditions().get(1).getExpression())
+            .filter(d -> !isEmpty(d.getConditions().get(1).getExpression())
+                && d.getConditions().get(1).getExpression().contains(encloseDoubleQuote(taskType))
                 && encloseDoubleQuote(name).equals(d.getConclusions().get(0).getExpression()))
             .findAny()
             .orElseThrow(() -> new NoSuchElementException("Unable to locate " + taskType + " and " + name
@@ -117,7 +119,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
             .getConclusions().get(1).getExpression();
     }
 
-    private static Stream<Arguments> viewAdditionalApplicationsScenarios() {
+    private static Stream<Arguments> allocatedJudgeScenarios() {
         return Stream.of(
             Arguments.of(
                 "LEGAL_OPERATIONS",
@@ -143,7 +145,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     @ParameterizedTest
-    @MethodSource("viewAdditionalApplicationsScenarios")
+    @MethodSource("allocatedJudgeScenarios")
     void testViewAdditionalApplicationRoleCategory(String expected, Map<String, Object> caseData) {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         String feelExpression = getValueFromWaConfiguration(logic, "viewAdditionalApplications", "roleCategory");
@@ -154,6 +156,33 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
             feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData));
         assertEquals(expected, result.toOption().get());
     }
+
+    @ParameterizedTest
+    @MethodSource("allocatedJudgeScenarios")
+    void testMessageResponseAllocatedJudgeRoleCategory(String expected, Map<String, Object> caseData) {
+        DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
+        String feelExpression = getValueFromWaConfiguration(logic, "reviewMessageAllocatedJudge", "roleCategory");
+
+        FeelEngine feelEngine = new FeelEngine.Builder().build();
+
+        Either<FeelEngine.Failure, Object> result =
+            feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData));
+        assertEquals(expected, result.toOption().get());
+    }
+
+    @ParameterizedTest
+    @MethodSource("hearingJudgeScenarios")
+    void testMessageResponseHearingJudgeRoleCategory(String expected, Map<String, Object> caseData) {
+        DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
+        String feelExpression = getValueFromWaConfiguration(logic, "reviewMessageHearingJudge", "roleCategory");
+
+        FeelEngine feelEngine = new FeelEngine.Builder().build();
+
+        Either<FeelEngine.Failure, Object> result =
+            feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData));
+        assertEquals(expected, result.toOption().get());
+    }
+
 
     private static String formatString(Date date) {
         return new SimpleDateFormat("yyyy-MM-dd").format(date) + "T"
@@ -174,7 +203,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
         return formatString(cal.getTime());
     }
 
-    private static Stream<Arguments> approveOrdersScenarios() {
+    private static Stream<Arguments> hearingJudgeScenarios() {
         return Stream.of(
             // empty hearingDetails, determined by allocatedJudge.judgeTitle
             Arguments.of(
@@ -518,7 +547,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     @ParameterizedTest
-    @MethodSource("approveOrdersScenarios")
+    @MethodSource("hearingJudgeScenarios")
     void testApproveOrdersRoleCategory(String expected, Map<String, Object> caseData) {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         String feelExpression = getValueFromWaConfiguration(logic, "approveOrders", "roleCategory");
