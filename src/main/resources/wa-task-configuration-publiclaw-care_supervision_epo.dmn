@@ -623,8 +623,7 @@ else "roleAssignmentId"</text>
           <text>"roleCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13wjipi">
-          <text>if (
-    ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+          <text>if ( matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
     or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
 ) 
 then "LEGAL_OPERATIONS" 
@@ -653,14 +652,14 @@ else "JUDICIAL"</text>
         ].value,
         precedes: function(x, y) x.startDate &gt;= y.startDate
     )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
-    or ends with(
+    or matches(
         sort(
             list: caseData.hearingDetails[
                 date and time(item.value.startDate) 
                 &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
             ].value,
             precedes: function(x, y) x.startDate &gt;= y.startDate
-        )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk")
+        )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk", "i")
 ) 
 then "LEGAL_OPERATIONS" 
 else if (
@@ -671,7 +670,7 @@ else if (
         ].value,
         precedes: function(x, y) x.startDate &gt;= y.startDate
     )[1] = null) and    
-    (ends with(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk")
+    (matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
     or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
 ) 
 then "LEGAL_OPERATIONS" 

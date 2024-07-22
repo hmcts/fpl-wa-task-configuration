@@ -132,6 +132,12 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 ))
             ),
             Arguments.of(
+                "LEGAL_OPERATIONS",
+                Map.of("allocatedJudge", Map.of("judgeTitle", "MAGISTRATE",
+                                                "judgeEmailAddress", "test@Justice.gov.uk"
+                ))
+            ),
+            Arguments.of(
                 "JUDICIAL",
                 Map.of("allocatedJudge", Map.of("judgeTitle", "HER_HONOUR_JUDGE",
                                                 "judgeEmailAddress", "test@whatever.com"
@@ -362,6 +368,33 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
                                    "judgeAndLegalAdvisor", Map.of(
                                        "judgeTitle", "MR_JUSTICE",
                                        "judgeEmailAddress", "whatever@whatever.com"
+                                   )
+                               )
+                           ),
+                           Map.of("id", UUID.randomUUID(),
+                                  "value", Map.of(
+                                   "startDate", getFutureStartDate(),
+                                   "judgeAndLegalAdvisor", Map.of(
+                                       "judgeTitle", "LEGAL_ADVISOR",
+                                       "judgeEmailAddress", "whatever@justice.gov.uk"
+                                   )
+                               )
+                           )
+                       ),
+                       "allocatedJudge", Map.of("judgeTitle", "LEGAL_ADVISOR",
+                                                "judgeEmailAddress", "whatever@justice.gov.uk"
+                    )
+                )
+            ),
+            Arguments.of(
+                "LEGAL_OPERATIONS",
+                Map.of("hearingDetails", List.of(
+                           Map.of("id", UUID.randomUUID(),
+                                  "value", Map.of(
+                                   "startDate", getPastStartDate(),
+                                   "judgeAndLegalAdvisor", Map.of(
+                                       "judgeTitle", "MAGISTRATE",
+                                       "judgeEmailAddress", "whatever@Justice.gov.uk"
                                    )
                                )
                            ),
