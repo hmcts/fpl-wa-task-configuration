@@ -633,6 +633,27 @@ else "JUDICIAL"</text>
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_15kqbag">
+        <inputEntry id="UnaryTests_0qjv3x2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1msttiz">
+          <text>"viewAdditionalApplications","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dsxj85">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ot2154">
+          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + (if ( matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
+) 
+then " (Allocated Legal Adviser)" 
+else " (Allocated Judge)") + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ltmgrk">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0bganw9">
         <inputEntry id="UnaryTests_1e9fbyi">
           <text></text>
@@ -678,6 +699,53 @@ else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zeaw9z">
           <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19bk8q7">
+        <inputEntry id="UnaryTests_0oiaswz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19j8ggr">
+          <text>"approveOrders","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12o4e26">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16fdujv">
+          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + (if (
+    sort(
+        list: caseData.hearingDetails[
+            date and time(item.value.startDate) 
+            &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+        ].value,
+        precedes: function(x, y) x.startDate &gt;= y.startDate
+    )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
+    or matches(
+        sort(
+            list: caseData.hearingDetails[
+                date and time(item.value.startDate) 
+                &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+            ].value,
+            precedes: function(x, y) x.startDate &gt;= y.startDate
+        )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk", "i")
+) 
+then " (Hearing Legal Adviser)" 
+else if (
+    (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0 or sort(
+        list: caseData.hearingDetails[
+            date and time(item.value.startDate) 
+            &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+        ].value,
+        precedes: function(x, y) x.startDate &gt;= y.startDate
+    )[1] = null) and    
+    (matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
+) 
+then " (Hearing Legal Adviser)" 
+else " (Hearing Judge)") + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_002o3fe">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1mwn1hl">
@@ -1187,7 +1255,7 @@ else [5000])[1]</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qd59ye">
-          <text>"viewAdditionalApplications","reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageHearingJudge","reviewMessageAllocatedJudge","approveOrders","reviewOrderCMO","reviewResponseAllocatedJudge","reviewResponseHearingJudge","reviewResponseHearingCentreAdmin","reviewResponseCTSC"</text>
+          <text>"reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageAllocatedJudge","reviewOrderCMO","reviewResponseHearingCentreAdmin","reviewResponseCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_19vr5yu">
           <text>"title"</text>

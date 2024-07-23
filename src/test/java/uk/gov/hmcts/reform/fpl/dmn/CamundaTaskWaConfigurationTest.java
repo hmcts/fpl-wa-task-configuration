@@ -23,6 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Stream;
 
@@ -39,9 +40,9 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_CONFIGURATION;
     }
 
-    private static LocalDateTime NOW = LocalDateTime.now();
+    private static final LocalDateTime NOW = LocalDateTime.now();
 
-    private static Map<String, Object> CASE_DATA = Map.of(
+    private static final Map<String, Object> CASE_DATA = Map.of(
         "caseName", "Test v Smith",
         "caseManagementLocation", Map.of(
             "region", "1",
@@ -162,6 +163,22 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
             feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData));
         assertEquals(expected, result.toOption().get());
     }
+
+    @ParameterizedTest
+    @MethodSource("allocatedJudgeScenarios")
+    void testViewAdditionalApplicationTitle(String expected, Map<String, Object> caseData) {
+        DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
+        String feelExpression = getValueFromWaConfiguration(logic, "viewAdditionalApplications", "title");
+
+        FeelEngine feelEngine = new FeelEngine.Builder().build();
+
+        Either<FeelEngine.Failure, Object> result =
+            feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData, "taskAttributes"
+                , Map.of("name", "View Additional Applications")));
+        assertTrue(((String) result.toOption().get()).contains(
+            Objects.equals(expected, "LEGAL_OPERATIONS") ? "(Allocated Legal Adviser)" : "(Allocated Judge)"));
+    }
+
 
     @ParameterizedTest
     @MethodSource("allocatedJudgeScenarios")
@@ -592,11 +609,27 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertEquals(expected, result.toOption().get());
     }
 
+    @ParameterizedTest
+    @MethodSource("hearingJudgeScenarios")
+    void testApproveOrdersTitle(String expected, Map<String, Object> caseData) {
+        DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
+        String feelExpression = getValueFromWaConfiguration(logic, "approveOrders", "title");
+
+        FeelEngine feelEngine = new FeelEngine.Builder().build();
+
+        Either<FeelEngine.Failure, Object> result =
+            feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData,
+                                                             "taskAttributes", Map.of("name", "Approve Orders")));
+        assertTrue(((String) result.toOption().get()).contains(
+            Objects.equals(expected, "LEGAL_OPERATIONS") ? "(Hearing Legal Adviser)" : "(Hearing Judge)"));
+    }
+
+
     @Test
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(65));
+        assertThat(logic.getRules().size(), is(67));
     }
 
     private static List<Map<String, Object>> getBaseValues() {
