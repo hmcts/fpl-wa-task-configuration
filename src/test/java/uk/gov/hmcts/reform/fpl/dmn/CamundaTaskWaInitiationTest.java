@@ -52,7 +52,7 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 ),
                 Map.of(
                     "taskId", "reviewMessageAllocatedJudge",
-                    "name", "Review Message",
+                    "name", "Review Message (Allocated Judge)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -64,7 +64,7 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 ),
                 Map.of(
                     "taskId", "reviewResponseAllocatedJudge",
-                    "name", "Review Response",
+                    "name", "Review Response (Allocated Judge)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -76,7 +76,7 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 ),
                 Map.of(
                     "taskId", "reviewMessageHearingJudge",
-                    "name", "Review Message",
+                    "name", "Review Message (Hearing Judge)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),

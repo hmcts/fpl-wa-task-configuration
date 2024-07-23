@@ -88,7 +88,7 @@
           <text>"reviewMessageAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1t763fh">
-          <text>"Review Message"</text>
+          <text>"Review Message (Allocated Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rdug08">
           <text></text>
@@ -127,7 +127,7 @@
           <text>"reviewResponseAllocatedJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vn5g5s">
-          <text>"Review Response"</text>
+          <text>"Review Response (Allocated Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0v622xr">
           <text></text>
@@ -165,7 +165,7 @@
           <text>"reviewMessageHearingJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c5z6g6">
-          <text>"Review Message"</text>
+          <text>"Review Message (Hearing Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ofj4sk">
           <text></text>
@@ -203,7 +203,7 @@
           <text>"reviewResponseHearingJudge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sl7nse">
-          <text>"Review Response"</text>
+          <text>"Review Response (Hearing Judge)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0af9psb">
           <text></text>

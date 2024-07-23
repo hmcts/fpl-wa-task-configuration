@@ -638,7 +638,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1msttiz">
-          <text>"viewAdditionalApplications","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
+          <text>"viewAdditionalApplications"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dsxj85">
           <text>"title"</text>
@@ -651,7 +651,28 @@ then " (Allocated Legal Adviser)"
 else " (Allocated Judge)") + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ltmgrk">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1k9g7ca">
+        <inputEntry id="UnaryTests_1rgau92">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cyy81z">
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hl6n7n">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uc47zq">
+          <text>if (taskAttributes != null and taskAttributes.name != null) then replace(taskAttributes.name, "Judge", (if ( matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
+) 
+then "Legal Adviser" 
+else "Judge")) + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0976xs4">
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0bganw9">
@@ -706,7 +727,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_19j8ggr">
-          <text>"approveOrders","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+          <text>"approveOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12o4e26">
           <text>"title"</text>
@@ -745,6 +766,53 @@ then " (Hearing Legal Adviser)"
 else " (Hearing Judge)") + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_002o3fe">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xz5q3i">
+        <inputEntry id="UnaryTests_1srp3lz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08spiu2">
+          <text>"reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fktfa4">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mg98eb">
+          <text>if (taskAttributes != null and taskAttributes.name != null) then replace(taskAttributes.name, "Judge", (if (
+    sort(
+        list: caseData.hearingDetails[
+            date and time(item.value.startDate) 
+            &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+        ].value,
+        precedes: function(x, y) x.startDate &gt;= y.startDate
+    )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
+    or matches(
+        sort(
+            list: caseData.hearingDetails[
+                date and time(item.value.startDate) 
+                &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+            ].value,
+            precedes: function(x, y) x.startDate &gt;= y.startDate
+        )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk", "i")
+) 
+then "Legal Adviser" 
+else if (
+    (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0 or sort(
+        list: caseData.hearingDetails[
+            date and time(item.value.startDate) 
+            &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
+        ].value,
+        precedes: function(x, y) x.startDate &gt;= y.startDate
+    )[1] = null) and    
+    (matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
+    or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
+) 
+then "Legal Adviser" 
+else "Judge")) + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14fokti">
           <text></text>
         </outputEntry>
       </rule>

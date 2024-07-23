@@ -166,9 +166,9 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @MethodSource("allocatedJudgeScenarios")
-    void testViewAdditionalApplicationTitle(String expected, Map<String, Object> caseData) {
+    void testReviewMessageAllocatedJudgeTitle(String expected, Map<String, Object> caseData) {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        String feelExpression = getValueFromWaConfiguration(logic, "viewAdditionalApplications", "title");
+        String feelExpression = getValueFromWaConfiguration(logic, "reviewMessageAllocatedJudge", "title");
 
         FeelEngine feelEngine = new FeelEngine.Builder().build();
 
@@ -177,7 +177,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 "caseData",
                 caseData,
                 "taskAttributes",
-                Map.of("name", "View Additional Applications")
+                Map.of("name", "Review Message (Allocated Judge)")
             ));
         assertTrue(((String) result.toOption().get()).contains(
             Objects.equals(expected, "LEGAL_OPERATIONS") ? "(Allocated Legal Adviser)" : "(Allocated Judge)"));
@@ -634,7 +634,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(67));
+        assertThat(logic.getRules().size(), is(69));
     }
 
     private static List<Map<String, Object>> getBaseValues() {
