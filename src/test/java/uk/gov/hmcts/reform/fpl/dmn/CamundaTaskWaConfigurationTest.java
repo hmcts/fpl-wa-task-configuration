@@ -173,8 +173,12 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
         FeelEngine feelEngine = new FeelEngine.Builder().build();
 
         Either<FeelEngine.Failure, Object> result =
-            feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData, "taskAttributes"
-                , Map.of("name", "View Additional Applications")));
+            feelEngine.evalExpression(feelExpression, Map.of(
+                "caseData",
+                caseData,
+                "taskAttributes",
+                Map.of("name", "View Additional Applications")
+            ));
         assertTrue(((String) result.toOption().get()).contains(
             Objects.equals(expected, "LEGAL_OPERATIONS") ? "(Allocated Legal Adviser)" : "(Allocated Judge)"));
     }
@@ -619,7 +623,8 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         Either<FeelEngine.Failure, Object> result =
             feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData,
-                                                             "taskAttributes", Map.of("name", "Approve Orders")));
+                                                             "taskAttributes", Map.of("name", "Approve Orders")
+            ));
         assertTrue(((String) result.toOption().get()).contains(
             Objects.equals(expected, "LEGAL_OPERATIONS") ? "(Hearing Legal Adviser)" : "(Hearing Judge)"));
     }
