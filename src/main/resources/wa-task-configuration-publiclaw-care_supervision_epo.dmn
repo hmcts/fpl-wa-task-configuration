@@ -813,7 +813,7 @@ then "Legal Adviser"
 else "Judge")) + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14fokti">
-          <text></text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1mwn1hl">
