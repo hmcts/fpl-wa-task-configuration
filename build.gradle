@@ -183,7 +183,7 @@ dependencies {
   testImplementation(platform('org.junit:junit-bom:5.10.2'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
   testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
-  testImplementation 'org.hamcrest:hamcrest-core:1.3'
+  testImplementation 'org.hamcrest:hamcrest-core:3.0'
 
   testImplementation group: 'org.camunda.bpm.dmn', name: 'camunda-engine-dmn', version: versions.camunda
   testImplementation group: 'org.camunda.bpm.assert', name: 'camunda-bpm-assert', version: '15.0.0'
