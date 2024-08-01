@@ -71,6 +71,32 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0lkgi61">
+        <inputEntry id="UnaryTests_1hyb7mt">
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ieney8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w8h8oc">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11cz9va">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ws78nd">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11oic7q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15quwa9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v4t5ri">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0kail0l">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_1ezfkar">
