@@ -180,9 +180,9 @@ dependencies {
   annotationProcessor 'org.projectlombok:lombok:1.18.34'
   compileOnly 'org.projectlombok:lombok:1.18.34'
 
-  testImplementation(platform('org.junit:junit-bom:5.10.2'))
+  testImplementation(platform('org.junit:junit-bom:5.10.3'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-  testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
   testImplementation 'org.hamcrest:hamcrest-core:3.0'
 
   testImplementation group: 'org.camunda.bpm.dmn', name: 'camunda-engine-dmn', version: versions.camunda
