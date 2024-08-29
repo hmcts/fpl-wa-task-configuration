@@ -82,11 +82,11 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     private static Stream<Arguments> approveOrdersMajorPriorityScenarios() {
         return Stream.of(
-            Arguments.of(1000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("YES")))),
-            Arguments.of(4000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("NO")))),
-            Arguments.of(4000, Map.of("draftOrderUrgency", toNullValueMap("urgency"))),
-            Arguments.of(4000, toNullValueMap("draftOrderUrgency")),
-            Arguments.of(4000, null)
+            Arguments.of(2000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("YES")))),
+            Arguments.of(5000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("NO")))),
+            Arguments.of(5000, Map.of("draftOrderUrgency", toNullValueMap("urgency"))),
+            Arguments.of(5000, toNullValueMap("draftOrderUrgency")),
+            Arguments.of(5000, null)
         );
     }
 

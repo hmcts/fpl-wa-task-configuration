@@ -1199,23 +1199,6 @@ else [5000])[1]</text>
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1ugry15">
-        <inputEntry id="UnaryTests_0peeiuc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1a93a1b">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0wyybb9">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0drgh4v">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1l0y9ji">
-          <text></text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
