@@ -725,7 +725,7 @@ else "JUDICIAL"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_184qrc2">
-          <text>"[Review additional applications](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication)"</text>
+          <text>"First review the application on the 'Other applications' tab, take any actions in [Approve orders](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewCMO) or [Send message](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/messageJudgeOrLegalAdviser), then [Mark task as complete](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kzut7e">
           <text>true</text>
