@@ -1030,7 +1030,7 @@ else "JUDICIAL"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1pm17ft">
-          <text>"Check the hearing request on the hearings tab, [List the hearing](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/manageHearings), then [Mark request as done](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewListingAction)"</text>
+          <text>"Check the hearing request on the hearings tab, take appropriate actions in [Manage Hearings](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/manageHearings) or List Assist, then [Mark request as done](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/reviewListingAction)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0eo9v2q">
           <text>true</text>
