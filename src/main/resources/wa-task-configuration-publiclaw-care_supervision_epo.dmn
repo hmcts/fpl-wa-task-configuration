@@ -1469,13 +1469,13 @@ else [5000])[1]</text>
   <decision id="Decision_137edzy" name="Listing Action Type">
     <variable id="InformationItem_0vbtgh8" name="listingActionType" typeRef="string" />
     <literalExpression id="LiteralExpression_0jtsang">
-      <text>if (taskAttributes != null) then {
+      <text>if (taskAttributes != null) then replace({
  "__prefix": "__processCategory__actionType_",
  "__attribute_entries": get entries(taskAttributes),
  "__matching_keys": for __item in __attribute_entries return if starts with(__item.key, __prefix) then substring(__item.key, string length(__prefix) + 1) else null,
  "__filtered_keys": __matching_keys[ item != null ],
  "__nullable_action_type": if (is empty(__filtered_keys)) then null else __filtered_keys[1]
-}.__nullable_action_type
+}.__nullable_action_type, ";", ", ")
 else null</text>
     </literalExpression>
   </decision>
