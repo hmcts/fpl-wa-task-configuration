@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.19.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-initiation-publiclaw-care_supervision_epo" name="Task initiation DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_1fj3kaa" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Event Id" camunda:inputVariable="eventId">
@@ -439,6 +439,44 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1mi8gx4">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ns1qs9">
+        <inputEntry id="UnaryTests_1ei231n">
+          <text>"queryManagementRaiseQuery"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1toxmqv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lo56do">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f8cdb1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07r6rpm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cdtmi5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jza6ng">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14kgfrp">
+          <text>"151","123","203","139","130","242","303","131","115"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0533bjc">
+          <text>"queryManagementRespondToQuery"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_073xhkh">
+          <text>"Respond to a Query"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04jot75">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1br8h2z">
           <text>"case progression"</text>
         </outputEntry>
       </rule>
