@@ -62,6 +62,19 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     @Test
+    void shouldSetTitleOnListingAction() {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskType", "reviewListingAction");
+        inputVariables.putValue("taskAttributes", Map.of("name", "Review listing request",
+                                                         "__processCategory__actionType_Listing required", true));
+        inputVariables.putValue("caseData", CASE_DATA);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+        assertTrue(dmnDecisionTableResult.getResultList()
+                       .contains(getRowResult("title", "Review listing request (Listing required)", false)));
+    }
+
+    @Test
     void shouldHaveCorrectPriorities() {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskType", "checkPlacementApplication");
@@ -596,7 +609,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(65));
+        assertThat(logic.getRules().size(), is(68));
     }
 
     private static List<Map<String, Object>> getBaseValues() {
