@@ -920,7 +920,7 @@ else "JUDICIAL"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0cpnxq9">
-        <description>Always high</description>
+        <description>Low/Medium/High based on priority date</description>
         <inputEntry id="UnaryTests_0rl2ult">
           <text></text>
         </inputEntry>
@@ -931,14 +931,14 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13hfmgv">
-          <text>3000</text>
+          <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fha0sj">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_19deutz">
-        <description>Always high</description>
+        <description>Low/Medium/High based on priority date</description>
         <inputEntry id="UnaryTests_12indo7">
           <text></text>
         </inputEntry>
@@ -949,14 +949,14 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_006d2yy">
-          <text>3000</text>
+          <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rlxpn9">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ncrti2">
-        <description>Always high</description>
+        <description>Low/Medium/High based on priority date</description>
         <inputEntry id="UnaryTests_16dpoyj">
           <text></text>
         </inputEntry>
@@ -967,14 +967,14 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18fqap8">
-          <text>3000</text>
+          <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1idplt1">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12aldmx">
-        <description>Always high</description>
+        <description>Low/Medium/High based on priority date</description>
         <inputEntry id="UnaryTests_0no48hl">
           <text></text>
         </inputEntry>
@@ -985,14 +985,14 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0etm8vn">
-          <text>3000</text>
+          <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02azr2b">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1r9erb3">
-        <description>Always high</description>
+        <description>Low/Medium/High based on priority date</description>
         <inputEntry id="UnaryTests_1dmaqgb">
           <text></text>
         </inputEntry>
@@ -1003,14 +1003,14 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08fathr">
-          <text>3000</text>
+          <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ozp8nz">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0jyvt7i">
-        <description>Always urgent</description>
+        <description>Always High</description>
         <inputEntry id="UnaryTests_0eardmm">
           <text></text>
         </inputEntry>
@@ -1021,14 +1021,14 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1527jxq">
-          <text>2000</text>
+          <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0g815ew">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0u2fv5e">
-        <description>Always high. (A single-element array [urgency] that stores "YES" or "NO".)</description>
+        <description>If marked urgent = urgent, else Low/Medium/High based on priority date</description>
         <inputEntry id="UnaryTests_0kyy5l7">
           <text></text>
         </inputEntry>
@@ -1043,11 +1043,11 @@ else "JUDICIAL"</text>
     and caseData.draftOrderUrgency.urgency != null 
     and count(caseData.draftOrderUrgency.urgency) &gt; 0) then
     for each in caseData.draftOrderUrgency.urgency
-    return if each = "YES" then 1000 else 4000
-else [4000])[1]</text>
+    return if each = "YES" then 2000 else 5000
+else [5000])[1]</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nlo5oi">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0rdjhot">
@@ -1065,7 +1065,7 @@ else [4000])[1]</text>
           <text>1000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m4az2a">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_05thsas">
@@ -1083,7 +1083,7 @@ else [4000])[1]</text>
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1heqlas">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12cdxqu">
@@ -1101,7 +1101,7 @@ else [4000])[1]</text>
           <text>3000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_110utbn">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1d9pjbm">
@@ -1124,7 +1124,7 @@ else [4000])[1]</text>
 else [5000])[1]</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02l2c2g">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1jo8pn7">
@@ -1142,7 +1142,7 @@ else [5000])[1]</text>
           <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05d2fmj">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1sjo1jt">
@@ -1160,7 +1160,7 @@ else [5000])[1]</text>
           <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0z2xrgo">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1updfxd">
@@ -1178,7 +1178,7 @@ else [5000])[1]</text>
           <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1reym9k">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12gscj2">
@@ -1196,7 +1196,7 @@ else [5000])[1]</text>
           <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0877p3e">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1v38zo1">
