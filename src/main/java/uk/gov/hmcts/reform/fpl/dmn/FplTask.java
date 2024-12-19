@@ -21,7 +21,8 @@ public enum FplTask {
     REVIEW_FAILED_PAYMENT("reviewFailedPayment"),
     REVIEW_CORRESPONDENCE("reviewCorrespondence"),
     CHECK_PLACEMENT_APPLICATION("checkPlacementApplication"),
-    CHASE_OUTSTANDING_ORDER("chaseOutstandingOrder");
+    CHASE_OUTSTANDING_ORDER("chaseOutstandingOrder"),
+    QUERY_MANAGEMENT_RESPOND_TO_QUERY("queryManagementRespondToQuery");
 
     private String value;
 
