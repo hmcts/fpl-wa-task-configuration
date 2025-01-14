@@ -473,7 +473,7 @@
       </rule>
       <rule id="DecisionRule_1w788bo">
         <inputEntry id="UnaryTests_0nhcc2y">
-          <text>"reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt"</text>
+          <text>"reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewListingAction"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_09onc92">
           <text></text>
