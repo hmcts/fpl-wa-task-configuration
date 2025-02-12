@@ -188,9 +188,20 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1epo5hh">
+        <inputEntry id="UnaryTests_086jcxy">
+          <text>"reviewListingAction"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u5eifa">
+          <text>"reviewListingAction"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dh55bk">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1nzha00">
         <inputEntry id="UnaryTests_14ft3ua">
-          <text>"reviewCMO","replyToMessageJudgeOrLegalAdviser","reviewAdditionalApplication","sendToGatekeeper","returnApplication","sendOrderReminder"</text>
+          <text>"reviewCMO","replyToMessageJudgeOrLegalAdviser","reviewAdditionalApplication","sendToGatekeeper","returnApplication","sendOrderReminder","reviewListingAction"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12z0rov">
           <text></text>
