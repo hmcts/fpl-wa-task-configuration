@@ -544,7 +544,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewListingAction"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewListingAction","queryManagementRespondToQuery"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1attt77">
           <text></text>
@@ -686,7 +686,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uuvjqh">
-          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC","queryManagementRespondToQuery"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1u9r6w0">
           <text></text>
@@ -1056,6 +1056,26 @@ else "JUDICIAL"</text>
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1b7jteh">
+        <inputEntry id="UnaryTests_0un0ce4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16wlcb4">
+          <text>"queryManagementRespondToQuery"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ms9h54">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04mhus8">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dzzt9a">
+          <text>"[Respond to a query](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/queryManagementRespondQuery)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07mqv8t">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_18r5w06">
         <description>all tasks have the default 500</description>
         <inputEntry id="UnaryTests_18mvv82">
@@ -1420,6 +1440,26 @@ else [5000])[1]</text>
           <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1022klg">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1y73i4x">
+        <inputEntry id="UnaryTests_13q58gm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jezepj">
+          <text>"queryManagementRespondToQuery"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u81e28">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1piailh">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0djqxgt">
+          <text>5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qu0kfw">
           <text>false</text>
         </outputEntry>
       </rule>
