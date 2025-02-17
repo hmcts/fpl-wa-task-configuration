@@ -929,6 +929,41 @@
           <text>"case progression"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1l5ihpf">
+        <inputEntry id="UnaryTests_03j1fvb">
+          <text>"queryManagementRaiseQuery"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g4irsi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k79o6x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09x91ca">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1spv88z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h4qjoe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p4ogvd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r8usfv">
+          <text>"queryManagementRespondToQuery"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1it6eza">
+          <text>"Respond to a Query"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cmaib8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10eps1p">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

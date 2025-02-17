@@ -199,6 +199,17 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0swawz5">
+        <inputEntry id="UnaryTests_0cdkdf1">
+          <text>"queryManagementRespondQuery"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06yj4la">
+          <text>"queryManagementRespondToQuery"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s4uv58">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1nzha00">
         <inputEntry id="UnaryTests_14ft3ua">
           <text>"reviewCMO","replyToMessageJudgeOrLegalAdviser","reviewAdditionalApplication","sendToGatekeeper","returnApplication","sendOrderReminder","reviewListingAction"</text>
