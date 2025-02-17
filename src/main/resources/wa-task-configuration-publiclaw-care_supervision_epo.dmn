@@ -1478,7 +1478,7 @@ else [5000])[1]</text>
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_040jt2c">
-          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
+          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + " (" + substring(string(date(now())), 9, 2) + "/" + substring(string(date(now())), 6, 2) + "/" + substring(string(date(now())), 1, 4) + " " + substring(string(time(now())), 1, 5) + ")" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03vf2mq">
           <text>false</text>
