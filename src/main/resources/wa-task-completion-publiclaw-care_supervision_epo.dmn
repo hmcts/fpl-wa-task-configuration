@@ -111,6 +111,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0trav2o">
+        <description>DEPRECATED</description>
         <inputEntry id="UnaryTests_0ooic7u">
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
@@ -122,6 +123,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0a3rjv3">
+        <description>DEPRECATED</description>
         <inputEntry id="UnaryTests_14min44">
           <text>"replyToMessageJudgeOrLegalAdviser"</text>
         </inputEntry>
@@ -129,6 +131,28 @@
           <text>"reviewResponseLegalAdviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09lngvv">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1agq3zj">
+        <inputEntry id="UnaryTests_05m61v2">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_074j4d2">
+          <text>"reviewMessageOther"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nxj107">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q25bc5">
+        <inputEntry id="UnaryTests_1s1cp38">
+          <text>"replyToMessageJudgeOrLegalAdviser"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0yug9yn">
+          <text>"reviewResponseOther"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1apidmd">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

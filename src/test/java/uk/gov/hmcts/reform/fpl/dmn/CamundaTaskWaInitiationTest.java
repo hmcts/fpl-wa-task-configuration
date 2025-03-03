@@ -99,8 +99,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                     "court", Map.of("code", "151")
                 ),
                 Map.of(
-                    "taskId", "reviewMessageLegalAdviser",
-                    "name", "Review Message (Legal Adviser)",
+                    "taskId", "reviewMessageOther",
+                    "name", "Review Message (Other Judiciary)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
