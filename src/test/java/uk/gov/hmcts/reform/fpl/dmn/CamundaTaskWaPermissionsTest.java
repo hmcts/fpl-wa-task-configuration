@@ -52,7 +52,7 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
                 ),
                 getRowResult(
                     "allocated-judge",
-                    "Own,Assign,Claim,Unassign,Read",
+                    "Complete,Own,Assign,Claim,Unassign,Read",
                     "JUDICIAL",
                     "316",
                     1,
@@ -60,7 +60,7 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
                 ),
                 getRowResult(
                     "tribunal-caseworker",
-                    "Own,Assign,Claim,Unassign,Read",
+                    "Complete,Own,Assign,Claim,Unassign,Read",
                     "LEGAL_OPERATIONS",
                     null,
                     null,
