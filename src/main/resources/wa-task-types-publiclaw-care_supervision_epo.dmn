@@ -119,6 +119,28 @@
           <text>"Review Response (Legal Adviser)"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1pt29vh">
+        <inputEntry id="UnaryTests_17qb2c6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_149x4ag">
+          <text>"reviewMessageOther"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ndv21b">
+          <text>"Review Message (Other Judiciary)"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18pc57d">
+        <inputEntry id="UnaryTests_1pa3db9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f3y9o2">
+          <text>"reviewResponseOther"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1infklm">
+          <text>"Review Response (Other Judiciary)"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1dv38vf">
         <inputEntry id="UnaryTests_0wbfgz0">
           <text></text>
