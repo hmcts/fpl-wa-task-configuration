@@ -421,7 +421,7 @@
       </rule>
       <rule id="DecisionRule_09x1weo">
         <inputEntry id="UnaryTests_1an08mt">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","viewAdditionalApplications"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08wkeq2">
           <text></text>
@@ -475,7 +475,7 @@
       <rule id="DecisionRule_1u9jc6e">
         <description>for ensuring tasks are reassigned when necessary</description>
         <inputEntry id="UnaryTests_19846qw">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
+          <text>"approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dykfnl">
           <text></text>
