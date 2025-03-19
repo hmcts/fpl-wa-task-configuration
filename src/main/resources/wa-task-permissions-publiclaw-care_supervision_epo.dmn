@@ -421,7 +421,7 @@
       </rule>
       <rule id="DecisionRule_09x1weo">
         <inputEntry id="UnaryTests_1an08mt">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","viewAdditionalApplications"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08wkeq2">
           <text></text>
