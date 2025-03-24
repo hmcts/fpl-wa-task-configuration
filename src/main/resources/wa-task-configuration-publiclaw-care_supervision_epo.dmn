@@ -544,7 +544,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewListingAction","queryManagementRespondToQuery"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewListingAction","reviewMessageOther","reviewResponseOther","queryManagementRespondToQuery"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1attt77">
           <text></text>
@@ -666,7 +666,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c1bkfo">
-          <text>"reviewSpecificAccessRequestJudiciary"</text>
+          <text>"reviewSpecificAccessRequestJudiciary","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mau698">
           <text></text>
@@ -821,7 +821,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0b9sm9k">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1960ml5">
           <text></text>
@@ -1202,6 +1202,27 @@ else "JUDICIAL"</text>
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0wkt147">
+        <description>Low/Medium/High based on priority date</description>
+        <inputEntry id="UnaryTests_17gmodg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08f6796">
+          <text>"reviewMessageOther","reviewResponseOther"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v6yec1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ed2gij">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0abk3pl">
+          <text>5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mwdgor">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0jyvt7i">
         <description>Always High</description>
         <inputEntry id="UnaryTests_0eardmm">
@@ -1468,7 +1489,7 @@ else [5000])[1]</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qd59ye">
-          <text>"viewAdditionalApplications","reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageHearingJudge","reviewMessageAllocatedJudge","approveOrders","reviewOrderCMO","reviewResponseAllocatedJudge","reviewResponseHearingJudge","reviewResponseHearingCentreAdmin","reviewResponseCTSC"</text>
+          <text>"viewAdditionalApplications","reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageHearingJudge","reviewMessageAllocatedJudge","approveOrders","reviewOrderCMO","reviewResponseAllocatedJudge","reviewResponseHearingJudge","reviewResponseHearingCentreAdmin","reviewResponseCTSC","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0nf7hes">
           <text></text>
