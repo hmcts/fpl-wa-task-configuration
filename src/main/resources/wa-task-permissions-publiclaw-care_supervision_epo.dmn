@@ -525,58 +525,6 @@
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1r07d0k">
-        <inputEntry id="UnaryTests_13vre0y">
-          <text>"queryManagementRespondToQuery"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0waghkj">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1kf82r2">
-          <text>"ctsc"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0ubhbbz">
-          <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0za5rv9">
-          <text>"CTSC"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_05fsrkv">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_17o8fns">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0fk2afs">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_01bsuwy">
-        <inputEntry id="UnaryTests_08ze6qu">
-          <text>"queryManagementRespondToQuery"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0qc4r8l">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_13zvfx4">
-          <text>"hearing-centre-admin"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_051m9qk">
-          <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_02xgrib">
-          <text>"ADMIN"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1tsflf5">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_16vb4ud">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0glal7o">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1w788bo">
         <inputEntry id="UnaryTests_0nhcc2y">
           <text>"reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewListingAction"</text>
