@@ -30,8 +30,7 @@ public enum FplTask {
     REVIEW_CORRESPONDENCE("reviewCorrespondence"),
     CHECK_PLACEMENT_APPLICATION("checkPlacementApplication"),
     CHASE_OUTSTANDING_ORDER("chaseOutstandingOrder"),
-    REVIEW_LISTING_ACTION("reviewListingAction"),
-    QUERY_MANAGEMENT_RESPOND_TO_QUERY("queryManagementRespondToQuery");
+    REVIEW_LISTING_ACTION("reviewListingAction");
 
     private final String value;
 
