@@ -126,7 +126,39 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                     "name", "Review listing request",
                     "processCategories", "actionType_Listing required"
                 )
-
+            ),
+            Arguments.of(
+                "submitApplication",
+                Map.of(
+                    "hearing", Map.of("hearingUrgencyType", "STANDARD")
+                ),
+                Map.of(
+                    "taskId", "reviewStandardApplication",
+                    "name", "Review Standard Application",
+                    "processCategories", "case creation"
+                )
+            ),
+            Arguments.of(
+                "submitApplication",
+                Map.of(
+                    "hearing", Map.of("hearingUrgencyType", "SAME_DAY")
+                ),
+                Map.of(
+                    "taskId", "reviewUrgentApplication",
+                    "name", "Review Urgent Application",
+                    "processCategories", "case creation"
+                )
+            ),
+            Arguments.of(
+                "submitApplication",
+                Map.of(
+                    "hearing", Map.of("hearingUrgencyType", "URGENT")
+                ),
+                Map.of(
+                    "taskId", "reviewUrgentApplication",
+                    "name", "Review Urgent Application",
+                    "processCategories", "case creation"
+                )
             )
         );
     }
@@ -135,7 +167,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        // todo - check this after evaluation period
-        assertThat(logic.getRules().size(), is(11));
+        assertThat(logic.getRules().size(), is(25));
     }
 }
