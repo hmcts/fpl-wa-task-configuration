@@ -169,7 +169,7 @@ def versions = [
   junit           : '5.7.2',
   junitPlatform   : '1.8.1',
   reformLogging   : '5.1.7',
-  camunda         : '7.22.0',
+  camunda         : '7.23.0',
   pitest          : '1.5.2',
   sonarPitest     : '0.5',
   tomcat          : '9.0.68',
