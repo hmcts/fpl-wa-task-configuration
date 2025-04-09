@@ -916,6 +916,26 @@ else "JUDICIAL"</text>
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1h9c6al">
+        <inputEntry id="UnaryTests_0b2ml7x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w2hxcs">
+          <text>"queryManagementRespondToQuery"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gmsgp9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15133hl">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03y3s0g">
+          <text>"[Respond to a query](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/queryManagementRespondQuery)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j06ld2">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_01l2k1j">
         <inputEntry id="UnaryTests_0pm9tye">
           <text></text>
@@ -1054,26 +1074,6 @@ else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nhmfdj">
           <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0bkrsv0">
-        <inputEntry id="UnaryTests_1tr4f8f">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_05kotc0">
-          <text>"queryManagementRespondToQuery"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01y4b0b">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1v0bcgz">
-          <text>"description"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1jexaly">
-          <text>"[Respond to a query](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/queryManagementRespondQuery)"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0kr6vkz">
-          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_18r5w06">
@@ -1464,25 +1464,25 @@ else [5000])[1]</text>
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1b1czpi">
+      <rule id="DecisionRule_0a4w1cd">
         <description>Low, Medium, High based on priority date</description>
-        <inputEntry id="UnaryTests_0x6d5k2">
+        <inputEntry id="UnaryTests_1cr7ofz">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0oqgjgj">
+        <inputEntry id="UnaryTests_1x6pimi">
           <text>"queryManagementRespondToQuery"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_15bocnn">
+        <inputEntry id="UnaryTests_1qjy93x">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0v2jb6r">
+        <outputEntry id="LiteralExpression_0kg4qmh">
           <text>"majorPriority"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0yhuej6">
+        <outputEntry id="LiteralExpression_0czcvyd">
           <text>5000</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0gx1ecc">
-          <text>true</text>
+        <outputEntry id="LiteralExpression_1thkyf4">
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1sumgf3">
