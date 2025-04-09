@@ -930,7 +930,7 @@ else "JUDICIAL"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03y3s0g">
-          <text>"[Respond to a query](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/queryManagementRespondQuery)"</text>
+          <text>"[Respond to a query](/query-management/query/${[CASE_REFERENCE]}/3/" + caseData.latestQueryID + ")"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1j06ld2">
           <text>true</text>
