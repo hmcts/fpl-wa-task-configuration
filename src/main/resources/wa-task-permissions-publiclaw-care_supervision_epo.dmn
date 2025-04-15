@@ -605,6 +605,33 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_17bwz38">
+        <description>DFPL-2727, allow Legal Advisers to complete listing action tasks</description>
+        <inputEntry id="UnaryTests_09u8u9o">
+          <text>"reviewListingAction"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12xs5xa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fxklh1">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16175re">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pfotjj">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jz4nsk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rze878">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03776wp">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1oooaja">
         <description>DEPRECATED</description>
         <inputEntry id="UnaryTests_11vlyzo">
