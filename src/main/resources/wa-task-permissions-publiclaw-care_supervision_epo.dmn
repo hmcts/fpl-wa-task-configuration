@@ -97,6 +97,60 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1n29qsu">
+        <description>allow case role judges to be assigned/complete these tasks but do not auto assign</description>
+        <inputEntry id="UnaryTests_0ff3d47">
+          <text>"reviewMessageOther","reviewResponseOther"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0yw7mqh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0miubvk">
+          <text>"allocated-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01j7r22">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p5sv4a">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15ut8qv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11xq6oy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dw8nlh">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03wab0r">
+        <description>allow case role judges to be assigned/complete these tasks but do not auto assign</description>
+        <inputEntry id="UnaryTests_1bbcwp8">
+          <text>"reviewMessageOther","reviewResponseOther"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09iz1n1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_053b2p8">
+          <text>"hearing-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0awwrs3">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_119lt8f">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k8phyp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hwy17z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q0rcfv">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0kail0l">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_1ezfkar">
