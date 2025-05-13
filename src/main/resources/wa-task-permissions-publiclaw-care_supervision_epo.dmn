@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-permissions-publiclaw-care_supervision_epo" name="Permissions DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_0vv02p8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Task type" biodi:width="313" camunda:inputVariable="taskType">
@@ -818,55 +818,55 @@
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_122nkk6">
-        <inputEntry id="UnaryTests_1544r2e">
+      <rule id="DecisionRule_0wwtnhl">
+        <inputEntry id="UnaryTests_04na4uj">
           <text>"queryManagementRespondToQuery"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0ryio1z">
+        <outputEntry id="LiteralExpression_1ap5yh4">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0aj1cu6">
+        <outputEntry id="LiteralExpression_0gg3smp">
           <text>"ctsc"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_075dbc8">
+        <outputEntry id="LiteralExpression_1mj1gjw">
           <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_17b6m2l">
+        <outputEntry id="LiteralExpression_1ic6wsy">
           <text>"CTSC"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_02n4a18">
+        <outputEntry id="LiteralExpression_0k4fn0w">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1i6yuik">
+        <outputEntry id="LiteralExpression_1fg602w">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1nykgso">
+        <outputEntry id="LiteralExpression_1qv7d1g">
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0t1vs8s">
-        <inputEntry id="UnaryTests_1y23h7k">
+      <rule id="DecisionRule_0g75miq">
+        <inputEntry id="UnaryTests_0aq5y7e">
           <text>"queryManagementRespondToQuery"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_17ivynh">
+        <outputEntry id="LiteralExpression_1qsg5ta">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1pp2w86">
+        <outputEntry id="LiteralExpression_1yorqkd">
           <text>"hearing-centre-admin"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1s9cp80">
+        <outputEntry id="LiteralExpression_0xc9kct">
           <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0kquoq9">
+        <outputEntry id="LiteralExpression_1ry8y1g">
           <text>"ADMIN"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0acg0kl">
+        <outputEntry id="LiteralExpression_1nwr91e">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_17om02j">
+        <outputEntry id="LiteralExpression_1r9i6hk">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_05xnvr4">
+        <outputEntry id="LiteralExpression_05r2alu">
           <text>false</text>
         </outputEntry>
       </rule>
