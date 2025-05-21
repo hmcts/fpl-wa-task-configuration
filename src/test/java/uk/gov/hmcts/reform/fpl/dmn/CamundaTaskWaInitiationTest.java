@@ -99,8 +99,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                     "court", Map.of("code", "151")
                 ),
                 Map.of(
-                    "taskId", "reviewMessageLegalAdviser",
-                    "name", "Review Message (Legal Adviser)",
+                    "taskId", "reviewMessageOther",
+                    "name", "Review Message (Other Judiciary)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -115,6 +115,50 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                     "name", "Approve Orders",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
+            ),
+            Arguments.of(
+                "requestListingAction",
+                Map.of(
+                    "lastListingRequestType", "Listing required"
+                ),
+                Map.of(
+                    "taskId", "reviewListingAction",
+                    "name", "Review listing request",
+                    "processCategories", "actionType_Listing required"
+                )
+            ),
+            Arguments.of(
+                "submitApplication",
+                Map.of(
+                    "hearing", Map.of("hearingUrgencyType", "STANDARD")
+                ),
+                Map.of(
+                    "taskId", "reviewStandardApplication",
+                    "name", "Review Standard Application",
+                    "processCategories", "case creation"
+                )
+            ),
+            Arguments.of(
+                "submitApplication",
+                Map.of(
+                    "hearing", Map.of("hearingUrgencyType", "SAME_DAY")
+                ),
+                Map.of(
+                    "taskId", "reviewUrgentApplication",
+                    "name", "Review Urgent Application",
+                    "processCategories", "case creation"
+                )
+            ),
+            Arguments.of(
+                "submitApplication",
+                Map.of(
+                    "hearing", Map.of("hearingUrgencyType", "URGENT")
+                ),
+                Map.of(
+                    "taskId", "reviewUrgentApplication",
+                    "name", "Review Urgent Application",
+                    "processCategories", "case creation"
+                )
             )
         );
     }
@@ -123,7 +167,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        // todo - check this after evaluation period
-        assertThat(logic.getRules().size(), is(10));
+        assertThat(logic.getRules().size(), is(25));
     }
 }

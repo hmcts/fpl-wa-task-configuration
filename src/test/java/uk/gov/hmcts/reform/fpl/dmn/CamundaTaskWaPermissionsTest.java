@@ -52,7 +52,7 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
                 ),
                 getRowResult(
                     "allocated-judge",
-                    "Complete,Own,Assign,Claim,Unassign,Read",
+                    "Own,Assign,Claim,Unassign,Read",
                     "JUDICIAL",
                     "316",
                     1,
@@ -60,7 +60,7 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
                 ),
                 getRowResult(
                     "tribunal-caseworker",
-                    "Complete,Own,Assign,Claim,Unassign,Read",
+                    "Own,Assign,Claim,Unassign,Read",
                     "LEGAL_OPERATIONS",
                     null,
                     null,
@@ -74,7 +74,7 @@ class CamundaTaskWaPermissionsTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(25));
+        assertThat(logic.getRules().size(), is(30));
     }
 
     private static Map<String, Object> getRowResult(String name, String value, String roleCategory, String auth,

@@ -62,6 +62,19 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     @Test
+    void shouldSetTitleOnListingAction() {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskType", "reviewListingAction");
+        inputVariables.putValue("taskAttributes", Map.of("name", "Review listing request",
+                                                         "__processCategory__actionType_Listing required", true));
+        inputVariables.putValue("caseData", CASE_DATA);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+        assertTrue(dmnDecisionTableResult.getResultList()
+                       .contains(getRowResult("title", "Review listing request (Listing required)", false)));
+    }
+
+    @Test
     void shouldHaveCorrectPriorities() {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskType", "checkPlacementApplication");
@@ -70,7 +83,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
         assertTrue(dmnDecisionTableResult.getResultList().containsAll(List.of(
             getRowResult("minorPriority", "500", true),
-            getRowResult("majorPriority", "5000", true)
+            getRowResult("majorPriority", "5000", false)
         )));
     }
 
@@ -82,11 +95,11 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     private static Stream<Arguments> approveOrdersMajorPriorityScenarios() {
         return Stream.of(
-            Arguments.of(1000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("YES")))),
-            Arguments.of(4000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("NO")))),
-            Arguments.of(4000, Map.of("draftOrderUrgency", toNullValueMap("urgency"))),
-            Arguments.of(4000, toNullValueMap("draftOrderUrgency")),
-            Arguments.of(4000, null)
+            Arguments.of(2000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("YES")))),
+            Arguments.of(5000, Map.of("draftOrderUrgency", Map.of("urgency", List.of("NO")))),
+            Arguments.of(5000, Map.of("draftOrderUrgency", toNullValueMap("urgency"))),
+            Arguments.of(5000, toNullValueMap("draftOrderUrgency")),
+            Arguments.of(5000, null)
         );
     }
 
@@ -596,7 +609,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(65));
+        assertThat(logic.getRules().size(), is(69));
     }
 
     private static List<Map<String, Object>> getBaseValues() {

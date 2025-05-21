@@ -47,7 +47,7 @@
       <rule id="DecisionRule_1s2rbf3">
         <description></description>
         <inputEntry id="UnaryTests_1gultec">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0vdp8e1">
           <text></text>
@@ -73,7 +73,7 @@
       </rule>
       <rule id="DecisionRule_0lkgi61">
         <inputEntry id="UnaryTests_1hyb7mt">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ieney8">
           <text></text>
@@ -94,6 +94,60 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1v4t5ri">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1n29qsu">
+        <description>allow case role judges to be assigned/complete these tasks but do not auto assign</description>
+        <inputEntry id="UnaryTests_0ff3d47">
+          <text>"reviewMessageOther","reviewResponseOther"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0yw7mqh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0miubvk">
+          <text>"allocated-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01j7r22">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p5sv4a">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15ut8qv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11xq6oy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dw8nlh">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03wab0r">
+        <description>allow case role judges to be assigned/complete these tasks but do not auto assign</description>
+        <inputEntry id="UnaryTests_1bbcwp8">
+          <text>"reviewMessageOther","reviewResponseOther"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09iz1n1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_053b2p8">
+          <text>"hearing-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0awwrs3">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_119lt8f">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k8phyp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hwy17z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q0rcfv">
           <text>false</text>
         </outputEntry>
       </rule>
@@ -445,6 +499,60 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_09g3ije">
+        <description>for ensuring tasks are reassigned when necessary</description>
+        <inputEntry id="UnaryTests_0rciqrm">
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05tds6d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04e5ghc">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k2fyzd">
+          <text>"Assign,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dgxpvu">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ul03ob">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02sdcep">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05549om">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1u9jc6e">
+        <description>for ensuring tasks are reassigned when necessary</description>
+        <inputEntry id="UnaryTests_19846qw">
+          <text>"approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dykfnl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13akzv2">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bp0554">
+          <text>"Assign,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fal6bn">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oqxct1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nzuf2t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1azn9k9">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1liss5w">
         <inputEntry id="UnaryTests_0tbv583">
           <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewOrderCMOUrgent","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication"</text>
@@ -473,7 +581,7 @@
       </rule>
       <rule id="DecisionRule_1w788bo">
         <inputEntry id="UnaryTests_0nhcc2y">
-          <text>"reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt"</text>
+          <text>"reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewListingAction"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_09onc92">
           <text></text>
@@ -497,8 +605,35 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_17bwz38">
+        <description>DFPL-2727, allow Legal Advisers to complete listing action tasks</description>
+        <inputEntry id="UnaryTests_09u8u9o">
+          <text>"reviewListingAction"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12xs5xa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fxklh1">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16175re">
+          <text>"Complete,Own,Assign,Claim,Unassign,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pfotjj">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jz4nsk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rze878">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03776wp">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1oooaja">
-        <description></description>
+        <description>DEPRECATED</description>
         <inputEntry id="UnaryTests_11vlyzo">
           <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </inputEntry>
@@ -525,7 +660,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_03nv4et">
-        <description>Auto assigning</description>
+        <description>Auto assigning, DEPRECATED</description>
         <inputEntry id="UnaryTests_0kypttb">
           <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </inputEntry>
@@ -552,6 +687,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0jhmjko">
+        <description>DEPRECATED</description>
         <inputEntry id="UnaryTests_15ms8bl">
           <text>"reviewMessageLegalAdviser","reviewResponseLegalAdviser"</text>
         </inputEntry>
