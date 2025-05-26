@@ -180,7 +180,7 @@ dependencies {
   annotationProcessor 'org.projectlombok:lombok:1.18.38'
   compileOnly 'org.projectlombok:lombok:1.18.38'
 
-  testImplementation(platform('org.junit:junit-bom:5.11.4'))
+  testImplementation(platform('org.junit:junit-bom:5.12.2'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
   testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
   testImplementation 'org.hamcrest:hamcrest-core:3.0'
