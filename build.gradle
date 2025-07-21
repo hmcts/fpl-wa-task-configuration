@@ -189,8 +189,8 @@ dependencies {
   testImplementation group: 'org.camunda.bpm.assert', name: 'camunda-bpm-assert', version: '15.0.0'
   testImplementation group: 'org.camunda.bpm', name: 'camunda-engine', version: versions.camunda
 
-  testImplementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.19.1'
-  testImplementation group: 'com.fasterxml.jackson', name: 'jackson-bom', version: '2.19.1', ext: 'pom'
+  testImplementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.19.2'
+  testImplementation group: 'com.fasterxml.jackson', name: 'jackson-bom', version: '2.19.2', ext: 'pom'
 }
 
 mainClassName = 'uk.gov.hmcts.reform.demo.Application'
