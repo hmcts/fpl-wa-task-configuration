@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-permissions-publiclaw-care_supervision_epo" name="Permissions DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_0vv02p8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Task type" biodi:width="313" camunda:inputVariable="taskType">
@@ -29,7 +29,7 @@
           <text>"task-supervisor"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_031urzk">
-          <text>"Complete,Assign,Unassign,Read,Cancel,Manage"</text>
+          <text>"Complete,Assign,Unassign,Read,Manage"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c0juuw">
           <text></text>
@@ -42,6 +42,58 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1ch3ikr">
           <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13rnjf1">
+        <inputEntry id="UnaryTests_0kn4gfs">
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewMessageOther","reviewResponseOther","viewAdditionalApplications","approveOrders","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewListingAction","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestJudiciary","reviewSpecificAccessRequestAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0corv2z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18rtanq">
+          <text>"task-supervisor"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0akfzs7">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h2r4dx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12bh1m0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o765ia">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jpl137">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1c7te00">
+        <inputEntry id="UnaryTests_0xgbmnj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0aa7oij">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_003c56q">
+          <text>"ctsc-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dtk9ku">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12e3iw6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10hpk7g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mnvb9d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h7oxsf">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1s2rbf3">
