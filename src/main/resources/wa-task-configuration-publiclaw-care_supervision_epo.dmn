@@ -1509,7 +1509,7 @@ else null</text>
       <text>// 1000: urgent
 // 3000: high
 // 5000: Low, Medium, High based on priority date
-if(caseData.waTaskUrgency = "URGENT") then 1000 else if(caseData.waTaskUrgency = "HIGH") then 3000 else 5000</text>
+if(caseData.waTaskUrgencyLevel = "URGENT") then 1000 else if(caseData.waTaskUrgencyLevel = "HIGH") then 3000 else 5000</text>
     </literalExpression>
   </decision>
   <dmndi:DMNDI>
