@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.37.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-configuration-publiclaw-care_supervision_epo" name="Task configuration DMN" camunda:historyTimeToLive="P30D">
     <informationRequirement id="InformationRequirement_1od0u7n">
       <requiredDecision href="#Decision_137edzy" />
@@ -741,8 +741,8 @@ else "roleAssignmentId"</text>
         <outputEntry id="LiteralExpression_13wjipi">
           <text>if ( matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
     or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
-) 
-then "LEGAL_OPERATIONS" 
+)
+then "LEGAL_OPERATIONS"
 else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_106iqxi">
@@ -766,33 +766,33 @@ else "JUDICIAL"</text>
           <text>if (
     sort(
         list: caseData.hearingDetails[
-            date and time(item.value.startDate) 
+            date and time(item.value.startDate)
             &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
         ].value,
         precedes: function(x, y) x.startDate &gt;= y.startDate
-    )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
+    )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR"
     or matches(
         sort(
             list: caseData.hearingDetails[
-                date and time(item.value.startDate) 
+                date and time(item.value.startDate)
                 &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
             ].value,
             precedes: function(x, y) x.startDate &gt;= y.startDate
         )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk", "i")
-) 
-then "LEGAL_OPERATIONS" 
+)
+then "LEGAL_OPERATIONS"
 else if (
     (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0 or sort(
         list: caseData.hearingDetails[
-            date and time(item.value.startDate) 
+            date and time(item.value.startDate)
             &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
         ].value,
         precedes: function(x, y) x.startDate &gt;= y.startDate
-    )[1] = null) and    
+    )[1] = null) and
     (matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
     or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
-) 
-then "LEGAL_OPERATIONS" 
+)
+then "LEGAL_OPERATIONS"
 else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zeaw9z">
@@ -1242,8 +1242,8 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mdgkb3">
-          <text>(if (caseData.draftOrderUrgency != null 
-    and caseData.draftOrderUrgency.urgency != null 
+          <text>(if (caseData.draftOrderUrgency != null
+    and caseData.draftOrderUrgency.urgency != null
     and count(caseData.draftOrderUrgency.urgency) &gt; 0) then
     for each in caseData.draftOrderUrgency.urgency
     return if each = "YES" then 2000 else 5000
@@ -1331,8 +1331,8 @@ else [5000])[1]</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1io2kqb">
-          <text>(if (caseData.orderReviewUrgency != null 
-    and caseData.orderReviewUrgency.urgency != null 
+          <text>(if (caseData.orderReviewUrgency != null
+    and caseData.orderReviewUrgency.urgency != null
     and count(caseData.orderReviewUrgency.urgency) &gt; 0) then
     for each in caseData.orderReviewUrgency.urgency
     return if each = "YES" then 1000 else 5000
@@ -1461,7 +1461,7 @@ else [5000])[1]</text>
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_040jt2c">
-          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + " (" + substring(string(date(now()+ duration("PT1H"))), 9, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 6, 2) + "/" + substring(string(date(now()+ duration("PT1H"))), 1, 4) + " " + substring(string(time(now()+ duration("PT1H"))), 1, 5) + ")" else ""</text>
+          <text>if (taskAttributes != null and taskAttributes.name != null) then taskAttributes.name + " (" + substring(string(date(now())), 9, 2) + "/" + substring(string(date(now())), 6, 2) + "/" + substring(string(date(now())), 1, 4) + " " + substring(string(time(now())), 1, 5) + ")" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03vf2mq">
           <text>false</text>
