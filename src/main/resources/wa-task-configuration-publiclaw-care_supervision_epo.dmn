@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.37.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-configuration-publiclaw-care_supervision_epo" name="Task configuration DMN" camunda:historyTimeToLive="P30D">
     <informationRequirement id="InformationRequirement_1od0u7n">
       <requiredDecision href="#Decision_137edzy" />
@@ -544,7 +544,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewListingAction","reviewMessageOther","reviewResponseOther"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1attt77">
           <text></text>
@@ -616,6 +616,26 @@
           <text>"access_requests"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dqfk6h">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ewtpqi">
+        <inputEntry id="UnaryTests_0xkhsor">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j3llx9">
+          <text>"reviewListingAction"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jmhkis">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1b0bqph">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1z0m6iu">
+          <text>"hearing_work"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1571g38">
           <text>true</text>
         </outputEntry>
       </rule>
