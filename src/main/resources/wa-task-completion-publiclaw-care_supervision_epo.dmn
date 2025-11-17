@@ -234,6 +234,17 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_00xfzwr">
+        <inputEntry id="UnaryTests_0ybbwkl">
+          <text>"queryManagementRespondQuery"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kntbhe">
+          <text>"queryManagementRespondToQuery"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w9cg7u">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
