@@ -544,7 +544,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewListingAction","reviewMessageOther","reviewResponseOther","queryManagementRespondToQuery"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewMessageOther","reviewResponseOther","queryManagementRespondToQuery"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1attt77">
           <text></text>
@@ -616,6 +616,26 @@
           <text>"access_requests"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dqfk6h">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ewtpqi">
+        <inputEntry id="UnaryTests_0xkhsor">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j3llx9">
+          <text>"reviewListingAction"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jmhkis">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1b0bqph">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1z0m6iu">
+          <text>"hearing_work"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1571g38">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -738,8 +758,8 @@ else "roleAssignmentId"</text>
         <outputEntry id="LiteralExpression_13wjipi">
           <text>if ( matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
     or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR"
-) 
-then "LEGAL_OPERATIONS" 
+)
+then "LEGAL_OPERATIONS"
 else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_106iqxi">
@@ -763,33 +783,33 @@ else "JUDICIAL"</text>
           <text>if (
     sort(
         list: caseData.hearingDetails[
-            date and time(item.value.startDate) 
+            date and time(item.value.startDate)
             &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
         ].value,
         precedes: function(x, y) x.startDate &gt;= y.startDate
-    )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR" 
+    )[1].judgeAndLegalAdvisor.judgeTitle = "LEGAL_ADVISOR"
     or matches(
         sort(
             list: caseData.hearingDetails[
-                date and time(item.value.startDate) 
+                date and time(item.value.startDate)
                 &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
             ].value,
             precedes: function(x, y) x.startDate &gt;= y.startDate
         )[1].judgeAndLegalAdvisor.judgeEmailAddress, "@justice.gov.uk", "i")
-) 
-then "LEGAL_OPERATIONS" 
+)
+then "LEGAL_OPERATIONS"
 else if (
     (caseData.hearingDetails = null or count(caseData.hearingDetails) = 0 or sort(
         list: caseData.hearingDetails[
-            date and time(item.value.startDate) 
+            date and time(item.value.startDate)
             &lt;= date and time(substring(string(date(now())), 1, 10) + "T" + substring(string(time(now())), 1, 8))
         ].value,
         precedes: function(x, y) x.startDate &gt;= y.startDate
-    )[1] = null) and    
+    )[1] = null) and
     (matches(caseData.allocatedJudge.judgeEmailAddress, "@justice.gov.uk", "i")
     or caseData.allocatedJudge.judgeTitle = "LEGAL_ADVISOR")
-) 
-then "LEGAL_OPERATIONS" 
+)
+then "LEGAL_OPERATIONS"
 else "JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zeaw9z">
@@ -1259,8 +1279,8 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mdgkb3">
-          <text>(if (caseData.draftOrderUrgency != null 
-    and caseData.draftOrderUrgency.urgency != null 
+          <text>(if (caseData.draftOrderUrgency != null
+    and caseData.draftOrderUrgency.urgency != null
     and count(caseData.draftOrderUrgency.urgency) &gt; 0) then
     for each in caseData.draftOrderUrgency.urgency
     return if each = "YES" then 2000 else 5000
@@ -1348,8 +1368,8 @@ else [5000])[1]</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1io2kqb">
-          <text>(if (caseData.orderReviewUrgency != null 
-    and caseData.orderReviewUrgency.urgency != null 
+          <text>(if (caseData.orderReviewUrgency != null
+    and caseData.orderReviewUrgency.urgency != null
     and count(caseData.orderReviewUrgency.urgency) &gt; 0) then
     for each in caseData.orderReviewUrgency.urgency
     return if each = "YES" then 1000 else 5000
