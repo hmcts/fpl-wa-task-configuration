@@ -306,6 +306,17 @@
           <text>"Review listing request"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1984lza">
+        <inputEntry id="UnaryTests_03spgse">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zs3bu8">
+          <text>"queryManagementRespondToQuery"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n3ekr9">
+          <text>"Respond to a Query"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

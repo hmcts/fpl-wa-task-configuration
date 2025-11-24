@@ -818,6 +818,58 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0wwtnhl">
+        <inputEntry id="UnaryTests_04na4uj">
+          <text>"queryManagementRespondToQuery"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ap5yh4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gg3smp">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mj1gjw">
+          <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ic6wsy">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k4fn0w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fg602w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qv7d1g">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g75miq">
+        <inputEntry id="UnaryTests_0aq5y7e">
+          <text>"queryManagementRespondToQuery"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qsg5ta">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yorqkd">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xc9kct">
+          <text>"Complete,Own,Claim,Unclaim,UnassignClaim,Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ry8y1g">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nwr91e">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r9i6hk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05r2alu">
+          <text>false</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
