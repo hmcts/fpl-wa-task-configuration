@@ -547,7 +547,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1v6se2q">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewListingAction","reviewMessageOther","reviewResponseOther"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewMessageCTSC","reviewResponseCTSC","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewCorrespondence","chaseOutstandingOrder","reviewCorrespondenceHighCourt","reviewListingAction","reviewMessageOther","reviewResponseOther","queryManagementRespondToQuery"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1attt77">
           <text></text>
@@ -689,7 +689,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uuvjqh">
-          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC","queryManagementRespondToQuery"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1u9r6w0">
           <text></text>
@@ -916,6 +916,26 @@ else "JUDICIAL"</text>
           <text>"[Send order reminder](/case/PUBLICLAW/CARE_SUPERVISION_EPO/${[CASE_REFERENCE]}/trigger/sendOrderReminder)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0el8m85">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0snqzy6">
+        <inputEntry id="UnaryTests_1amlthk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1up4lra">
+          <text>"queryManagementRespondToQuery"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eo9fi0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xvzovu">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pr1xzi">
+          <text>"[Respond to a query](/query-management/query/${[CASE_REFERENCE]}/3/" + caseData.latestQueryID + ")"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09g0sq3">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -1444,6 +1464,27 @@ else [5000])[1]</text>
           <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1022klg">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tbzp3k">
+        <description>Low, Medium, High based on priority date</description>
+        <inputEntry id="UnaryTests_0h840uq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04q1z72">
+          <text>"queryManagementRespondToQuery"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nb9042">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dpzswj">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vfxsej">
+          <text>5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07574on">
           <text>false</text>
         </outputEntry>
       </rule>
