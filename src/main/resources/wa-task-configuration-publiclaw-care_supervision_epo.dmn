@@ -4,6 +4,9 @@
     <informationRequirement id="InformationRequirement_1od0u7n">
       <requiredDecision href="#Decision_137edzy" />
     </informationRequirement>
+    <informationRequirement id="InformationRequirement_06ko614">
+      <requiredDecision href="#Decision_13euaxk" />
+    </informationRequirement>
     <decisionTable id="DecisionTable_04h0po8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="CCD Case Data" camunda:inputVariable="caseData">
         <inputExpression id="InputExpression_1" typeRef="string">
@@ -1132,7 +1135,7 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13hfmgv">
-          <text>5000</text>
+          <text>urgency</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fha0sj">
           <text>false</text>
@@ -1153,7 +1156,7 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_006d2yy">
-          <text>5000</text>
+          <text>urgency</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rlxpn9">
           <text>false</text>
@@ -1174,7 +1177,7 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18fqap8">
-          <text>5000</text>
+          <text>urgency</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1idplt1">
           <text>false</text>
@@ -1195,7 +1198,7 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0etm8vn">
-          <text>5000</text>
+          <text>urgency</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02azr2b">
           <text>false</text>
@@ -1216,7 +1219,7 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08fathr">
-          <text>5000</text>
+          <text>urgency</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ozp8nz">
           <text>false</text>
@@ -1237,7 +1240,7 @@ else "JUDICIAL"</text>
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0abk3pl">
-          <text>5000</text>
+          <text>urgency</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1mwdgor">
           <text>false</text>
@@ -1561,6 +1564,15 @@ else [5000])[1]</text>
 else null</text>
     </literalExpression>
   </decision>
+  <decision id="Decision_13euaxk" name="Urgency">
+    <variable id="InformationItem_08zllsw" name="urgency" typeRef="integer" />
+    <literalExpression id="LiteralExpression_1qkruzd" expressionLanguage="feel">
+      <text>// 1000: urgent
+// 3000: high
+// 5000: Low, Medium, High based on priority date
+if(caseData.waTaskUrgencyLevel = "URGENT") then 1000 else if(caseData.waTaskUrgencyLevel = "HIGH") then 3000 else 5000</text>
+    </literalExpression>
+  </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <dmndi:DMNShape dmnElementRef="wa-task-configuration-publiclaw-care_supervision_epo">
@@ -1574,6 +1586,14 @@ else null</text>
         <di:waypoint x="360" y="140" />
         <di:waypoint x="340" y="140" />
       </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1c7e85q" dmnElementRef="InformationRequirement_06ko614">
+        <di:waypoint x="250" y="260" />
+        <di:waypoint x="250" y="200" />
+        <di:waypoint x="250" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0yk181k" dmnElementRef="Decision_13euaxk">
+        <dc:Bounds height="80" width="180" x="160" y="260" />
+      </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </definitions>
