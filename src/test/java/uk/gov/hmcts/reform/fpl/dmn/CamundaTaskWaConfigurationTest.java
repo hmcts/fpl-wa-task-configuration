@@ -107,7 +107,7 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @MethodSource("approveOrdersMajorPriorityScenarios")
     void testApproveOrdersMajorPriority(int expected, Map<String, Object> caseData) {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        String feelExpression = getValueFromWaConfiguration(logic, "approveOrdersHearingJuge",
+        String feelExpression = getValueFromWaConfiguration(logic, "approveOrdersHearingJudge",
                                                             "majorPriority");
 
         FeelEngine feelEngine = new FeelEngine.Builder().build();
