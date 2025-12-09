@@ -622,6 +622,26 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0ewtpqi">
+        <inputEntry id="UnaryTests_0xkhsor">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j3llx9">
+          <text>"reviewListingAction"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jmhkis">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1b0bqph">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1z0m6iu">
+          <text>"hearing_work"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1571g38">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0u28eoa">
         <description></description>
         <inputEntry id="UnaryTests_18usn2l">
