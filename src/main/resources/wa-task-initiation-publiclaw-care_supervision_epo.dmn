@@ -404,6 +404,41 @@
           <text>"case progression"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0qgzn29">
+        <inputEntry id="UnaryTests_07dblms">
+          <text>"uploadAdditionalApplications"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n6tedz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mh5c1r">
+          <text>"CTSC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11l7alg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a25zcw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_060ckl8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h4kfqf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0g76rgs">
+          <text>"viewAdditionalApplications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ih64jd">
+          <text>"View Additional Applications"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l9eqj4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1snzbsc">
+          <text>"case progression"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1wndqzo">
         <inputEntry id="UnaryTests_0f8guqf">
           <text>"uploadCMO"</text>

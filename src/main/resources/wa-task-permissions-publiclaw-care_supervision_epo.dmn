@@ -262,7 +262,7 @@
       <rule id="DecisionRule_05ky9qy">
         <description></description>
         <inputEntry id="UnaryTests_0rwo9d7">
-          <text>"viewAdditionalApplicationsAllocatedJudge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vxrv0d">
           <text></text>
@@ -288,7 +288,7 @@
       </rule>
       <rule id="DecisionRule_06wkpbu">
         <inputEntry id="UnaryTests_0tbqigo">
-          <text>"viewAdditionalApplicationsAllocatedLegalAdviser"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08ad9mz">
           <text></text>
@@ -315,7 +315,7 @@
       <rule id="DecisionRule_1ge53t3">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_01okq32">
-          <text>"viewAdditionalApplicationsAllocatedJudge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00pbt44">
           <text></text>
@@ -342,7 +342,7 @@
       <rule id="DecisionRule_0urbbi8">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_0fu4qre">
-          <text>"viewAdditionalApplicationsAllocatedLegalAdviser"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12b4bo7">
           <text></text>
