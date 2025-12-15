@@ -527,7 +527,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08wb4e8">
-          <text>"viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rukd5g">
           <text></text>
@@ -730,7 +730,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1236doa">
-          <text>"viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_05uobhg">
           <text></text>
@@ -844,7 +844,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1mnibze">
-          <text>"viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJuge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJuge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1mp0n8g">
           <text></text>
@@ -1232,7 +1232,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15wczy4">
-          <text>"viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJuge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJuge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1xs606m">
           <text></text>
@@ -1493,7 +1493,7 @@ else [5000])[1]</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qd59ye">
-          <text>"viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge","reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageHearingJudge","reviewMessageAllocatedJudge","approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewOrderCMO","reviewResponseAllocatedJudge","reviewResponseHearingJudge","reviewResponseHearingCentreAdmin","reviewResponseCTSC","reviewMessageOther","reviewResponseOther","reviewCorrespondence"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge","reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageHearingJudge","reviewMessageAllocatedJudge","approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewOrderCMO","reviewResponseAllocatedJudge","reviewResponseHearingJudge","reviewResponseHearingCentreAdmin","reviewResponseCTSC","reviewMessageOther","reviewResponseOther","reviewCorrespondence"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0nf7hes">
           <text></text>
