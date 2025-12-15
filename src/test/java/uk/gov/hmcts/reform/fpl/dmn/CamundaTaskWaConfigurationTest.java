@@ -107,7 +107,8 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @MethodSource("approveOrdersMajorPriorityScenarios")
     void testApproveOrdersMajorPriority(int expected, Map<String, Object> caseData) {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        String feelExpression = getValueFromWaConfiguration(logic, "approveOrders", "majorPriority");
+        String feelExpression = getValueFromWaConfiguration(logic, "approveOrdersHearingJudge",
+                                                            "majorPriority");
 
         FeelEngine feelEngine = new FeelEngine.Builder().build();
 
@@ -167,7 +168,8 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @MethodSource("allocatedJudgeScenarios")
     void testViewAdditionalApplicationRoleCategory(String expected, Map<String, Object> caseData) {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        String feelExpression = getValueFromWaConfiguration(logic, "viewAdditionalApplications", "roleCategory");
+        String feelExpression = getValueFromWaConfiguration(logic, "viewAdditionalApplicationsAllocatedJudge",
+                                                            "roleCategory");
 
         FeelEngine feelEngine = new FeelEngine.Builder().build();
 
@@ -201,7 +203,6 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
             feelEngine.evalExpression(feelExpression, Map.of("caseData", caseData));
         assertEquals(expected, result.toOption().get());
     }
-
 
     private static String formatString(Date date) {
         return new SimpleDateFormat("yyyy-MM-dd").format(date) + "T"
@@ -596,7 +597,8 @@ class CamundaTaskWaConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @MethodSource("hearingJudgeScenarios")
     void testApproveOrdersRoleCategory(String expected, Map<String, Object> caseData) {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        String feelExpression = getValueFromWaConfiguration(logic, "approveOrders", "roleCategory");
+        String feelExpression = getValueFromWaConfiguration(logic, "approveOrdersHearingJudge",
+                                                            "roleCategory");
 
         FeelEngine feelEngine = new FeelEngine.Builder().build();
 
