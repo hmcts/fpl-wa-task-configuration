@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-permissions-publiclaw-care_supervision_epo" name="Permissions DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_0vv02p8" hitPolicy="RULE ORDER">
-      <input id="Input_1" label="Task type" biodi:width="313" camunda:inputVariable="taskType">
+      <input id="Input_1" label="Task type" biodi:width="553" camunda:inputVariable="taskType">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text>if(taskAttributes != null and taskAttributes.taskType != null) then
             taskAttributes.taskType
@@ -10,7 +10,7 @@
             "r1"</text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Case Access Category" name="caseAccessCategory" typeRef="string" biodi:width="192" />
+      <output id="Output_1" label="Case Access Category" name="caseAccessCategory" typeRef="string" biodi:width="150" />
       <output id="OutputClause_0tfvigx" label="Name" name="name" typeRef="string" biodi:width="311" />
       <output id="OutputClause_175fp1a" label="Value" name="value" typeRef="string" biodi:width="236" />
       <output id="OutputClause_0o2n8ga" label="RoleCategory" name="roleCategory" typeRef="string" />
@@ -262,7 +262,7 @@
       <rule id="DecisionRule_05ky9qy">
         <description></description>
         <inputEntry id="UnaryTests_0rwo9d7">
-          <text>"viewAdditionalApplications"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vxrv0d">
           <text></text>
@@ -288,7 +288,7 @@
       </rule>
       <rule id="DecisionRule_06wkpbu">
         <inputEntry id="UnaryTests_0tbqigo">
-          <text>"viewAdditionalApplications"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08ad9mz">
           <text></text>
@@ -315,7 +315,7 @@
       <rule id="DecisionRule_1ge53t3">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_01okq32">
-          <text>"viewAdditionalApplications"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00pbt44">
           <text></text>
@@ -342,7 +342,7 @@
       <rule id="DecisionRule_0urbbi8">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_0fu4qre">
-          <text>"viewAdditionalApplications"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12b4bo7">
           <text></text>
@@ -369,7 +369,7 @@
       <rule id="DecisionRule_10ux7wt">
         <description></description>
         <inputEntry id="UnaryTests_1kf3gzz">
-          <text>"approveOrders"</text>
+          <text>"approveOrdersHearingJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ngsmbg">
           <text></text>
@@ -395,7 +395,7 @@
       </rule>
       <rule id="DecisionRule_0sv4kx5">
         <inputEntry id="UnaryTests_0kwmkyx">
-          <text>"approveOrders"</text>
+          <text>"approveOrdersLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jybmyd">
           <text></text>
@@ -422,7 +422,7 @@
       <rule id="DecisionRule_0wx6m1d">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_02y62xj">
-          <text>"approveOrders"</text>
+          <text>"approveOrdersHearingJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1dordef">
           <text></text>
@@ -449,7 +449,7 @@
       <rule id="DecisionRule_002pzao">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_1g0d3xf">
-          <text>"approveOrders"</text>
+          <text>"approveOrdersLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hf0l9t">
           <text></text>
@@ -502,7 +502,7 @@
       <rule id="DecisionRule_09g3ije">
         <description>for ensuring tasks are reassigned when necessary</description>
         <inputEntry id="UnaryTests_0rciqrm">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05tds6d">
           <text></text>
@@ -529,7 +529,7 @@
       <rule id="DecisionRule_1u9jc6e">
         <description>for ensuring tasks are reassigned when necessary</description>
         <inputEntry id="UnaryTests_19846qw">
-          <text>"approveOrders","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
+          <text>"approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dykfnl">
           <text></text>

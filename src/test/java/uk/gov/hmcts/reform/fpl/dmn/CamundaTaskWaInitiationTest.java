@@ -105,14 +105,50 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "OTHER"
+                ),
+                Map.of(
+                    "taskId", "viewAdditionalApplicationsAllocatedLegalAdviser",
+                    "name", "View Additional Applications (Allocated Legal Adviser)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "JUDICIARY"
+                ),
+                Map.of(
+                    "taskId", "viewAdditionalApplicationsAllocatedJudge",
+                    "name", "View Additional Applications (Allocated Judge)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
                 "uploadCMO",
                 Map.of(
+                    "latestRoleSent", "HEARING_JUDGE",
                     "draftOrderNeedsReviewUploaded", true,
                     "court", Map.of("code", "151")
                 ),
                 Map.of(
-                    "taskId", "approveOrders",
-                    "name", "Approve Orders",
+                    "taskId", "approveOrdersHearingJudge",
+                    "name", "Approve Orders (Hearing Judge)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadCMO",
+                Map.of(
+                    "latestRoleSent", "OTHER",
+                    "draftOrderNeedsReviewUploaded", true,
+                    "court", Map.of("code", "151")
+                ),
+                Map.of(
+                    "taskId", "approveOrdersLegalAdviser",
+                    "name", "Approve Orders (Hearing Legal Adviser)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -167,6 +203,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(26));
+        assertThat(logic.getRules().size(), is(29));
     }
 }
