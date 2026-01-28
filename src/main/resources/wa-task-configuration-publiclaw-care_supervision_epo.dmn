@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0yh1rk0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-configuration-publiclaw-care_supervision_epo" name="Task configuration DMN" camunda:historyTimeToLive="P30D">
     <informationRequirement id="InformationRequirement_1od0u7n">
       <requiredDecision href="#Decision_137edzy" />
@@ -527,7 +527,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08wb4e8">
-          <text>"viewAdditionalApplications","approveOrders","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rukd5g">
           <text></text>
@@ -750,7 +750,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1236doa">
-          <text>"viewAdditionalApplications","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_05uobhg">
           <text></text>
@@ -774,7 +774,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0hoz5te">
-          <text>"approveOrders","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
+          <text>"approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewMessageHearingJudge","reviewResponseHearingJudge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ohupj0">
           <text></text>
@@ -824,7 +824,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_06q4zr9">
-          <text>"approveOrders"</text>
+          <text>"approveOrdersLegalAdviser","approveOrdersHearingJudge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_19qrov2">
           <text></text>
@@ -864,7 +864,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1mnibze">
-          <text>"viewAdditionalApplications"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJuge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1mp0n8g">
           <text></text>
@@ -1252,7 +1252,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15wczy4">
-          <text>"viewAdditionalApplications"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJuge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1xs606m">
           <text></text>
@@ -1273,7 +1273,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_04ss7q8">
-          <text>"approveOrders"</text>
+          <text>"approveOrdersLegalAdviser","approveOrdersHearingJudge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0v39i7p">
           <text></text>
@@ -1513,7 +1513,7 @@ else [5000])[1]</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qd59ye">
-          <text>"viewAdditionalApplications","reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageHearingJudge","reviewMessageAllocatedJudge","approveOrders","reviewOrderCMO","reviewResponseAllocatedJudge","reviewResponseHearingJudge","reviewResponseHearingCentreAdmin","reviewResponseCTSC","reviewMessageOther","reviewResponseOther","reviewCorrespondence"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge","reviewMessageCTSC","reviewMessageLegalAdviser","reviewMessageHearingCentreAdmin","reviewMessageHearingJudge","reviewMessageAllocatedJudge","approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewOrderCMO","reviewResponseAllocatedJudge","reviewResponseHearingJudge","reviewResponseHearingCentreAdmin","reviewResponseCTSC","reviewMessageOther","reviewResponseOther","reviewCorrespondence"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0nf7hes">
           <text></text>
