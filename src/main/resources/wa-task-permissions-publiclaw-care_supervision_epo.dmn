@@ -369,7 +369,7 @@
       <rule id="DecisionRule_10ux7wt">
         <description></description>
         <inputEntry id="UnaryTests_1kf3gzz">
-          <text>"approveOrdersHearingJudge"</text>
+          <text>"approveOrders","approveOrdersHearingJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ngsmbg">
           <text></text>
@@ -395,7 +395,7 @@
       </rule>
       <rule id="DecisionRule_0sv4kx5">
         <inputEntry id="UnaryTests_0kwmkyx">
-          <text>"approveOrdersLegalAdviser"</text>
+          <text>"approveOrders","approveOrdersLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jybmyd">
           <text></text>
@@ -422,7 +422,7 @@
       <rule id="DecisionRule_0wx6m1d">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_02y62xj">
-          <text>"approveOrdersHearingJudge"</text>
+          <text>"approveOrders","approveOrdersHearingJudge"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1dordef">
           <text></text>
@@ -449,7 +449,7 @@
       <rule id="DecisionRule_002pzao">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_1g0d3xf">
-          <text>"approveOrdersLegalAdviser"</text>
+          <text>"approveOrders","approveOrdersLegalAdviser"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hf0l9t">
           <text></text>
@@ -502,7 +502,7 @@
       <rule id="DecisionRule_09g3ije">
         <description>for ensuring tasks are reassigned when necessary</description>
         <inputEntry id="UnaryTests_0rciqrm">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","approveOrders","approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05tds6d">
           <text></text>
@@ -529,7 +529,7 @@
       <rule id="DecisionRule_1u9jc6e">
         <description>for ensuring tasks are reassigned when necessary</description>
         <inputEntry id="UnaryTests_19846qw">
-          <text>"approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
+          <text>"approveOrders","approveOrdersLegalAdviser","approveOrdersHearingJudge","reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewResponseOther"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dykfnl">
           <text></text>
