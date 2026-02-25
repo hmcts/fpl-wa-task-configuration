@@ -177,8 +177,8 @@ def versions = [
 ]
 
 dependencies {
-  annotationProcessor 'org.projectlombok:lombok:1.18.40'
-  compileOnly 'org.projectlombok:lombok:1.18.40'
+  annotationProcessor 'org.projectlombok:lombok:1.18.42'
+  compileOnly 'org.projectlombok:lombok:1.18.42'
 
   testImplementation(platform('org.junit:junit-bom:5.11.4'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
