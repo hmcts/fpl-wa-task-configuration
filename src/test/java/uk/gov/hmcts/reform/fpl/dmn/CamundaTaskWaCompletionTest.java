@@ -42,7 +42,8 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
 
     public static Stream<Arguments> scenarioProvider() {
         return Stream.of(
-            Arguments.of("reviewCMO", getAutoCompleteTaskTypes(FplTask.APPROVE_ORDERS)),
+            Arguments.of("reviewCMO", getAutoCompleteTaskTypes(FplTask.APPROVE_ORDERS,
+                FplTask.APPROVE_ORDERS_LEGAL_ADVISER, FplTask.APPROVE_ORDERS_HEARING_JUDGE)),
             Arguments.of("replyToMessageJudgeOrLegalAdviser", getAutoCompleteTaskTypes(
                 FplTask.REVIEW_MESSAGE_ALLOCATED_JUDGE, FplTask.REVIEW_RESPONSE_ALLOCATED_JUDGE,
                 FplTask.REVIEW_MESSAGE_HEARING_JUDGE, FplTask.REVIEW_RESPONSE_HEARING_JUDGE,
@@ -66,7 +67,7 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(21));
+        assertThat(logic.getRules().size(), is(25));
     }
 
     private static Map<String, String> getAutoCompleteTaskType(FplTask taskType) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0i5xieu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0i5xieu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-types-publiclaw-care_supervision_epo" name="Task Types DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_1teyk0b" hitPolicy="COLLECT">
       <input id="Input_1">
@@ -152,6 +152,28 @@
           <text>"View Additional Applications"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0enobnm">
+        <inputEntry id="UnaryTests_02gyyin">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0d4g9yt">
+          <text>"viewAdditionalApplicationsAllocatedLegalAdviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rv3345">
+          <text>"View Additional Applications (Allocated Legal Adviser)"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1574a4e">
+        <inputEntry id="UnaryTests_0e1nj4y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i7ndm4">
+          <text>"viewAdditionalApplicationsAllocatedJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1otvtjb">
+          <text>"View Additional Applications (Allocated Judge)"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1q9ociu">
         <inputEntry id="UnaryTests_0ypda1d">
           <text></text>
@@ -161,6 +183,28 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1t4vh3s">
           <text>"Approve Orders"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10fm4iz">
+        <inputEntry id="UnaryTests_00h5dg3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lspatn">
+          <text>"approveOrdersLegalAdviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gtctfx">
+          <text>"Approve Orders (Hearing Legal Adviser)"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kdpe25">
+        <inputEntry id="UnaryTests_1i2fca6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q8iir0">
+          <text>"approveOrdersHearingJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k9gi71">
+          <text>"Approve Orders (Hearing Judge)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0rq6mz1">
