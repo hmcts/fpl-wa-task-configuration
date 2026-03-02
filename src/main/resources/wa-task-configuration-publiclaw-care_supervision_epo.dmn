@@ -1247,7 +1247,7 @@ else "JUDICIAL"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0jyvt7i">
-        <description>Always High</description>
+        <description>High / Urgency</description>
         <inputEntry id="UnaryTests_0eardmm">
           <text></text>
         </inputEntry>
