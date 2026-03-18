@@ -20,8 +20,12 @@ public enum FplTask {
     REVIEW_MESSAGE_LEGAL_ADVISOR("reviewMessageLegalAdviser"),
     @Deprecated(since = "DFPL-2664")
     REVIEW_RESPONSE_LEGAL_ADVISOR("reviewResponseLegalAdviser"),
+    VIEW_ADDITIONAL_APPLICATIONS_LEGAL_ADVISER("viewAdditionalApplicationsAllocatedLegalAdviser"),
+    VIEW_ADDITIONAL_APPLICATIONS_ALLOCATED_JUDGE("viewAdditionalApplicationsAllocatedJudge"),
     VIEW_ADDITIONAL_APPLICATIONS("viewAdditionalApplications"),
     APPROVE_ORDERS("approveOrders"),
+    APPROVE_ORDERS_LEGAL_ADVISER("approveOrdersLegalAdviser"),
+    APPROVE_ORDERS_HEARING_JUDGE("approveOrdersHearingJudge"),
     REVIEW_URGENT_APPLICATION("reviewUrgentApplication"),
     REVIEW_STANDARD_APPLICATION("reviewStandardApplication"),
     REVIEW_STANDARD_DIRECTION_ORDER("reviewStandardDirectionOrder"),
