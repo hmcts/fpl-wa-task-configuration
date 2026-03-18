@@ -864,7 +864,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1mnibze">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJuge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1mp0n8g">
           <text></text>
@@ -1252,7 +1252,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15wczy4">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJuge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1xs606m">
           <text></text>
