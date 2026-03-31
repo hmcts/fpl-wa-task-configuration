@@ -55,7 +55,7 @@
       <rule id="DecisionRule_1ef1fru">
         <inputEntry id="UnaryTests_09gnzz2">
           <text>
-            "reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewResponseOther","viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","approveOrders","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewListingAction","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestJudiciary"
+            "reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewResponseOther","viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","approveOrders","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewListingAction","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestJudiciary"
           </text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1m2f7jm">
