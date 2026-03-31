@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
-             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
-             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0"
-             xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0"
-             id="Definitions_1iaots2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn"
-             exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform"
-             modeler:executionPlatformVersion="7.17.0">
-  <decision id="wa-task-completion-publiclaw-care_supervision_epo" name="Task completion DMN"
-            camunda:historyTimeToLive="P30D">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1iaots2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-completion-publiclaw-care_supervision_epo" name="Task completion DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_14vgqqu" hitPolicy="COLLECT" biodi:annotationsWidth="708">
       <input id="Input_1" label="Event ID" biodi:width="341" camunda:inputVariable="eventId">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text></text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Task Type" name="taskType" typeRef="string" biodi:width="573"/>
-      <output id="OutputClause_11cuihz" label="Completion Mode" name="completionMode" typeRef="string"/>
+      <output id="Output_1" label="Task Type" name="taskType" typeRef="string" biodi:width="573" />
+      <output id="OutputClause_11cuihz" label="Completion Mode" name="completionMode" typeRef="string" />
       <rule id="DecisionRule_1fd34p5">
         <description></description>
         <inputEntry id="UnaryTests_1hz19s2">
@@ -276,9 +269,7 @@
       </rule>
       <rule id="DecisionRule_1nzha00">
         <inputEntry id="UnaryTests_14ft3ua">
-          <text>
-            "reviewCMO","replyToMessageJudgeOrLegalAdviser","reviewAdditionalApplication","sendToGatekeeper","returnApplication","sendOrderReminder","reviewListingAction"
-          </text>
+          <text>"reviewCMO","replyToMessageJudgeOrLegalAdviser","reviewAdditionalApplication","sendToGatekeeper","returnApplication","sendOrderReminder","reviewListingAction"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12z0rov">
           <text></text>
@@ -303,7 +294,7 @@
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <dmndi:DMNShape dmnElementRef="wa-task-completion-publiclaw-care_supervision_epo">
-        <dc:Bounds height="80" width="180" x="160" y="100"/>
+        <dc:Bounds height="80" width="180" x="160" y="100" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
