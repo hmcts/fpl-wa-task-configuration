@@ -55,7 +55,7 @@
           <text>"task-supervisor"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0r0j8bc">
-          <text>"Cancel"</text>
+          <text>"Complete,Assign,Unassign,Read,Manage,Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0h4olfy">
           <text></text>
