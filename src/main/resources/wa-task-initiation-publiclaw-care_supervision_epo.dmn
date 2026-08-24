@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0swvthw" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.50.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-initiation-publiclaw-care_supervision_epo" name="Task initiation DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_1fj3kaa" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Event Id" biodi:width="317" camunda:inputVariable="eventId">
@@ -857,6 +857,41 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_15l3juw">
           <text>"manage outcome"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1svrbqq">
+        <inputEntry id="UnaryTests_1km2656">
+          <text>"create-work-allocation-task"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ohm2ow">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c7kt16">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_123l9jp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1md1iou">
+          <text>"ORDER_UPLOADED","ORDER_CONCLUDES_PROCEEDINGS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dc9m0f">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tl5pwk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07fqbwx">
+          <text>"createFinalOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tn0u7i">
+          <text>"Final Order to be Created (CTSC)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1z0qp0v">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06jqmrt">
+          <text>"case progression"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ha7mo9">
