@@ -873,7 +873,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1md1iou">
-          <text>"ORDER_UPLOADED","ORDER_CONCLUDES_PROCEEDINGS"</text>
+          <text>"CMO_REVIEWED","ORDER_CONCLUDES_PROCEEDINGS"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1dc9m0f">
           <text>false</text>
@@ -908,7 +908,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_09c8t9z">
-          <text>"ORDER_UPLOADED","ORDER_CONCLUDES_PROCEEDINGS"</text>
+          <text>"CMO_REVIEWED","ORDER_CONCLUDES_PROCEEDINGS"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1g2qlcm">
           <text>true</text>
