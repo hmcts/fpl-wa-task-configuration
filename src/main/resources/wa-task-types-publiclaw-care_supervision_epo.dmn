@@ -372,6 +372,17 @@
           <text>"Final Order to be Created (CTSC)"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1e2quyf">
+        <inputEntry id="UnaryTests_12cd776">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10wmqn7">
+          <text>"createFinalOrderHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zwdb9h">
+          <text>"Final Order to be Created (High Court)"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

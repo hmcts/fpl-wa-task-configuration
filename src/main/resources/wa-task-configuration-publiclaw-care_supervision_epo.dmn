@@ -527,7 +527,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08wb4e8">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge","approveOrders","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","createFinalOrder"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","viewAdditionalApplicationsAllocatedJudge","approveOrders","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewOrderCMO","reviewStandardDirectionOrder","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","createFinalOrder","createFinalOrderHighCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rukd5g">
           <text></text>
@@ -669,7 +669,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ox5s2">
-          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewSpecificAccessRequestAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewListingAction","createFinalOrder"</text>
+          <text>"reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewSpecificAccessRequestAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewListingAction","createFinalOrderHighCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0k8ws0z">
           <text></text>
@@ -709,7 +709,7 @@ else "roleAssignmentId"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uuvjqh">
-          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC","queryManagementRespondToQuery"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","chaseOutstandingOrder","reviewSpecificAccessRequestCTSC","queryManagementRespondToQuery","createFinalOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1u9r6w0">
           <text></text>
@@ -1004,7 +1004,7 @@ else "JUDICIAL"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zimas0">
-          <text>"createFinalOrder"</text>
+          <text>"createFinalOrder","createFinalOrderHighCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0d2fof9">
           <text></text>
@@ -1403,23 +1403,24 @@ else [5000])[1]</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0e2n464">
+        <description>Always high</description>
         <inputEntry id="UnaryTests_064uwnj">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jrfvnc">
-          <text>"createFinalOrder"</text>
+          <text>"createFinalOrder","createFinalOrderHighCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0txke2t">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1s9t4k3">
-          <text>"minorPriority"</text>
+          <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h3zfpy">
-          <text>500</text>
+          <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nrpswo">
-          <text>true</text>
+          <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1jo8pn7">
