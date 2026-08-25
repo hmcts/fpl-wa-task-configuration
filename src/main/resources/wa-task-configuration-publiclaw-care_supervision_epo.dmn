@@ -1487,27 +1487,6 @@ else [5000])[1]</text>
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0b1jl4u">
-        <description>Low, Medium, High based on priority date</description>
-        <inputEntry id="UnaryTests_1aowtyx">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03cfeaf">
-          <text>"reviewListingAction"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0onlj7l">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ou9bg0">
-          <text>"majorPriority"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1agd0ln">
-          <text>5000</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1022klg">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1tbzp3k">
         <description>Low, Medium, High based on priority date</description>
         <inputEntry id="UnaryTests_0h840uq">
