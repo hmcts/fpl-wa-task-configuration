@@ -568,7 +568,7 @@
           <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0joasoz">
-          <text>"reviewListingRequest"</text>
+          <text>"reviewListingAction"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1p3kfxw">
           <text>"Review listing request"</text>
