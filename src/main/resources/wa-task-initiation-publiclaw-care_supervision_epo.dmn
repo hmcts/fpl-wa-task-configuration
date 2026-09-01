@@ -37,8 +37,8 @@
         </inputValues>
       </input>
       <input id="InputClause_11c116j" label="Court Code is 100" camunda:inputVariable="courtCode">
-        <inputExpression id="LiteralExpression_0d2hgt1" typeRef="boolean" expressionLanguage="juel">
-          <text>additionalData != null and additionalData.Data != null and additionalData.Data.court != null and additionalData.Data.court.code != null and additionalData.Data.court.code.equals("100")</text>
+        <inputExpression id="LiteralExpression_0d2hgt1" typeRef="boolean">
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.court != null and additionalData.Data.court.code != null) then additionalData.Data.court.code = "100" else false</text>
         </inputExpression>
       </input>
       <input id="InputClause_1ube3ye" label="Draft order needs review?" camunda:inputVariable="draftOrderNeedsReviewUploaded">
@@ -56,22 +56,22 @@
           <text>"messageJudgeOrLegalAdviser"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0t9fngz">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_085vjtp">
           <text>"JUDICIARY"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1iddlak">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rsbxop">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jx8z64">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0b9b2sd">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1gtn6d2">
           <text>"reviewMessageAllocatedJudge"</text>
@@ -545,26 +545,27 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1b3d1wg">
+        <description>Triggers task on requestListingAction event</description>
         <inputEntry id="UnaryTests_1szexai">
           <text>"requestListingAction"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0vyters">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0eq3vf5">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pvdzbk">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y8qqgk">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02z6pmi">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_18lmfh3">
-          <text></text>
+          <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0joasoz">
           <text>"reviewListingAction"</text>
@@ -576,7 +577,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_138vfgq">
-          <text>"actionType_" + additionalData.Data.lastListingRequestType</text>
+          <text>"case progression"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0jhb3uh">
