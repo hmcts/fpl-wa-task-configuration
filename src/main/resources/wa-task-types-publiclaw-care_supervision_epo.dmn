@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0i5xieu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0i5xieu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.50.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-types-publiclaw-care_supervision_epo" name="Task Types DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_1teyk0b" hitPolicy="COLLECT">
       <input id="Input_1">
@@ -359,6 +359,28 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1n3ekr9">
           <text>"Respond to a Query"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13trtmc">
+        <inputEntry id="UnaryTests_1akx6mq">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mzkxnp">
+          <text>"createFinalOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jj46ev">
+          <text>"Final Order (CTSC)"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1e2quyf">
+        <inputEntry id="UnaryTests_12cd776">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10wmqn7">
+          <text>"createFinalOrderHighCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zwdb9h">
+          <text>"Final Order (High Court)"</text>
         </outputEntry>
       </rule>
     </decisionTable>
