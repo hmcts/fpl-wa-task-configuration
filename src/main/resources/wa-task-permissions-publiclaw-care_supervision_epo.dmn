@@ -661,7 +661,7 @@
       </rule>
       <rule id="DecisionRule_1liss5w">
         <inputEntry id="UnaryTests_0tbv583">
-          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewOrderCMOUrgent","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication"</text>
+          <text>"reviewMessageCTSC","reviewResponseCTSC","reviewUrgentApplication","reviewStandardApplication","reviewStandardDirectionOrder","reviewOrderCMO","reviewOrderCMOUrgent","reviewFailedPayment","reviewCorrespondence","checkPlacementApplication","reviewListingAction"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0c7jinl">
           <text></text>

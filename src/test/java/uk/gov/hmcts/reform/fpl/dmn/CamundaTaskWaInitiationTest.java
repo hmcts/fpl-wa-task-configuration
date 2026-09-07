@@ -57,6 +57,17 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "requestListingAction",
+                Map.of(
+                    "court", Map.of("code", "151")
+                ),
+                Map.of(
+                    "taskId", "reviewListingAction",
+                    "name", "Review listing request",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
                 "replyToMessageJudgeOrLegalAdviser",
                 Map.of(
                     "latestRoleSent", "JUDICIARY",
@@ -163,17 +174,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                     "taskId", "approveOrders",
                     "name", "Approve Orders",
                     "processCategories", CASE_PROGRESSION.getValue()
-                )
-            ),
-            Arguments.of(
-                "requestListingAction",
-                Map.of(
-                    "lastListingRequestType", "Listing required"
-                ),
-                Map.of(
-                    "taskId", "reviewListingAction",
-                    "name", "Review listing request",
-                    "processCategories", "actionType_Listing required"
                 )
             ),
             Arguments.of(
