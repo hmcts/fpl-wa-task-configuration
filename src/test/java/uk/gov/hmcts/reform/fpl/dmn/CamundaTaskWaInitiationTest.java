@@ -118,7 +118,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "uploadAdditionalApplications",
                 Map.of(
-                    "latestRoleSent", "OTHER"
+                    "latestRoleSent", "OTHER",
+                    "isC2Application", false
                 ),
                 Map.of(
                     "taskId", "viewAdditionalApplicationsAllocatedLegalAdviser",
@@ -129,11 +130,36 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "uploadAdditionalApplications",
                 Map.of(
-                    "latestRoleSent", "JUDICIARY"
+                    "latestRoleSent", "JUDICIARY",
+                    "isC2Application", false
                 ),
                 Map.of(
                     "taskId", "viewAdditionalApplicationsAllocatedJudge",
                     "name", "View Additional Applications (Allocated Judge)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "OTHER",
+                    "isC2Application", true
+                ),
+                Map.of(
+                    "taskId", "reviewC2ApplicationAllocatedLegalAdviser",
+                    "name", "Review C2 Application (Allocated Legal Adviser)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "JUDICIARY",
+                    "isC2Application", true
+                ),
+                Map.of(
+                    "taskId", "reviewC2ApplicationAllocatedJudge",
+                    "name", "Review C2 Application (Allocated Judge)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -216,6 +242,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(30));
+        assertThat(logic.getRules().size(), is(33));
     }
 }
