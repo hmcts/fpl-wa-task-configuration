@@ -152,6 +152,17 @@
           <text>"View Additional Applications"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0kbbc9q">
+        <inputEntry id="UnaryTests_0xfqv2x">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z20zkw">
+          <text>"reviewC2Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nvdxaw">
+          <text>"Review C2 Application"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0enobnm">
         <inputEntry id="UnaryTests_02gyyin">
           <text></text>
@@ -163,6 +174,17 @@
           <text>"View Additional Applications (Allocated Legal Adviser)"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_01jftx2">
+        <inputEntry id="UnaryTests_0nod77a">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mciepj">
+          <text>"reviewC2ApplicationAllocatedLegalAdviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0saz8xe">
+          <text>"Review C2 Application (Allocated Legal Adviser)"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1574a4e">
         <inputEntry id="UnaryTests_0e1nj4y">
           <text></text>
@@ -172,6 +194,17 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1otvtjb">
           <text>"View Additional Applications (Allocated Judge)"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_187jyqb">
+        <inputEntry id="UnaryTests_0kf9y3h">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0183hy1">
+          <text>"reviewC2ApplicationAllocatedJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dhtzdf">
+          <text>"Review C2 Application (Allocated Judge)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1q9ociu">
