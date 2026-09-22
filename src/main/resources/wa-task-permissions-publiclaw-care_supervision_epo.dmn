@@ -46,7 +46,7 @@
       </rule>
       <rule id="DecisionRule_1ef1fru">
         <inputEntry id="UnaryTests_09gnzz2">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewResponseOther","viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","approveOrders","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewListingAction","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestJudiciary","createFinalOrderHighCourt","reviewC2Application","reviewC2ApplicationAllocatedJudge","reviewC2ApplicationAllocatedLegalAdviser"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewResponseOther","viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","approveOrders","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewListingAction","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestJudiciary","createFinalOrderHighCourt","reviewC2Application","reviewC2ApplicationAllocatedJudge","reviewC2ApplicationAllocatedLegalAdviser","reviewC2ApplicationAllocatedLegalAdviserNextHearing","reviewC2ApplicationAllocatedJudgeNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1m2f7jm">
           <text></text>
@@ -314,7 +314,7 @@
       <rule id="DecisionRule_05ky9qy">
         <description></description>
         <inputEntry id="UnaryTests_0rwo9d7">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","reviewC2Application","reviewC2ApplicationAllocatedJudge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","reviewC2Application","reviewC2ApplicationAllocatedJudge","reviewC2ApplicationAllocatedJudgeNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vxrv0d">
           <text></text>
@@ -340,7 +340,7 @@
       </rule>
       <rule id="DecisionRule_06wkpbu">
         <inputEntry id="UnaryTests_0tbqigo">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","reviewC2Application","reviewC2ApplicationAllocatedLegalAdviser"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","reviewC2Application","reviewC2ApplicationAllocatedLegalAdviser","reviewC2ApplicationAllocatedLegalAdviserNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08ad9mz">
           <text></text>
@@ -367,7 +367,7 @@
       <rule id="DecisionRule_1ge53t3">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_01okq32">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","reviewC2Application","reviewC2ApplicationAllocatedJudge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","reviewC2Application","reviewC2ApplicationAllocatedJudge","reviewC2ApplicationAllocatedJudgeNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00pbt44">
           <text></text>
@@ -394,7 +394,7 @@
       <rule id="DecisionRule_0urbbi8">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_0fu4qre">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","reviewC2Application","reviewC2ApplicationAllocatedLegalAdviser"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","reviewC2Application","reviewC2ApplicationAllocatedLegalAdviser","reviewC2ApplicationAllocatedLegalAdviserNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12b4bo7">
           <text></text>

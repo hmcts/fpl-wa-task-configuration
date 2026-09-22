@@ -143,7 +143,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "uploadAdditionalApplications",
                 Map.of(
                     "latestRoleSent", "OTHER",
-                    "isC2Application", true
+                    "isC2Application", true,
+                    "reviewNextHearing", false
                 ),
                 Map.of(
                     "taskId", "reviewC2ApplicationAllocatedLegalAdviser",
@@ -155,11 +156,38 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "uploadAdditionalApplications",
                 Map.of(
                     "latestRoleSent", "JUDICIARY",
-                    "isC2Application", true
+                    "isC2Application", true,
+                    "reviewNextHearing", false
                 ),
                 Map.of(
                     "taskId", "reviewC2ApplicationAllocatedJudge",
                     "name", "Review C2 Application (Allocated Judge)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "OTHER",
+                    "isC2Application", true,
+                    "reviewNextHearing", true
+                ),
+                Map.of(
+                    "taskId", "reviewC2ApplicationAllocatedLegalAdviserNextHearing",
+                    "name", "Review C2 Application (Allocated Legal Adviser) (next hearing)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "JUDICIARY",
+                    "isC2Application", true,
+                    "reviewNextHearing", true
+                ),
+                Map.of(
+                    "taskId", "reviewC2ApplicationAllocatedJudgeNextHearing",
+                    "name", "Review C2 Application (Allocated Judge) (next hearing)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -242,6 +270,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(35));
+        assertThat(logic.getRules().size(), is(38));
     }
 }

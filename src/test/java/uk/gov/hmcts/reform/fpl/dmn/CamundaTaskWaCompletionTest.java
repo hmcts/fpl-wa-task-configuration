@@ -67,7 +67,7 @@ class CamundaTaskWaCompletionTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(28));
+        assertThat(logic.getRules().size(), is(31));
     }
 
     private static Map<String, String> getAutoCompleteTaskType(FplTask taskType) {
