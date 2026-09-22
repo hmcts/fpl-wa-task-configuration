@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.50.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1rc89mk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-permissions-publiclaw-care_supervision_epo" name="Permissions DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_0vv02p8" hitPolicy="RULE ORDER">
       <input id="Input_1" label="Task type" biodi:width="553" camunda:inputVariable="taskType">
@@ -46,7 +46,7 @@
       </rule>
       <rule id="DecisionRule_1ef1fru">
         <inputEntry id="UnaryTests_09gnzz2">
-          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewResponseOther","viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","approveOrders","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewListingAction","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestJudiciary","createFinalOrderHighCourt"</text>
+          <text>"reviewMessageAllocatedJudge","reviewResponseAllocatedJudge","reviewMessageHearingJudge","reviewResponseHearingJudge","reviewMessageOther","reviewMessageLegalAdviser","reviewResponseLegalAdviser","reviewMessageHearingCentreAdmin","reviewResponseHearingCentreAdmin","reviewStandardDirectionOrderHighCourt","reviewOrderCMOHighCourt","reviewFailedPaymentHighCourt","reviewCorrespondenceHighCourt","checkPlacementApplicationHighCourt","reviewResponseOther","viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","viewAdditionalApplicationsAllocatedLegalAdviser","approveOrders","approveOrdersHearingJudge","approveOrdersLegalAdviser","reviewListingAction","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestJudiciary","createFinalOrderHighCourt","reviewC2Application","reviewC2ApplicationAllocatedJudge","reviewC2ApplicationAllocatedLegalAdviser","reviewC2ApplicationAllocatedLegalAdviserNextHearing","reviewC2ApplicationAllocatedJudgeNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1m2f7jm">
           <text></text>
@@ -314,7 +314,7 @@
       <rule id="DecisionRule_05ky9qy">
         <description></description>
         <inputEntry id="UnaryTests_0rwo9d7">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","reviewC2Application","reviewC2ApplicationAllocatedJudge","reviewC2ApplicationAllocatedJudgeNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vxrv0d">
           <text></text>
@@ -340,7 +340,7 @@
       </rule>
       <rule id="DecisionRule_06wkpbu">
         <inputEntry id="UnaryTests_0tbqigo">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","reviewC2Application","reviewC2ApplicationAllocatedLegalAdviser","reviewC2ApplicationAllocatedLegalAdviserNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08ad9mz">
           <text></text>
@@ -367,7 +367,7 @@
       <rule id="DecisionRule_1ge53t3">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_01okq32">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedJudge","reviewC2Application","reviewC2ApplicationAllocatedJudge","reviewC2ApplicationAllocatedJudgeNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00pbt44">
           <text></text>
@@ -394,7 +394,7 @@
       <rule id="DecisionRule_0urbbi8">
         <description>Auto assigning</description>
         <inputEntry id="UnaryTests_0fu4qre">
-          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser"</text>
+          <text>"viewAdditionalApplications","viewAdditionalApplicationsAllocatedLegalAdviser","reviewC2Application","reviewC2ApplicationAllocatedLegalAdviser","reviewC2ApplicationAllocatedLegalAdviserNextHearing","reviewC2ApplicationNextHearing"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12b4bo7">
           <text></text>

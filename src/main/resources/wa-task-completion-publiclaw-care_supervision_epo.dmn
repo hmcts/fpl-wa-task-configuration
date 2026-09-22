@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1iaots2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.50.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1iaots2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-completion-publiclaw-care_supervision_epo" name="Task completion DMN" camunda:historyTimeToLive="P30D">
     <decisionTable id="DecisionTable_14vgqqu" hitPolicy="COLLECT" biodi:annotationsWidth="708">
       <input id="Input_1" label="Event ID" biodi:width="341" camunda:inputVariable="eventId">
@@ -189,6 +189,28 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_12jkmcr">
+        <inputEntry id="UnaryTests_0k2xypd">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03jl1lk">
+          <text>"reviewC2ApplicationAllocatedLegalAdviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_020kez1">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sx5b50">
+        <inputEntry id="UnaryTests_0yizdtx">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1emyt3e">
+          <text>"reviewC2ApplicationAllocatedLegalAdviserNextHearing"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13dw1mm">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0sdavr9">
         <description></description>
         <inputEntry id="UnaryTests_1kpfn45">
@@ -201,6 +223,28 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0ozveu7">
+        <inputEntry id="UnaryTests_155i7id">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18sb8qp">
+          <text>"reviewC2ApplicationAllocatedJudge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g196q7">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15s6po3">
+        <inputEntry id="UnaryTests_0g2axbf">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05jne31">
+          <text>"reviewC2ApplicationAllocatedJudgeNextHearing"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rq1gov">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1ptrt13">
         <inputEntry id="UnaryTests_082l9jr">
           <text>"reviewAdditionalApplication"</text>
@@ -209,6 +253,28 @@
           <text>"viewAdditionalApplications"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09jwsgh">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07c2i5g">
+        <inputEntry id="UnaryTests_0h1y8vc">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vhz71r">
+          <text>"reviewC2Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02cu74j">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xio6aa">
+        <inputEntry id="UnaryTests_1swdqn6">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jxi269">
+          <text>"reviewC2ApplicationNextHearing"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13n7wxk">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
