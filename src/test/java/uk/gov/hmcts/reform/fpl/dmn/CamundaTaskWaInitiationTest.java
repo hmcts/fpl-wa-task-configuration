@@ -119,7 +119,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "uploadAdditionalApplications",
                 Map.of(
                     "latestRoleSent", "OTHER",
-                    "isC2Application", false
+                    "isC2Application", false,
+                    "reviewNextHearing", false
                 ),
                 Map.of(
                     "taskId", "viewAdditionalApplicationsAllocatedLegalAdviser",
@@ -131,7 +132,8 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "uploadAdditionalApplications",
                 Map.of(
                     "latestRoleSent", "JUDICIARY",
-                    "isC2Application", false
+                    "isC2Application", false,
+                    "reviewNextHearing", false
                 ),
                 Map.of(
                     "taskId", "viewAdditionalApplicationsAllocatedJudge",
