@@ -418,7 +418,7 @@
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_024tg81">
-          <text></text>
+          <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15vnak5">
           <text>"viewAdditionalApplicationsAllocatedLegalAdviser"</text>
@@ -541,7 +541,7 @@
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0w3q030">
-          <text></text>
+          <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_136ewhx">
           <text>"viewAdditionalApplicationsAllocatedJudge"</text>
@@ -664,7 +664,7 @@
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1x3uz2v">
-          <text></text>
+          <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0g76rgs">
           <text>"viewAdditionalApplications"</text>
