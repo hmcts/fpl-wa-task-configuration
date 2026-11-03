@@ -57,6 +57,17 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "requestListingAction",
+                Map.of(
+                    "court", Map.of("code", "151")
+                ),
+                Map.of(
+                    "taskId", "reviewListingAction",
+                    "name", "Review listing request",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
                 "replyToMessageJudgeOrLegalAdviser",
                 Map.of(
                     "latestRoleSent", "JUDICIARY",
@@ -107,7 +118,9 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "uploadAdditionalApplications",
                 Map.of(
-                    "latestRoleSent", "OTHER"
+                    "latestRoleSent", "OTHER",
+                    "isC2Application", false,
+                    "reviewNextHearing", false
                 ),
                 Map.of(
                     "taskId", "viewAdditionalApplicationsAllocatedLegalAdviser",
@@ -118,11 +131,65 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "uploadAdditionalApplications",
                 Map.of(
-                    "latestRoleSent", "JUDICIARY"
+                    "latestRoleSent", "JUDICIARY",
+                    "isC2Application", false,
+                    "reviewNextHearing", false
                 ),
                 Map.of(
                     "taskId", "viewAdditionalApplicationsAllocatedJudge",
                     "name", "View Additional Applications (Allocated Judge)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "OTHER",
+                    "isC2Application", true,
+                    "reviewNextHearing", false
+                ),
+                Map.of(
+                    "taskId", "reviewC2ApplicationAllocatedLegalAdviser",
+                    "name", "Review C2 Application (Allocated Legal Adviser)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "JUDICIARY",
+                    "isC2Application", true,
+                    "reviewNextHearing", false
+                ),
+                Map.of(
+                    "taskId", "reviewC2ApplicationAllocatedJudge",
+                    "name", "Review C2 Application (Allocated Judge)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "OTHER",
+                    "isC2Application", true,
+                    "reviewNextHearing", true
+                ),
+                Map.of(
+                    "taskId", "reviewC2ApplicationAllocatedLegalAdviserNextHearing",
+                    "name", "Review C2 Application (Allocated Legal Adviser) (next hearing)",
+                    "processCategories", CASE_PROGRESSION.getValue()
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                Map.of(
+                    "latestRoleSent", "JUDICIARY",
+                    "isC2Application", true,
+                    "reviewNextHearing", true
+                ),
+                Map.of(
+                    "taskId", "reviewC2ApplicationAllocatedJudgeNextHearing",
+                    "name", "Review C2 Application (Allocated Judge) (next hearing)",
                     "processCategories", CASE_PROGRESSION.getValue()
                 )
             ),
@@ -166,17 +233,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "requestListingAction",
-                Map.of(
-                    "lastListingRequestType", "Listing required"
-                ),
-                Map.of(
-                    "taskId", "reviewListingAction",
-                    "name", "Review listing request",
-                    "processCategories", "actionType_Listing required"
-                )
-            ),
-            Arguments.of(
                 "submitApplication",
                 Map.of(
                     "hearing", Map.of("hearingUrgencyType", "STANDARD")
@@ -216,6 +272,6 @@ class CamundaTaskWaInitiationTest extends DmnDecisionTableBaseUnitTest {
     void shouldHaveCorrectNumberOfRules() {
         // The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getRules().size(), is(30));
+        assertThat(logic.getRules().size(), is(38));
     }
 }
